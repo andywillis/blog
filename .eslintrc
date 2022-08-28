@@ -4,16 +4,7 @@
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "requireConfigFile": false,
-    "babelOptions": {
-      "plugins": [
-        "@babel/plugin-syntax-import-assertions"
-      ]
-    }
-  },
-  "env": {
-    "browser": true
+    "ecmaVersion": "latest"
   },
   "rules": {
     "import/extensions": [1, {

@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "plugins": [
+        "@babel/plugin-syntax-import-assertions"
+      ]
+    }
+  },
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "import/extensions": [1, {
+      "css": "never",
+      "js": "never",
+      "jsx": "never",
+      "json": "never"
+    }]
+  }
+}
