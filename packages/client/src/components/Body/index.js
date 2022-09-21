@@ -1,10 +1,10 @@
 import Section from '../Section';
 
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Body(sections) {
   return (`
-    <div class="${styles.body}">
+    <div class="${style.body}">
       ${sections.map(Section).join('')}
     </div>
   `);

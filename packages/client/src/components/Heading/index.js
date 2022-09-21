@@ -1,8 +1,8 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Heading({ level, text }) {
   return (`
-    <div class="${styles[level]}">
+    <div class="${style[level]}">
       ${text}
     </div>
   `);

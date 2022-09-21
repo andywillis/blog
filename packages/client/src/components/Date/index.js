@@ -1,8 +1,5 @@
-import styles from './styles.module.css';
-
-// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
-// new Date().toLocaleString('en-GB', options)
+import style from './index.module.css';
 
 export default function Date(data) {
-  return `<p class=${styles.date}>${data}</p>`;
+  return `<p class=${style.date}>${data}</p>`;
 }

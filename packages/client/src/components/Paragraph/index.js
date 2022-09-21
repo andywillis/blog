@@ -1,8 +1,8 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Paragraph(html) {
   return (`
-    <p class="${styles.paragraph}">
+    <p class="${style.paragraph}">
       ${html}
     </p>
   `);

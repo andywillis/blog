@@ -1,16 +1,11 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Image({ src, alt }) {
 
-  // const [ , width, height ] = alt.match(/(\d+)x(\d+)/);
-  // style="height: ${height}px; width: ${width}px"
-  // width="${width}"
-  // height="${height}"
-
   return (`
-    <div class="${styles.imageContainer}">
+    <div class="${style.imageContainer}">
       <img
-        class="${styles.image}"
+        class="${style.image}"
         src="${src}"
         alt="${alt}"
       >

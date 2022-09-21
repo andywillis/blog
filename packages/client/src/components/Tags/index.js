@@ -1,10 +1,10 @@
 import Tag from '../Tag';
 
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Tags(data) {
   return (`
-    <ul class=${styles.tags}>
+    <ul class=${style.tags}>
       ${data.map(Tag).join('')}
     </ul> 
   `);

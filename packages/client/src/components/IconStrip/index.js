@@ -1,10 +1,10 @@
 import Icon from '../Icon';
 
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function IconStrip(icons) {
   return (`
-    <div class="${styles.iconStrip}">
+    <div class="${style.iconStrip}">
       ${icons.map(Icon).join('')}
     </div>
   `);

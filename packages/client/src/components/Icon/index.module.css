@@ -1,8 +1,8 @@
 .icon {
   box-sizing: content-box;
-  height: 48px;
-  width: 48px;
-  background-size: 48px 48px;
+  height: 64px;
+  width: 64px;
+  background-size: 64px 64px;
   background-color: transparent;
   border: 2px solid white;
 }

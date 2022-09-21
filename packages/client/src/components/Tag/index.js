@@ -1,8 +1,8 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Tag(tag) {
   return (`
-    <li class="${styles.tag}">
+    <li class="${style.tag}">
       ${tag.text}
     </li>
   `);

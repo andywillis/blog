@@ -1,8 +1,8 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Table(data) {
   return (`
-    <table class="${styles.table}">
+    <table class="${style.table}">
       ${data}
     </table>
   `);

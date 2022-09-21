@@ -1,9 +1,16 @@
-import styles from './styles.module.css';
+import style from './index.module.css';
 
+/**
+ * Footer
+ *
+ * @export
+ * @param {string} data
+ * @return {string} VSX
+ */
 export default function Footer(data) {
   return (`
-    <footer class="${styles.footer}">
-      <h2 class="${styles.heading}">${data}</h2>
+    <footer class="${style.footer}">
+      <h2 class="${style.heading}">${data}</h2>
     </footer>
   `);
 }

@@ -1,11 +1,11 @@
 import classnames from 'classnames';
-import styles from './styles.module.css';
+import style from './index.module.css';
 
 export default function Icon(icon) {
 
   const classes = classnames(
-    styles.icon,
-    icon.active && styles.active
+    style.icon,
+    icon.active && style.active
   );
 
   return (`
