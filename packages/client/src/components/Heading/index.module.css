@@ -1,12 +1,14 @@
+@import "open-props/blue";
+
 .h1 {
-  color: #154380;
-  font-size: 1.4em;
+  color: var(--blue-8);
+  font-size: 1.2em;
   margin-bottom: 0.2em;
   font-weight: 700;
 }
 
 .h2 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 1em;
   font-weight: 600;
 }

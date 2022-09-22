@@ -1,5 +1,9 @@
+@import "open-props/green";
+
 .date {
+  font-size: 1.1em;
+  color: var(--green-9);
+  padding-bottom: 0.6em;
   border-bottom:  1px solid #676767;
-  font-size: 0.8em;
   margin: 0 0 2em 0;
 }
