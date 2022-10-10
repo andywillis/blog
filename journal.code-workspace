@@ -10,6 +10,7 @@
 		],
 		"js/ts.implicitProjectConfig.strictFunctionTypes": false,
 		"js/ts.implicitProjectConfig.strictNullChecks": false,
-		"js/ts.implicitProjectConfig.checkJs": false
+		"js/ts.implicitProjectConfig.checkJs": false,
+		"javascript.validate.enable": false
 	}
 }

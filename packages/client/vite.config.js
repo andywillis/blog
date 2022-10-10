@@ -1,10 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { splitVendorChunkPlugin, defineConfig } from 'vite';
 
-import compress from 'vite-plugin-compress';
-
 export default defineConfig({
-  plugins: [ compress(), splitVendorChunkPlugin() ],
+  plugins: [ splitVendorChunkPlugin() ],
   root: 'src',
   server: {
     port: 3000,
@@ -17,6 +14,9 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'build'
+    target: 'esnext',
+    outDir: '../dist',
+    emptyOutDir: true,
+    sourcemap: true
   }
 });
