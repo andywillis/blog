@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "concurrently \"pnpm run serverdev\" \"pnpm run clientdev\"",
+    "prod": "pnpm run clientbuild & pnpm run serverprod",
     "clientbuild": "pnpm --filter client run build",
     "clientdev": "pnpm --filter client run dev",
     "serverdev": "pnpm --filter server run dev",
+    "serverprod": "pnpm --filter server run prod",
     "databasedev": "pnpm --filter database run dev",
     "heroku-postbuild": "pnpm run build",
     "testui": "npx vitest watch --ui --threads false",
