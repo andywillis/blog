@@ -21,7 +21,6 @@ html, body {
 
 body {
   font-family: 'Maitree', 'Amiri', serif;
-  /* font-family: Courier, serif; */
   font-size: calc(18px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

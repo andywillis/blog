@@ -1,8 +1,10 @@
+@import "open-props/teal";
+
 .tag {
   font-size: 0.7em;
   color: black;
-  background-color: #d6dce4;
-  border: 1px solid #bcbcbc;
+  background-color: var(--teal-1);
+  border: 1px solid var(--teal-3);
   padding: 0.2em 0.6em;
   display: inline-block;
   border-radius: 5px;
@@ -14,5 +16,5 @@
 
 .tag:hover {
   cursor: pointer;
-  background-color: #9CB0C9;
+  background-color: var(--teal-4);
 }
