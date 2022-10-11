@@ -2,6 +2,10 @@
   "name": "journal",
   "private": true,
   "version": "0.0.0",
+  "engines" : { 
+    "npm" : ">=8.0.0",
+    "node" : ">=17.0.0"
+  },
   "scripts": {
     "dev": "concurrently \"pnpm run serverdev\" \"pnpm run clientdev\"",
     "prod": "pnpm run clientbuild & pnpm run serverprod",
