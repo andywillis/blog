@@ -4,6 +4,7 @@ export default defineConfig({
   plugins: [ splitVendorChunkPlugin() ],
   root: 'src',
   server: {
+    open: true,
     port: 3000,
     proxy: {
       '/journal': {
@@ -15,7 +16,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: '../dist',
+    outDir: '../build',
     emptyOutDir: true,
     sourcemap: true
   }
