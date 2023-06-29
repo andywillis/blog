@@ -1,8 +1,0 @@
-{
-  "parserOptions": {
-    "requireConfigFile": false
-  },
-  "env": {
-    "browser": true
-  }
-}
