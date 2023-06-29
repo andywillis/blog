@@ -1,8 +1,6 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
+    "airbnb-base"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -11,17 +9,9 @@
     "babelOptions": {
       "plugins": [
         "@babel/plugin-syntax-import-assertions"
-      ],
-      "presets": ["babel-preset-preact"]
+      ]
     }
   },
-  "globals": {
-    "React": true
-  },
-  "plugins": [
-    "jsx-a11y",
-    "react-hooks"
-  ],
   "settings": {
     "import/resolver": {
       "node": {
@@ -33,25 +23,16 @@
     "browser": true
   },
   "rules": {
-    // Fix class for preact
-    "react/no-unknown-property": ["error", { "ignore": [ "class" ]}],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "import/extensions": [0, {
       "css": "never",
       "js": "never",
       "jsx": "never",
       "json": "never"
     }],
-    "react/jsx-props-no-spreading": 0,
     "import/no-extraneous-dependencies": 0,
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     "no-underscore-dangle": 0,
     "no-plusplus": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": 0,
-    "jsx-a11y/img-has-alt": 0,
     "default-case": 0,
     "func-names": 0,
     "consistent-return": 0,
@@ -70,10 +51,6 @@
     "no-shadow": 0,
     "no-param-reassign": 0,
     "no-tabs": 0,
-    "react/jsx-no-bind": 0,
-    "indent": ["error", "tab"],
-    "react/jsx-indent": [2, "tab"],
-    "react/jsx-indent-props": [2, "tab"],
-    "react/function-component-definition": 0
+    "indent": ["error", "tab", { "SwitchCase": 1 }]
   }
 }
