@@ -168,7 +168,7 @@ A walk from Embankment, up The Mall to Buckingham Palace, along <a href="https:/
 # Broadstairs
 ## December 28, 2016
 
-It comes as a surprise to many people, even to those who have lived in the area, that the water that plays alongs the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.
+It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.
 
 ![Photo of the North Sea from the coast near Broadstairs 800x449][1]
 
