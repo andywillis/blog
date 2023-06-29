@@ -1,4 +1,4 @@
-## Parkes Operation Center (Apollo 11),
+## Parkes Operation Center (Apollo 11)
 ### Tuesday, 26 July 2022
 
 Just finished watching [The Dish][wikipedia] - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was "based on" the actual events the film-makers used fictional characters.
@@ -234,7 +234,7 @@ Tags: nan, war, hospital
 
 ---
 
-## My Great Grandad, George W. Smith.",
+## My Great Grandad, George W. Smith.
 ### Sunday, 1 January 2006
 
 Organised the first Kent miner's strike.
