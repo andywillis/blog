@@ -1,70 +1,75 @@
-# Parkes Operation Center (Apollo 11),
-## Tuesday, 26 July 2022
-
-Just finished watching <a href="https://en.wikipedia.org/wiki/The_Dish">"The Dish"</a> - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was "based on" the actual events the film-makers used fictional characters.
-
-But I managed to <a href="https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html">unearth this brilliant photo of the actual operations team</a>. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).
-
-![Parkes Operations Team 1969 512x425][1]
+## Parkes Operation Center (Apollo 11)
+### Tuesday, 26 July 2022
 
 * thedish
 * parkes
 * apollo11
 
-[1]: https://www.parkes.atnf.csiro.au/news_events/apollo11/images/nasa_technicians.jpg
+Just finished watching [The Dish][wikipedia] - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was "based on" the actual events the film-makers used fictional characters.
 
----
+But I managed to [unearth this brilliant photo of the actual operations team][parkes]. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).
 
-# Ramsgate Sands
-## Tuesday, 18 December 2018
+![Parkes Operations Team 1969 512x425][original-team]
 
-This is the view from the other side of Sandwich Bay where it hugs the Cliffsend coast to the south of Ramsgate Harbour. This looks back toward the Bay, and is the outer reach of the low tide. Here the North Sea drains away to leave vast stretches of sand for the thousands of sea birds that make their home here.
+[wikipedia]: https://en.wikipedia.org/wiki/The_Dish
+[parkes]: https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html
+[original-team]: https://www.parkes.atnf.csiro.au/news_events/apollo11/images/nasa_technicians.jpg
 
-![Ramsgate Sands 800x449][1]
+----
+
+## Ramsgate Sands
+### Tuesday, 18 December 2018
 
 * ramsgatesands
 * sunset
 
-[1]: https://farm5.staticflickr.com/4911/31469292557_c51423babb.jpg
+This is the view from the other side of Sandwich Bay where it hugs the Cliffsend coast to the south of Ramsgate Harbour. This looks back toward the Bay, and is the outer reach of the low tide. Here the North Sea drains away to leave vast stretches of sand for the thousands of sea birds that make their home here.
 
----
+![Ramsgate Sands 800x449][sands]
 
-# Sandwich Bay, Kent
-## October 31, 2018
+[sands]: https://farm5.staticflickr.com/4911/31469292557_c51423babb.jpg
 
-Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling out as we arrived, and slowly merged with the horizon as we walked along towards Shellness Point where the seals basked in the low Autumn sun."
+----
 
-![Sandwich Bay 800x449][1]
-![Sandwich Bay 800x449][2]
+## Sandwich Bay, Kent
+### Wednesday, 31 October 2018
 
 * sandwichbay
 * beach
 * autumn
 * lowtide
 
-[1]: https://farm2.staticflickr.com/1953/30710154627_8a80c81bfe.jpg
-[2]: https://farm2.staticflickr.com/1975/45651025001_56a69daaf2.jpg
+Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling out as we arrived, and slowly merged with the horizon as we walked along towards Shellness Point where the seals basked in the low Autumn sun."
 
----
+![Sandwich Bay 800x449][bay1]
+![Sandwich Bay 800x449][bay2]
 
-# Dungeness
-## September 30, 2017
+[bay1]: https://farm2.staticflickr.com/1953/30710154627_8a80c81bfe.jpg
+[bay2]: https://farm2.staticflickr.com/1975/45651025001_56a69daaf2.jpg
 
+----
+
+## Dungeness
+### Saturday, 30 September 2017
 
 * dungeness
 * beach
 * windswept
 
-![Dungeness beach 800x449][1]
-![Ship high on the beach 480x800][2]
+![Dungeness beach 800x449][beach]
+![Ship high on the beach 480x800][ship]
 
-[1]: https://farm5.staticflickr.com/4497/36861332483_823053a587.jpg
-[2]: https://farm5.staticflickr.com/4479/37530502011_35f391476d.jpg
+[beach]: https://farm5.staticflickr.com/4497/36861332483_823053a587.jpg
+[ship]: https://farm5.staticflickr.com/4479/37530502011_35f391476d.jpg
 
----
+----
 
-# Flickr images for responsive sites
-## August 21, 2017
+## Flickr images for responsive sites
+### Monday, 21 August 2017
+
+* images
+* responsive
+* flickr
 
 Today I implemented basic responsive images for this site in order to improve the performance, and it took less than an hour thanks - mainly - to Flickr.
 
@@ -73,7 +78,7 @@ When you upload a new image to Flickr the service will automatically create and 
 For reference here's a list of the sizes along with their sizeIds based on an original image size of 2592x1456. Those marked with an asterisk are those sizes used for the devices that might visit this site.
 
 | Type      | Dimensions | ID  |
-| ----------|------------|-----|
+| -------------|----------------|------|
 | Square    | 75x75      | s   |
 | Thumbnail | 100x56     | t   |
 | Square    | 150x150    | q   |
@@ -87,51 +92,54 @@ For reference here's a list of the sizes along with their sizeIds based on an or
 | Large     | 2048x1150  | k   |
 | Original  | 2592x1456  | o   |
 
-* images
-* responsive
-* flickr
+----
 
----
-
-# Akule
-## August 15, 2017
+## Akule
+### Tuesday, 15 August 2017
 
 * ocean
 * photography
 * underwater
 * hawaii
 
-"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href="http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii/">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>" - Wayne Levin"
+"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, [I want to make images, not to explain or clarify that world, but to deepen the mystery.][hawaii]" - Wayne Levin"
 
-![Pretty school of fish 535x800][1]
+![Pretty school of fish 535x800][school]
 
-[1]: https://farm5.staticflickr.com/4372/35782338684_6e03d00bc6.jpg
+[hawaii]: http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii
+[school]: https://farm5.staticflickr.com/4372/35782338684_6e03d00bc6.jpg
 
----
+----
 
-# Wimbledon Common
-## July 31, 2017
-
-This is the pond I was lazing by when I heard the sad news that Sam Shepard had died.
-
-![Pond on the East side of Wimbledon Common 800x449][1]
+## Wimbledon Common
+### Monday, 31 July 2017
 
 * wimbledoncommon
 * pond
 * samshepard
 
-[1]: https://farm5.staticflickr.com/4291/36160259971_b9bdc0331a.jpg
+This is the pond I was lazing by when I heard the sad news that Sam Shepard had died.
 
----
+![Pond on the East side of Wimbledon Common 800x449][common]
 
-# This site
-## June 24, 2017
+[common]: https://farm5.staticflickr.com/4291/36160259971_b9bdc0331a.jpg
 
-This site is <a href="https://github.com/andywillis/uws">an on-going React/Redux project</a> to build and maintain an online static-site generated journal that looks good on both mobile and desktop. Initially this was going to be a one-shot experiment, but as I lean into different tech each month this has become a useful battle-tested area for me to test each tech out.
+----
+
+## This site
+### Saturday, 24 June 2017
+
+* express
+* react
+* reactrouter
+* markdown
+* journal
+
+This site is [an on-going React/Redux project][uws] to build and maintain an online static-site generated journal that looks good on both mobile and desktop. Initially this was going to be a one-shot experiment, but as I lean into different tech each month this has become a useful battle-tested area for me to test each tech out.
 
 In the first release, for example, I decided to not implement Redux so I could concentrate on the React component workflow instead. I added Redux in the second release. And, while I'm a fan of CSS modules, it makes sense to start testing CSS-in-JS here too to see what all the fuss is about.
 
-## Process breakdown
+### Process breakdown
 
 All the text on this site was generated from a markdown file (currently only 4k in size) hosted on my Google Drive account.
 
@@ -141,82 +149,85 @@ Once the site is loaded I use <code>redux-thunk</code> to grab the data from the
 
 This system means I can update the markdown file whenever I want from either my desktop or phone without the hassle of accessing a site admin panel to add a post knowing that within 30 minutes those words will be available on the site.
 
-* express
-* react
-* reactrouter
-* markdown
-* journal
+[uws]: https://github.com/andywillis/uws
 
----
+----
 
-# A Tuesday Wander
-## May 16, 2017"
-
-A walk from Embankment, up The Mall to Buckingham Palace, along <a href="https://c1.staticflickr.com/5/4194/33905597993_40dcd32263.jpg">Green Park</a> up to Hyde Park, through the park along the lake with the talkative geese, across to Kensington Palace <a href="http://www.metafilter.com">Gardens</a>, and out on to the road via <a href="https://c1.staticflickr.com/5/4185/34330714870_ae972fe467.jpg">the church</a>, finally heading down to Earl's Court.
-
-![Map of the walk from Embankment to Earl's Court 800x384][1]
+## A Tuesday Wander
+### Tuesday, 16 May 2017
 
 * kensingtonchurch
 * greenpark
 * london
 * hydepark
 
-[1]: https://c1.staticflickr.com/5/4175/34335985270_811e152740.jpg
+A walk from Embankment, up The Mall to Buckingham Palace, along [Green Park][greenpark] up to Hyde Park, through the park along the lake with the talkative geese, across to Kensington Palace Gardens, and out on to the road via [the church][church], finally heading down to Earl's Court.
 
----
+![Map of the walk from Embankment to Earl's Court 800x384][walk]
 
-# Broadstairs
-## December 28, 2016
+[greenpark]: https://c1.staticflickr.com/5/4194/33905597993_40dcd32263.jpg
+[church]: https://c1.staticflickr.com/5/4185/34330714870_ae972fe467.jpg
+[walk]: https://c1.staticflickr.com/5/4175/34335985270_811e152740.jpg
 
-It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.
+----
 
-![Photo of the North Sea from the coast near Broadstairs 800x449][1]
-
-If you were to imagine a line that crossed the sea in an ENE direction from Leathercoate Point, where the war memorial commemorating the Dover Patrol stands North of St. Margaret's Bay, to Walde Lighthouse just North of Calais, that line demarks where the Sea becomes the Channel.
-
-![Photo of the North Sea from the coast near Broadstairs 800x450][2]
+## Broadstairs
+### Wednesday, 28 December 2016
 
 * broadstairs
 * northsea
 * beach
 * ocean
 
-[1]: https://c1.staticflickr.com/1/602/31912173126_bbdfc7aee1.jpg
-[2]: https://c1.staticflickr.com/1/568/31912171456_8cbdda4cd8.jpg
+It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.
 
+![Photo of the North Sea from the coast near Broadstairs 800x449][north-sea]
 
----
+If you were to imagine a line that crossed the sea in an ENE direction from Leathercoate Point, where the war memorial commemorating the Dover Patrol stands North of St. Margaret's Bay, to Walde Lighthouse just North of Calais, that line demarks where the Sea becomes the Channel.
 
-# Wimbledon Common
+![Photo of the North Sea from the coast near Broadstairs 800x450][north-sea2]
 
-![The sun's rays shine through the foliage of a tree on the Common 800x449][1]
+[north-sea]: https://c1.staticflickr.com/1/602/31912173126_bbdfc7aee1.jpg
+[north-sea2]: https://c1.staticflickr.com/1/568/31912171456_8cbdda4cd8.jpg
+
+----
+
+## Wimbledon Common
+### Saturday, 31 December 2016
 
 * wimbledon
 * wimbledoncommon
 
-[1]: https://c1.staticflickr.com/1/329/31893590755_8a00661ac1.jpg
+![The sun's rays shine through the foliage of a tree on the Common 800x449][sun]
 
----
-# Montevideo, Uruguay
+[sun]: https://c1.staticflickr.com/1/329/31893590755_8a00661ac1.jpg
 
-![The beach North of Montevideo, Uruguay 800x449][1]
+----
+
+## Montevideo, Uruguay
+### Thursday, July 16 2015
 
 * uruguay
 * beach
 * ocean
 
-[1]: https://c1.staticflickr.com/1/460/19731108126_c55eec191a.jpg
+![The beach North of Montevideo, Uruguay 800x449][uruguay]
 
----
+[uruguay]: https://c1.staticflickr.com/1/460/19731108126_c55eec191a.jpg
 
-# Disney's The Black Hole
-## April 03, 2012
+----
 
-This is one of the many images rendered by my <a href="https://github.com/andywillis/spotmaps">spotmaps</a> <a href="https://github.com/andywillis/spotmap-pipeline">application</a>.
+## Disney's The Black Hole
+### Tuesday, 3 April 2012
+
+* theblackhole
+* spotmaps
+
+This is one of the many images rendered by my [spotmaps][spotmaps] application.
 
 From the original site:
 
-> Spotmaps, based on Brendan Dawes' <a href="http://brendandawes.com/projects/cinemaredux">Cinema Redux</a>, is an on-going project to map the colour narratives of different films.
+> Spotmaps, based on Brendan Dawes' [Cinema Redux][redux], is an on-going project to map the colour narratives of different films.
 
 > Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames.
 
@@ -224,58 +235,59 @@ From the original site:
 
 > A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap.
 
-![Black Hole spotmap 532x800][1]
+![Black Hole spotmap 532x800][blackhole]
 
-More images can be found <a href="https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787/">here on Flickr</a>.
+More images can be found [here on Flickr][flickr].
 
-There are also a couple of online articles about the spotmaps website on <a href="http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels">FastCoDesign</a>, and <a href="http://gizmodo.com/5972740/the-color-of-movies-visualized">Gizmodo</a>.
+There are also a couple of online articles about the spotmaps website on [FastCoDesign][fastco], and [Gizmodo][gizmodo].
 
-* theblackhole
-* spotmap
+[spotmaps]: https://github.com/andywillis/spotmaps
+[redux]: http://brendandawes.com/projects/cinemaredux
+[flickr]: https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787
+[fastco]: http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels
+[gizmodo]: http://gizmodo.com/5972740/the-color-of-movies-visualized
+[blackhole]: https://farm5.staticflickr.com/4366/35888008014_d2941d2375.jpg
 
-[1]: https://farm5.staticflickr.com/4366/35888008014_d2941d2375.jpg
+----
 
----
-
-# Nan
-## January 01, 2006
-
-Nan is on the right.
-
-![Nan in an operating theatre (black and white) 800x474][1]
+## Nan
+### Sunday, 1 January 2006
 
 * nan
 * war
 * hospital
 
-[1]: https://farm1.staticflickr.com/35/71621166_34f71281e7.jpg
+Nan is on the right.
 
----
+![Nan in an operating theatre (black and white) 800x474][nan]
 
-# My Great Grandad, George W. Smith.",
-## January 01, 2006
+[nan]: https://farm1.staticflickr.com/35/71621166_34f71281e7.jpg
 
-Organised the first Kent miner's strike.
+----
 
-![My great-grandfather, George 500x431][1]
+## My Great Grandad, George W. Smith.
+### Sunday, 1 January 2006
 
 * greatgranddad
 * miner
 * kent
 * dover
 
-[1]: https://farm1.staticflickr.com/20/72584528_bb9fe13cde.jpg
+Organised the first Kent miner's strike.
 
----
+![My great-grandfather, George 500x431][george]
 
-# Dirty Cow
-## January 01, 2000
+[george]: https://farm1.staticflickr.com/20/72584528_bb9fe13cde.jpg
 
-![Massive papier-mache cow on the roof of Fortress Studios 569x800][1]
+----
+
+## Dirty Cow
+### Sunday, 1 January 2000
 
 * cow
 * dirtycow
-* 2000
 * newyear
 
-[1]: https://farm1.staticflickr.com/40/90764612_de3f3bef39.jpg
+![Massive papier-mache cow on the roof of Fortress Studios 569x800][cow]
+
+[cow]: https://farm1.staticflickr.com/40/90764612_de3f3bef39.jpg

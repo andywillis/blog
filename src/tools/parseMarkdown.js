@@ -1,12 +1,19 @@
-const jsdom = require('jsdom');
-const markdown = require('markdown-it')();
+import jsdom from 'jsdom';
+import MarkdownIt from 'markdown-it';
+import fs from 'fs/promises';
+
+import rootname from '../../rootname.js';
+
+const markdownData = await fs.readFile(`${rootname}/src/data/journal.md`, 'utf8');
+
+const markdownParser = MarkdownIt();
 
 const { JSDOM } = jsdom;
 const { document } = (new JSDOM('<div>')).window;
 const div = document.querySelector('div');
 
-function splitMarkdown(md, sep) {
-	return md.split(sep).reverse();
+function splitMarkdown(markdown, delimiter) {
+	return markdown.split(delimiter); // .reverse();
 }
 
 function removeElement(el) {
@@ -14,20 +21,20 @@ function removeElement(el) {
 }
 
 function getTitle(parent) {
-	const element = parent.querySelector('h1');
-	const text = element.textContent;
-	removeElement(element);
-	return text;
-}
-
-function getDate(parent) {
 	const element = parent.querySelector('h2');
 	const text = element.textContent;
 	removeElement(element);
 	return text;
 }
 
-function getTags(parent) {
+function getDate(parent) {
+	const element = parent.querySelector('h3');
+	const text = element.textContent;
+	removeElement(element);
+	return text;
+}
+
+function getList(parent) {
 	const element = parent.querySelector('ul');
 	const items = element.querySelectorAll('li');
 	const tags = [...items].map((tag, i) => {
@@ -48,11 +55,16 @@ function getLink(id, title) {
 
 function getBody(el) {
 
-	const selector = 'p, h2, h3, h4, blockquote, img, table';
+	const selector = 'p, h2, h3, h4, blockquote, img, table, ul';
 
 	return [...el.querySelectorAll(selector)].reduce((p, c, i) => {
 
 		switch (c.nodeName) {
+
+			case 'UL': {
+				p.push({ id: i, type: 'list', html: c.innerHTML });
+				break;
+			}
 
 			case 'TABLE': {
 				p.push({ id: i, type: 'table', html: c.innerHTML });
@@ -94,12 +106,14 @@ function getBody(el) {
 }
 
 function buildEntry(md, id) {
-	const html = markdown.render(md);
+	
+	const html = markdownParser.render(md);
+	
 	div.innerHTML = html;
 
 	const title = getTitle(div);
 	const date = getDate(div);
-	const tags = getTags(div);
+	const tags = getList(div);
 	const link = getLink(id, title);
 	const body = getBody(div);
 	const cdata = div.innerHTML.trim();
@@ -129,9 +143,9 @@ function buildTagList(entries) {
 
 function processMarkdown(markdown) {
 	return new Promise((resolve, reject) => {
-		const sep = '\r\n\r\n----\r\n\r\n';
-		const markdownArr = splitMarkdown(markdown, sep);
-		const entries = markdownArr.map(buildEntry).reverse();
+		const delimiter = '\n\n----\n\n';
+		const markdownArr = splitMarkdown(markdown, delimiter);
+		const entries = markdownArr.map(buildEntry); // .reverse();
 		const links = entries.map(entry => entry.link);
 		const tags = buildTagList(entries);
 		try {
@@ -142,4 +156,7 @@ function processMarkdown(markdown) {
 	});
 }
 
-module.exports = processMarkdown;
+const data = await processMarkdown(markdownData);
+await fs.writeFile(`${rootname}/src/data/journal.json`, JSON.stringify(data), 'utf8');
+
+export default processMarkdown;
