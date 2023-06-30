@@ -34,11 +34,11 @@ function getDate(parent) {
 	return text;
 }
 
-function getList(parent) {
+function getTags(parent) {
 	const element = parent.querySelector('ul');
 	const items = element.querySelectorAll('li');
 	const tags = [...items].map((tag, i) => {
-		return { id: i, txt: tag.textContent };
+		return { id: i, tag: tag.textContent };
 	});
 	removeElement(element);
 	return tags;
@@ -113,7 +113,7 @@ function buildEntry(md, id) {
 
 	const title = getTitle(div);
 	const date = getDate(div);
-	const tags = getList(div);
+	const tags = getTags(div);
 	const link = getLink(id, title);
 	const body = getBody(div);
 	const cdata = div.innerHTML.trim();
