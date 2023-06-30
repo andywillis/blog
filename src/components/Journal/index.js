@@ -12,11 +12,11 @@ import style from './index.module.css';
  * @return {string} Template
  */
 export default function Journal(journal) {
-  return (`
-    <div class="${style.journal}">
-      ${Header()}
-      ${Entries(journal.entries)}
-      ${Footer(`© Andy Willis ${new Date().getFullYear()}`)}
-    </div>
-  `);
+	return (`
+		<div class="${style.journal}">
+			${Header()}
+			${Entries(journal.entries)}
+			${Footer(`© Andy Willis ${new Date().getFullYear()}`)}
+		</div>
+	`);
 }

@@ -8,9 +8,9 @@ import style from './index.module.css';
  * @return {string} VSX
  */
 export default function Footer(data) {
-  return (`
-    <footer class="${style.footer}">
-      <h2 class="${style.heading}">${data}</h2>
-    </footer>
-  `);
+	return (`
+		<footer class="${style.footer}">
+			<h2 class="${style.heading}">${data}</h2>
+		</footer>
+	`);
 }
