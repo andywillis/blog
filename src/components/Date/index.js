@@ -1,5 +1,7 @@
-import style from './index.module.css';
+// import style from './index.module.css';
+
+import Heading from '../Heading';
 
 export default function Date(data) {
-	return `<p class=${style.date}>${data}</p>`;
+	return `${Heading({ level: 'h3', text: data })}`;
 }

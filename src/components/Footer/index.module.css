@@ -1,14 +1,16 @@
 @import "open-props/blue";
 
 .footer {
-  font-size: 0.6em;
-  text-align: right;
-  width: 100%;
-  padding: 0.5em;
-  top: 100vh;
-  position: sticky;
-  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: var(--size-rem-lg);
+  line-height: 1.2rem;
+  /* top: var(--viewport-height-100); */
+  padding-right: var(--size-rem-md);
+  /* position: sticky; */
+  margin-top: 3em;
   border-top: 1px inset var(--blue-4);
   background-color: var(--blue-0);
-  color: var(--blue-9);
+  color: var(--gray-9);
 }
