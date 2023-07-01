@@ -3,8 +3,8 @@
 .tag {
   font-size: 1rem;
   color: black;
-  background-color: var(--orange-1);
-  border: 1px solid var(--orange-3);
+  background-color: var(--green-1);
+  border: 1px solid var(--green-3);
   padding: 0.2em 0.6em;
   display: inline-block;
   border-radius: 5px;
@@ -16,5 +16,5 @@
 
 .tag:hover {
   cursor: pointer;
-  background-color: var(--orange-2);
+  background-color: var(--green-2);
 }

@@ -3,7 +3,7 @@
 @import "open-props/red";
 
 .paragraph { 
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .paragraph:not(:last-child) { margin-bottom: 1em; }
@@ -21,4 +21,8 @@
 .paragraph a:hover {
   cursor: pointer;
   background-color: var(--blue-1);
+}
+
+.paragraph code {
+  color: var(--blue-7);
 }

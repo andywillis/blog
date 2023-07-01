@@ -73,7 +73,7 @@ Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling ou
 
 Today I implemented basic responsive images for this site in order to improve the performance, and it took less than an hour thanks - mainly - to Flickr.
 
-When you upload a new image to Flickr the service will automatically create and host new sizes of that image. Those copies can be requested through a simple http request (no need to use the API if you don't need to) according to a simple formula: <code>filename[_sizeId].jpg</code>.
+When you upload a new image to Flickr the service will automatically create and host new sizes of that image. Those copies can be requested through a simple http request (no need to use the API if you don't need to) according to a simple formula: `filename[_sizeId].jpg`.
 
 For reference here's a list of the sizes along with their sizeIds based on an original image size of 2592x1456. Those marked with an asterisk are those sizes used for the devices that might visit this site.
 
@@ -143,9 +143,9 @@ In the first release, for example, I decided to not implement Redux so I could c
 
 All the text on this site was generated from a markdown file (currently only 4k in size) hosted on my Google Drive account.
 
-I use Express to grab that file every 30 minutes, wrangle the data into an array of entries, and store it. There is a single API route <code>/entries</code> that React uses to get the data.
+I use Express to grab that file every 30 minutes, wrangle the data into an array of entries, and store it. There is a single API route `/entries` that React uses to get the data.
 
-Once the site is loaded I use <code>redux-thunk</code> to grab the data from the server and store it in a Redux state for React to use. React-router 4 provides a stable routing interface.
+Once the site is loaded I use `redux-thunk` to grab the data from the server and store it in a Redux state for React to use. React-router 4 provides a stable routing interface.
 
 This system means I can update the markdown file whenever I want from either my desktop or phone without the hassle of accessing a site admin panel to add a post knowing that within 30 minutes those words will be available on the site.
 
