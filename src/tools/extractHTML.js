@@ -1,9 +1,22 @@
+import { minify } from 'html-minifier';
 import fs from 'fs/promises';
 
 import rootname from '../../rootname.js';
 
-import html from '../../build/boo.js';
+import html from '../../build/bundle.js';
 
-console.log(html);
+const placeholder = await fs.readFile(`${rootname}/src/index_placeholder.html`, 'utf8');
 
+const replaced = placeholder.replace('{main}', html);
 
+const minified = minify(replaced, {
+	removeAttributeQuotes: true,
+	collapseWhitespace: true,
+	removeComments: true,
+	removeOptionalTags: true,
+	removeTagWhitespace: true
+});
+
+await fs.writeFile(`${rootname}/build/bundle.html`, minified, 'utf8');
+
+console.log('File written');
