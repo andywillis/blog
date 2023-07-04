@@ -11,7 +11,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "toMD": "node src/tools/parseMarkdown.js"
+    "toMD": "node src/tools/parseMarkdown.js",
+    "compileIndex": "node src/tools/compileIndex.js",
+    "compileJournal": "rollup --config && node src/tools/compileIndex.js"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -23,10 +25,18 @@
     "@babel/core": "^7.22.5",
     "@babel/eslint-parser": "^7.22.5",
     "@babel/plugin-syntax-import-assertions": "^7.22.5",
+    "@rollup/plugin-json": "6.0.0",
+    "@rollup/plugin-node-resolve": "15.1.0",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "^2.25.2",
+    "html-minifier": "4.0.0",
+    "postcss": "8.4.24",
+    "postcss-import": "15.1.0",
+    "postcss-import-url": "7.2.0",
     "postcss-nesting": "11.3.0",
+    "rollup": "3.26.0",
+    "rollup-plugin-postcss": "4.0.2",
     "vite": "^4.3.9",
     "vite-plugin-compression": "0.5.1"
   }

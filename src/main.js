@@ -2,6 +2,6 @@ import Journal from './components/Journal';
 
 import data from './data/journal.json';
 
-import './styles/global.module.css';
+const html = Journal(data);
 
-document.body.innerHTML = Journal(data);
+document.body.innerHTML = html;

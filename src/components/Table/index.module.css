@@ -1,5 +1,3 @@
-@import "open-props/gray";
-
 :root {
   --border-color: var(--gray-4);
 }

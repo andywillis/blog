@@ -1,17 +1,17 @@
-@import "open-props/blue";
-
 .header {
   display: flex;
   flex-direction: row;
-  padding: 1em;
+  align-items: center;
   background-color: var(--blue-0);
   color: var(--blue-9);
   border-bottom: 1px inset var(--blue-4);
-  margin-bottom: 2em;
+  padding-left: var(--size-rem-md);
+  margin-bottom: 3rem;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  align-items: center;
+  padding: 0;
 }
