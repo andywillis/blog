@@ -838,6 +838,8 @@ var data = {
 	tags: tags
 };
 
-var main_node = Journal(data);
+function compileJournal() {
+	return Journal(data);
+}
 
-export { main_node as default };
+export { compileJournal as default };
