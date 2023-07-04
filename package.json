@@ -13,7 +13,8 @@
     "lint": "eslint",
     "toMD": "node src/tools/parseMarkdown.js",
     "extractHtml": "node src/tools/extractHtml.js",
-    "nodebuild": "rollup --config"
+    "nodebuild": "rollup --config",
+    "vitebuild": "vite build --config vite_node.config.js"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -32,8 +33,11 @@
     "eslint-plugin-import": "^2.25.2",
     "html-minifier": "4.0.0",
     "postcss": "8.4.24",
+    "postcss-import": "15.1.0",
+    "postcss-import-url": "7.2.0",
     "postcss-modules": "6.0.0",
     "postcss-nesting": "11.3.0",
+    "postcss-preset-env": "9.0.0",
     "rollup": "3.26.0",
     "rollup-plugin-postcss": "4.0.2",
     "vite": "^4.3.9",

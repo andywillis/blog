@@ -7,7 +7,9 @@ import html from '../../build/bundle.js';
 
 const placeholder = await fs.readFile(`${rootname}/src/index_placeholder.html`, 'utf8');
 
-const replaced = placeholder.replace('{main}', html);
+const replaced = placeholder
+	.replace('{stylesheet}', '<link rel="stylesheet" href="bundle.css" />')
+	.replace('{html}', html);
 
 const minified = minify(replaced, {
 	removeAttributeQuotes: true,

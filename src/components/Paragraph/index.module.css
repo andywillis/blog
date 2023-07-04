@@ -1,7 +1,3 @@
-@import "open-props/blue";
-@import "open-props/gray";
-@import "open-props/red";
-
 .paragraph { 
   font-size: 1.1rem;
 }

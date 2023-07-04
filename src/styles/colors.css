@@ -1,10 +1,22 @@
-@import 'open-props/green-hsl';
-@import 'open-props/blue-hsl';
-@import 'open-props/gray-hsl';
-@import 'open-props/orange-hsl';
-@import 'open-props/yellow-hsl';
+@import 'open-props/red-hsl.min';
+@import 'open-props/green-hsl.min';
+@import 'open-props/blue-hsl.min';
+@import 'open-props/gray-hsl.min';
+@import 'open-props/orange-hsl.min';
+@import 'open-props/yellow-hsl.min';
 
 :root {
+
+	--red-0: hsl(var(--red-0-hsl));
+	--red-1: hsl(var(--red-1-hsl));
+	--red-2: hsl(var(--red-2-hsl));
+	--red-3: hsl(var(--red-3-hsl));
+	--red-4: hsl(var(--red-4-hsl));
+	--red-5: hsl(var(--red-5-hsl));
+	--red-6: hsl(var(--red-6-hsl));
+	--red-7: hsl(var(--red-7-hsl));
+	--red-8: hsl(var(--red-8-hsl));
+	--red-9: hsl(var(--red-9-hsl));
 
 	--green-0: hsl(var(--green-0-hsl));
 	--green-1: hsl(var(--green-1-hsl));
