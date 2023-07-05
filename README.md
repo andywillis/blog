@@ -1,11 +1,18 @@
 # Journal
 
-An engine to produce a simple compiled index HTML page from a bespoke Preact-like JS component system, and open-props.
+An engine to produce a simple compiled index HTML page from a bespoke Preact-like JS component system that renders markdown.
 
 - Stage 1: React 180K
 - Stage 2: Preact 58K
 - Stage 3: Bespoke system 28K JS + 11K CSS
 - Stage 4: Single minified HTML 23K
+
+## Tools
+
+- Vite
+- Markdown
+- Rollup
+- Open-Props
 
 ## Licence
 

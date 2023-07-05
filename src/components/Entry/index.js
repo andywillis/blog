@@ -8,7 +8,7 @@ import style from './index.module.css';
 export default function Entry(entry, index) {
 	const { date, title, body, tags } = entry;
 	return (`
-		<div class="${style.entry}">
+		<div class="${style.entry}" data-type="entry">
 			${Title(title)}
 			${Date(date)}
 			${Body(body, index)}
