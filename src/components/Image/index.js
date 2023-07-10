@@ -6,6 +6,7 @@ export default function Image({ src, alt }) {
 			<img
 				class="${style.image}"
 				src="${src}"
+				loading="lazy"
 				alt="${alt}"
 			>
 		</div>

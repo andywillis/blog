@@ -1,5 +1,5 @@
 .paragraph { 
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .paragraph:not(:last-child) { margin-bottom: 1em; }
@@ -21,4 +21,10 @@
 
 .paragraph code {
   color: hsl(var(--blue-8-hsl));
+}
+
+@media (min-width: 721px) {
+  .paragraph {
+    font-size: 1.1rem;
+  }
 }

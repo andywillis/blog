@@ -1,9 +1,17 @@
 import style from './index.module.css';
 
-export default function Heading({ level, text }) {
+/**
+ * Heading
+ *
+ * @param {object} { level, type, text }
+ * @return {string}
+ */
+function Heading({ level, type, text }) {
 	return (`
-		<${level} class="${style[level]}">
+		<${level} class="${style[type]}">
 			${text}
 		</${level}>
 	`);
 }
+
+export default Heading;

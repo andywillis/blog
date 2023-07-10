@@ -1,5 +1,5 @@
 .tag {
-  font-size: var(--font-size-2);
+  font-size: 1.4rem;
   /* color: black; */
   /* background-color: var(--green-1);
   border: 1px solid var(--green-3);
@@ -20,4 +20,10 @@
 .tag:hover {
   cursor: pointer;
   background-color: var(--blue-1);
+}
+
+@media (min-width: 721px) {
+  .tag {
+    font-size: 1.1rem;
+  }
 }

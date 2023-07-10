@@ -8,7 +8,7 @@ import style from './index.module.css';
 export default function Header() {
 	return (`
 		<header class="${style.header}">
-			${Heading({ level: 'h1', text: 'Andy Willis' })}
+			${Heading({ level: 'h1', type: 'h1', text: 'Andy Willis' })}
 		</header>
 	`);
 }
