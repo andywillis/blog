@@ -11,7 +11,7 @@
 .paragraph a:active {
   font-size: 1em;
   text-decoration: none;
-  color: var(--red-8);
+  color: hsl(var(--red-9-hsl));
 }
 
 .paragraph a:hover {
@@ -20,5 +20,5 @@
 }
 
 .paragraph code {
-  color: var(--blue-7);
+  color: hsl(var(--blue-8-hsl));
 }

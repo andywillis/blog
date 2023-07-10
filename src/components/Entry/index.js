@@ -1,5 +1,5 @@
 import Date from '../Date';
-import Body from '../Body';
+import Content from '../Content';
 import Tags from '../Tags';
 import Title from '../Title';
 
@@ -8,11 +8,13 @@ import style from './index.module.css';
 export default function Entry(entry, index) {
 	const { date, title, body, tags } = entry;
 	return (`
-		<div class="${style.entry}">
-			${Title(title)}
-			${Date(date)}
-			${Body(body, index)}
+		<section class="${style.entry}" data-type="entry">
+			<header class="${style.header}">
+				${Title(title)}
+				${Date(date)}
+			</header>
+			${Content(body, index)}
 			${Tags(tags)}
-		</div>
+		</section>
 	`);
 }

@@ -1,5 +1,15 @@
+/* .tags > * ~ * {
+	margin: 0 0.25em;
+} */
+
+.tagContainer h3 {
+	margin-bottom: 0.25rem;
+}
+
 .tags {
-	font-size: 0.8em;
+	grid-area: tags;
+	/* grid-column-start: 2; */
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }

@@ -1,3 +1,14 @@
-.entry:not(:last-child) {
-	margin-bottom: 3em;
+.header {
+	border-bottom: 1px dashed hsl(var(--sand-7-hsl));
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 721px) {
+	.entry {
+		display: grid;
+		column-gap: 4rem;
+		grid-template:
+			"heading tags"
+			"content aside" / 3fr 1fr;
+	}	
 }
