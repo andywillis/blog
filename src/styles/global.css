@@ -32,7 +32,7 @@ body {
 		"header"
 		"entries";
 	padding: 1rem;
-	border-left: 5px solid hsl(var(--red-6-hsl));
+	border-left: 5px solid hsl(var(--red-9-hsl) / 70%);
 	margin: 0;
 }
 
@@ -45,7 +45,7 @@ body {
 			"header header header"
 			"entries entries tags"; */
 		padding: 1rem 3rem;
-		border-left: 10px solid hsl(var(--red-6-hsl));
+		border-left: 10px solid hsl(var(--red-9-hsl) / 70%);
 		margin: 0;
 	}
 }
