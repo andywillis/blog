@@ -19,7 +19,7 @@
 .blockquote a:active {
   font-size: 1em;
   text-decoration: none;
-  color: var(--red-8);
+  color: hsl(var(--red-9-hsl));
 }
 
 .blockquote a:hover {

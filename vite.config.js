@@ -1,7 +1,7 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import postcssNesting from 'postcss-nesting';
 import compress from 'vite-plugin-compression';
-import path from 'path';
+// import path from 'path';
 
 export default defineConfig({
 	plugins: [
@@ -10,9 +10,9 @@ export default defineConfig({
 	],
 	root: 'src',
 	css: {
-		modules: {
-			generateScopedName: (name) => name
-		},
+		// modules: {
+		// 	generateScopedName: (name) => name
+		// },
 		postcss: {
 			plugins: [
 				postcssNesting

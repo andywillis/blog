@@ -8,11 +8,15 @@ import style from './index.module.css';
 export default function Entry(entry, index) {
 	const { date, title, body, tags } = entry;
 	return (`
-		<div class="${style.entry}" data-type="entry">
-			${Title(title)}
-			${Date(date)}
+		<section class="${style.entry}" data-type="entry">
+			<header class="${style.header}">
+				${Title(title)}
+				${Date(date)}
+			</header>
 			${Body(body, index)}
-			${Tags(tags)}
-		</div>
+			<footer class="footer">
+				${Tags(tags)}
+			</footer>
+		</section>
 	`);
 }
