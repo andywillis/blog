@@ -1,6 +1,12 @@
 # Journal
 
-An engine to produce a simple compiled index HTML page from a bespoke Preact-like JS component system that renders markdown.
+A simple blog with a focus on accessibility and performance.
+
+All posts are written in markdown. A conversion process renders the markdown to JSON that the component system can use to build the page.
+
+A backend engine produces a simple compiled index HTML page from the rendered page and, eventually, separate pages for each post. The HTML can be progressively enhanced with JS where needed.
+
+Work undertaken:
 
 - Stage 1: React 180K
 - Stage 2: Preact 58K
