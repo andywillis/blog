@@ -1,18 +1,23 @@
 .tag {
-  font-size: 1rem;
-  color: black;
-  background-color: var(--green-1);
+  font-size: var(--font-size-2);
+  /* color: black; */
+  /* background-color: var(--green-1);
   border: 1px solid var(--green-3);
-  padding: 0.2em 0.6em;
+  padding: 0.2em 0.6em; */
   display: inline-block;
-  border-radius: 5px;
+  color: hsl(var(--red-9-hsl));
+  /* border-radius: 5px; */
 }
 
-.tag:not(:last-child) {
+/* .tag:not(:last-child)::after {
+  content: ','
+} */
+
+/* .tag:not(:last-child) {
   margin-right: 0.25em;
-}
+} */
 
 .tag:hover {
   cursor: pointer;
-  background-color: var(--green-2);
+  background-color: var(--blue-1);
 }

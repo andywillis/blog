@@ -1,5 +1,5 @@
 import Date from '../Date';
-import Body from '../Body';
+import Content from '../Content';
 import Tags from '../Tags';
 import Title from '../Title';
 
@@ -13,10 +13,8 @@ export default function Entry(entry, index) {
 				${Title(title)}
 				${Date(date)}
 			</header>
-			${Body(body, index)}
-			<footer class="footer">
-				${Tags(tags)}
-			</footer>
+			${Content(body, index)}
+			${Tags(tags)}
 		</section>
 	`);
 }

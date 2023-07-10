@@ -2,9 +2,9 @@ import Section from '../Section';
 
 import style from './index.module.css';
 
-export default function Body(sections) {
+export default function Content(sections) {
 	return (`
-		<div class="${style.body}">
+		<div class="${style.content}">
 			${sections.map(Section).join('')}
 		</div>
 	`);
