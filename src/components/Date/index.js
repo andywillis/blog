@@ -3,5 +3,9 @@
 import Heading from '../Heading';
 
 export default function Date(data) {
-	return `${Heading({ level: 'h3', text: data })}`;
+	return `${Heading({
+		level: 'h3',
+		type: 'date',
+		text: data
+	})}`;
 }

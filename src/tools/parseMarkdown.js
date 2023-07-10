@@ -85,18 +85,18 @@ function getBody(el) {
 				break;
 			}
 
-			case 'H2': {
-				p.push({ id: i, type: 'h2', txt: c.textContent });
-				break;
-			}
+			// case 'H2': {
+			// 	p.push({ id: i, type: 'h2', text: c.textContent });
+			// 	break;
+			// }
 
 			case 'H3': {
-				p.push({ id: i, type: 'h3', txt: c.textContent });
+				p.push({ id: i, type: 'h3', text: c.textContent });
 				break;
 			}
 
 			case 'H4': {
-				p.push({ id: i, type: 'h4', txt: c.textContent });
+				p.push({ id: i, type: 'h4', text: c.textContent });
 				break;
 			}
 
