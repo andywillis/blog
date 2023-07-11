@@ -5,8 +5,9 @@ export default function Image({ src, alt }) {
 		<div class="${style.imageContainer}">
 			<img
 				class="${style.image}"
+				width="800px"
+				height="500px"
 				src="${src}"
-				loading="lazy"
 				alt="${alt}"
 			>
 		</div>

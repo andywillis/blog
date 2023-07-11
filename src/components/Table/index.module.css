@@ -17,6 +17,7 @@
     font-size: 1.1rem;
   }
 }
+
 .table thead {
   text-align: left;
   border-bottom: 1px solid var(--gray-7);
@@ -28,6 +29,7 @@
 }
 
 .table tbody td {
+  border: var(--size-px-01) solid var(--color-sand-regular);
   padding: 0.4em 0.8em;
 }
 
