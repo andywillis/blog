@@ -1,4 +1,4 @@
-var style$b = {"heading":"heading_nJ6uJ","h1":"h1_FMROn heading_nJ6uJ","h2":"h2_oQFsm heading_nJ6uJ","h3":"h3_KuDyr heading_nJ6uJ","date":"date_svN9j h3_KuDyr heading_nJ6uJ"};
+var style$a = {"heading":"heading_nJ6uJ","h1":"h1_FMROn heading_nJ6uJ","h2":"h2_oQFsm heading_nJ6uJ","h3":"h3_KuDyr heading_nJ6uJ","date":"date_svN9j h3_KuDyr heading_nJ6uJ"};
 
 /**
  * Heading
@@ -17,7 +17,7 @@ function Heading(props) {
 
 	return (`
 		<${level}
-			class="${style$b[type]}"
+			class="${style$a[type]}"
 			${link ? `id="${link}"` : ''}
 		>${text}
 		</${level}>
@@ -25,11 +25,11 @@ function Heading(props) {
 
 }
 
-var style$a = {"header":"header_ovhSs","nav":"nav_NtaC9"};
+var style$9 = {"header":"header_ovhSs","nav":"nav_NtaC9"};
 
 function Header() {
 	return (`
-		<header class="${style$a.header}">
+		<header class="${style$9.header}">
 			${Heading({ level: 'h1', type: 'h1', text: 'Andy Willis' })}
 		</header>
 	`);
@@ -46,23 +46,23 @@ function Date(data) {
 	})}`;
 }
 
-var style$9 = {"blockquote":"blockquote_id4g0"};
+var style$8 = {"blockquote":"blockquote_id4g0"};
 
 function Blockquote(blockquote) {
 	return (`
-		<p class=${style$9.blockquote}>
+		<p class=${style$8.blockquote}>
 			${blockquote}
 		</p>
 	`);
 }
 
-var style$8 = {"imageContainer":"imageContainer_3GSCf","image":"image_ZfmAG","fadeIn":"fadeIn_oAMz4"};
+var style$7 = {"imageContainer":"imageContainer_3GSCf","image":"image_ZfmAG","fadeIn":"fadeIn_oAMz4"};
 
 function Image({ src, alt }) {
 	return (`
-		<div class="${style$8.imageContainer}">
+		<div class="${style$7.imageContainer}">
 			<img
-				class="${style$8.image}"
+				class="${style$7.image}"
 				width="800px"
 				height="500px"
 				src="${src}"
@@ -72,21 +72,21 @@ function Image({ src, alt }) {
 	`);
 }
 
-var style$7 = {"paragraph":"paragraph_J0EDo"};
+var style$6 = {"paragraph":"paragraph_J0EDo"};
 
 function Paragraph(html) {
 	return (`
-		<p class="${style$7.paragraph}">
+		<p class="${style$6.paragraph}">
 			${html}
 		</p>
 	`);
 }
 
-var style$6 = {"table":"table_kW01W"};
+var style$5 = {"table":"table_kW01W"};
 
 function Table(data) {
 	return (`
-		<table class="${style$6.table}">
+		<table class="${style$5.table}">
 			${data}
 		</table>
 	`);
@@ -96,7 +96,6 @@ function format(section) {
 	switch (section.type) {
 		case 'h3': return Heading({ level: 'h3', type: 'h3', text: section.text });
 		case 'blockquote': return Blockquote(section.html);
-		// case 'heading': return Heading({ level: section.level, text: section.text });
 		case 'image': return Image({ src: section.src, alt: section.alt });
 		case 'table': return Table(section.html);
 		default: return Paragraph(section.html);
@@ -107,50 +106,48 @@ function Section(section) {
 	return `${format(section)}`;
 }
 
-var style$5 = {"content":"content_zCzQb"};
+var style$4 = {"content":"content_zCzQb"};
 
 function Content(sections) {
 	return (`
-		<div class="${style$5.content}">
+		<div class="${style$4.content}">
 			${sections.map(Section).join('')}
 		</div>
 	`);
 }
 
-var style$4 = {"tag":"tag_3fnis"};
+var style$3 = {"tag":"tag_3fnis"};
 
 function Tag(tag, index, arr) {
 	return (`
-		<li class="${style$4.tag}">
+		<li class="${style$3.tag}">
 			${tag.tag}${index < arr.length - 1 ? ',' : ''}
 		</li>
 	`);
 }
 
-var style$3 = {"tagContainer":"tagContainer_C7DhE","tags":"tags_Da2tx"};
+var style$2 = {"tagContainer":"tagContainer_C7DhE","tags":"tags_Da2tx"};
 
 function Tags(data) {
 	return (`
-		<section class=${style$3.tagContainer}>
+		<section class=${style$2.tagContainer}>
 			${Heading({ level: 'h3', type: 'h3', text: 'Tags' })}
-			<ul class="${style$3.tags}">
+			<ul class="${style$2.tags}">
 				${data.map(Tag).join('')}
 			</ul>
 		</section>
 	`);
 }
 
-var style$2 = {"link":"link_Pr-zz"};
-
 function Title(content, link) {
 	return `
-		<a href="#${link}" class="${style$2.link}">
+		<a href="#${link}">
 			${Heading({ link, level: 'h2', type: 'h2', text: content })}
 		</a>
 	`;
 }
 
-var style$1 = {"header":"header_WW578","entry":"entry_fyjIz"};
+var style$1 = {"entry":"entry_fyjIz","header":"header_WW578"};
 
 function Entry(entry, index) {
 	const { date, title, link, body, tags } = entry;
@@ -166,7 +163,7 @@ function Entry(entry, index) {
 	`);
 }
 
-var style = {"entries":"entries_GtBql","entry":"entry_JUm1Y"};
+var style = {"entries":"entries_GtBql"};
 
 function Entries(entries) {
 	return (`
