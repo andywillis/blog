@@ -63,8 +63,9 @@ function Image({ src, alt }) {
 		<div class="${style$8.imageContainer}">
 			<img
 				class="${style$8.image}"
+				width="800px"
+				height="500px"
 				src="${src}"
-				loading="lazy"
 				alt="${alt}"
 			>
 		</div>
@@ -226,10 +227,10 @@ var entries = [
 				id: 3,
 				type: "image",
 				src: "/assets/images/parkes.webp",
-				alt: "Parkes Operations Team 1969 512x425"
+				alt: "Parkes Operations Team 1969"
 			}
 		],
-		cdata: "<p>Just finished watching <a href=\"https://en.wikipedia.org/wiki/The_Dish\">The Dish</a> - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was \"based on\" the actual events the film-makers used fictional characters.</p>\n<p>But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).</p>\n<p><img src=\"/assets/images/parkes.webp\" alt=\"Parkes Operations Team 1969 512x425\"></p>"
+		cdata: "<p>Just finished watching <a href=\"https://en.wikipedia.org/wiki/The_Dish\">The Dish</a> - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was \"based on\" the actual events the film-makers used fictional characters.</p>\n<p>But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).</p>\n<p><img src=\"/assets/images/parkes.webp\" alt=\"Parkes Operations Team 1969\"></p>"
 	},
 	{
 		id: 2,
@@ -260,10 +261,10 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/towardssandwichbay.webp",
-				alt: "Ramsgate Sands 800x449"
+				alt: "Ramsgate Sands"
 			}
 		],
-		cdata: "<p>This is the view from the other side of Sandwich Bay where it hugs the Cliffsend coast to the south of Ramsgate Harbour. This looks back toward the Bay, and is the outer reach of the low tide. Here the North Sea drains away to leave vast stretches of sand for the thousands of sea birds that make their home here.</p>\n<p><img src=\"/assets/images/towardssandwichbay.webp\" alt=\"Ramsgate Sands 800x449\"></p>"
+		cdata: "<p>This is the view from the other side of Sandwich Bay where it hugs the Cliffsend coast to the south of Ramsgate Harbour. This looks back toward the Bay, and is the outer reach of the low tide. Here the North Sea drains away to leave vast stretches of sand for the thousands of sea birds that make their home here.</p>\n<p><img src=\"/assets/images/towardssandwichbay.webp\" alt=\"Ramsgate Sands\"></p>"
 	},
 	{
 		id: 3,
@@ -298,16 +299,16 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/sandwichbay1.webp",
-				alt: "Sandwich Bay 800x449"
+				alt: "Sandwich Bay"
 			},
 			{
 				id: 3,
 				type: "image",
 				src: "/assets/images/sandwichbay2.webp",
-				alt: "Sandwich Bay 800x449"
+				alt: "Sandwich Bay"
 			}
 		],
-		cdata: "<p>Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling out as we arrived, and slowly merged with the horizon as we walked along towards Shellness Point where the seals basked in the low Autumn sun.\"</p>\n<p><img src=\"/assets/images/sandwichbay1.webp\" alt=\"Sandwich Bay 800x449\">\n<img src=\"/assets/images/sandwichbay2.webp\" alt=\"Sandwich Bay 800x449\"></p>"
+		cdata: "<p>Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling out as we arrived, and slowly merged with the horizon as we walked along towards Shellness Point where the seals basked in the low Autumn sun.\"</p>\n<p><img src=\"/assets/images/sandwichbay1.webp\" alt=\"Sandwich Bay\">\n<img src=\"/assets/images/sandwichbay2.webp\" alt=\"Sandwich Bay\"></p>"
 	},
 	{
 		id: 4,
@@ -333,16 +334,16 @@ var entries = [
 				id: 1,
 				type: "image",
 				src: "/assets/images/dungeness1.webp",
-				alt: "Dungeness beach 800x449"
+				alt: "Dungeness beach"
 			},
 			{
 				id: 2,
 				type: "image",
 				src: "/assets/images/dungeness2.webp",
-				alt: "Ship high on the beach 480x800"
+				alt: "Ship high on the beach"
 			}
 		],
-		cdata: "<p><img src=\"/assets/images/dungeness1.webp\" alt=\"Dungeness beach 800x449\">\n<img src=\"/assets/images/dungeness2.webp\" alt=\"Ship high on the beach 480x800\"></p>"
+		cdata: "<p><img src=\"/assets/images/dungeness1.webp\" alt=\"Dungeness beach\">\n<img src=\"/assets/images/dungeness2.webp\" alt=\"Ship high on the beach\"></p>"
 	},
 	{
 		id: 5,
@@ -420,10 +421,10 @@ var entries = [
 				id: 3,
 				type: "image",
 				src: "/assets/images/akule.webp",
-				alt: "Pretty school of fish 535x800"
+				alt: "Pretty school of fish"
 			}
 		],
-		cdata: "<blockquote>\n<p>\"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href=\"http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii\">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>\" - Wayne Levin</p>\n</blockquote>\n<p><img src=\"/assets/images/akule.webp\" alt=\"Pretty school of fish 535x800\"></p>"
+		cdata: "<blockquote>\n<p>\"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href=\"http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii\">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>\" - Wayne Levin</p>\n</blockquote>\n<p><img src=\"/assets/images/akule.webp\" alt=\"Pretty school of fish\"></p>"
 	},
 	{
 		id: 7,
@@ -454,10 +455,10 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/shepard.webp",
-				alt: "Pond on the East side of Wimbledon Common 800x449"
+				alt: "Pond on the East side of Wimbledon Common"
 			}
 		],
-		cdata: "<p>This is the pond I was lazing by when I heard the sad news that Sam Shepard had died.</p>\n<p><img src=\"/assets/images/shepard.webp\" alt=\"Pond on the East side of Wimbledon Common 800x449\"></p>"
+		cdata: "<p>This is the pond I was lazing by when I heard the sad news that Sam Shepard had died.</p>\n<p><img src=\"/assets/images/shepard.webp\" alt=\"Pond on the East side of Wimbledon Common\"></p>"
 	},
 	{
 		id: 8,
@@ -558,10 +559,10 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/wandermap.webp",
-				alt: "Map of the walk from Embankment to Earl's Court 800x384"
+				alt: "Map of the walk from Embankment to Earl's Court"
 			}
 		],
-		cdata: "<p>A walk from Embankment, up The Mall to Buckingham Palace, along Green Park, up to Hyde Park, through the park along the lake with the talkative geese, across to Kensington Palace Gardens, and finally out on to the road and on to Earl's Court.</p>\n<p><img src=\"/assets/images/wandermap.webp\" alt=\"Map of the walk from Embankment to Earl's Court 800x384\"></p>"
+		cdata: "<p>A walk from Embankment, up The Mall to Buckingham Palace, along Green Park, up to Hyde Park, through the park along the lake with the talkative geese, across to Kensington Palace Gardens, and finally out on to the road and on to Earl's Court.</p>\n<p><img src=\"/assets/images/wandermap.webp\" alt=\"Map of the walk from Embankment to Earl's Court\"></p>"
 	},
 	{
 		id: 10,
@@ -596,7 +597,7 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/broadstairs1.webp",
-				alt: "Photo of the North Sea from the coast near Broadstairs 800x449"
+				alt: "Photo of the North Sea from the coast near Broadstairs"
 			},
 			{
 				id: 3,
@@ -607,10 +608,10 @@ var entries = [
 				id: 5,
 				type: "image",
 				src: "/assets/images/broadstairs2.webp",
-				alt: "Photo of the North Sea from the coast near Broadstairs 800x450"
+				alt: "Photo of the North Sea from the coast near Broadstairs"
 			}
 		],
-		cdata: "<p>It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.</p>\n<p><img src=\"/assets/images/broadstairs1.webp\" alt=\"Photo of the North Sea from the coast near Broadstairs 800x449\"></p>\n<p>If you were to imagine a line that crossed the sea in an ENE direction from Leathercoate Point, where the war memorial commemorating the Dover Patrol stands North of St. Margaret's Bay, to Walde Lighthouse just North of Calais, that line demarks where the Sea becomes the Channel.</p>\n<p><img src=\"/assets/images/broadstairs2.webp\" alt=\"Photo of the North Sea from the coast near Broadstairs 800x450\"></p>"
+		cdata: "<p>It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.</p>\n<p><img src=\"/assets/images/broadstairs1.webp\" alt=\"Photo of the North Sea from the coast near Broadstairs\"></p>\n<p>If you were to imagine a line that crossed the sea in an ENE direction from Leathercoate Point, where the war memorial commemorating the Dover Patrol stands North of St. Margaret's Bay, to Walde Lighthouse just North of Calais, that line demarks where the Sea becomes the Channel.</p>\n<p><img src=\"/assets/images/broadstairs2.webp\" alt=\"Photo of the North Sea from the coast near Broadstairs\"></p>"
 	},
 	{
 		id: 11,
@@ -632,10 +633,10 @@ var entries = [
 				id: 1,
 				type: "image",
 				src: "/assets/images/wimbledontree.webp",
-				alt: "The sun's rays shine through the foliage of a tree on the Common 800x449"
+				alt: "The sun's rays shine through the foliage of a tree on the Common"
 			}
 		],
-		cdata: "<p><img src=\"/assets/images/wimbledontree.webp\" alt=\"The sun's rays shine through the foliage of a tree on the Common 800x449\"></p>"
+		cdata: "<p><img src=\"/assets/images/wimbledontree.webp\" alt=\"The sun's rays shine through the foliage of a tree on the Common\"></p>"
 	},
 	{
 		id: 12,
@@ -661,10 +662,10 @@ var entries = [
 				id: 1,
 				type: "image",
 				src: "/assets/images/uruguay.webp",
-				alt: "The beach North of Montevideo, Uruguay 800x449"
+				alt: "The beach North of Montevideo, Uruguay"
 			}
 		],
-		cdata: "<p><img src=\"/assets/images/uruguay.webp\" alt=\"The beach North of Montevideo, Uruguay 800x449\"></p>"
+		cdata: "<p><img src=\"/assets/images/uruguay.webp\" alt=\"The beach North of Montevideo, Uruguay\"></p>"
 	},
 	{
 		id: 13,
@@ -716,7 +717,7 @@ var entries = [
 				id: 11,
 				type: "image",
 				src: "/assets/images/blackhole.webp",
-				alt: "Black Hole spotmap 532x800"
+				alt: "Black Hole spotmap"
 			},
 			{
 				id: 12,
@@ -729,7 +730,7 @@ var entries = [
 				html: "There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>."
 			}
 		],
-		cdata: "<p>This is one of the many images rendered by my <a href=\"https://github.com/andywillis/spotmaps\">spotmaps</a> application.</p>\n<p>From the original site:</p>\n<blockquote>\n<p>Spotmaps, based on Brendan Dawes' <a href=\"http://brendandawes.com/projects/cinemaredux\">Cinema Redux</a>, is an on-going project to map the colour narratives of different films.</p>\n</blockquote>\n<blockquote>\n<p>Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames.</p>\n</blockquote>\n<blockquote>\n<p>Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film.</p>\n</blockquote>\n<blockquote>\n<p>A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap.</p>\n</blockquote>\n<p><img src=\"/assets/images/blackhole.webp\" alt=\"Black Hole spotmap 532x800\"></p>\n<p>More images can be found <a href=\"https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787\">here on Flickr</a>.</p>\n<p>There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>.</p>"
+		cdata: "<p>This is one of the many images rendered by my <a href=\"https://github.com/andywillis/spotmaps\">spotmaps</a> application.</p>\n<p>From the original site:</p>\n<blockquote>\n<p>Spotmaps, based on Brendan Dawes' <a href=\"http://brendandawes.com/projects/cinemaredux\">Cinema Redux</a>, is an on-going project to map the colour narratives of different films.</p>\n</blockquote>\n<blockquote>\n<p>Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames.</p>\n</blockquote>\n<blockquote>\n<p>Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film.</p>\n</blockquote>\n<blockquote>\n<p>A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap.</p>\n</blockquote>\n<p><img src=\"/assets/images/blackhole.webp\" alt=\"Black Hole spotmap\"></p>\n<p>More images can be found <a href=\"https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787\">here on Flickr</a>.</p>\n<p>There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>.</p>"
 	},
 	{
 		id: 14,
@@ -760,10 +761,10 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/nan.webp",
-				alt: "Nan in an operating theatre (black and white) 800x474"
+				alt: "Nan in an operating theatre (black and white)"
 			}
 		],
-		cdata: "<p>Nan is on the right.</p>\n<p><img src=\"/assets/images/nan.webp\" alt=\"Nan in an operating theatre (black and white) 800x474\"></p>"
+		cdata: "<p>Nan is on the right.</p>\n<p><img src=\"/assets/images/nan.webp\" alt=\"Nan in an operating theatre (black and white)\"></p>"
 	},
 	{
 		id: 15,
@@ -798,10 +799,10 @@ var entries = [
 				id: 2,
 				type: "image",
 				src: "/assets/images/george.webp",
-				alt: "My great-grandfather, George 500x431"
+				alt: "My great-grandfather, George"
 			}
 		],
-		cdata: "<p>Organised the first Kent miner's strike.</p>\n<p><img src=\"/assets/images/george.webp\" alt=\"My great-grandfather, George 500x431\"></p>"
+		cdata: "<p>Organised the first Kent miner's strike.</p>\n<p><img src=\"/assets/images/george.webp\" alt=\"My great-grandfather, George\"></p>"
 	},
 	{
 		id: 16,
@@ -827,10 +828,10 @@ var entries = [
 				id: 1,
 				type: "image",
 				src: "/assets/images/dirtycow.webp",
-				alt: "Massive papier-mache cow on the roof of Fortress Studios 569x800"
+				alt: "Massive papier-mache cow on the roof of Fortress Studios"
 			}
 		],
-		cdata: "<p><img src=\"/assets/images/dirtycow.webp\" alt=\"Massive papier-mache cow on the roof of Fortress Studios 569x800\"></p>"
+		cdata: "<p><img src=\"/assets/images/dirtycow.webp\" alt=\"Massive papier-mache cow on the roof of Fortress Studios\"></p>"
 	}
 ];
 var links = [

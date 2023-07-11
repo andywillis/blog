@@ -4,6 +4,7 @@ import postcss from 'rollup-plugin-postcss';
 import importUrl from 'postcss-import-url';
 import nesting from 'postcss-nesting';
 import cssimport from 'postcss-import';
+import gzipPlugin from 'rollup-plugin-gzip';
 
 export default {
 
@@ -15,8 +16,11 @@ export default {
 	},
 
 	plugins: [
+
 		resolve(),
+
 		json(),
+
 		postcss({
 
 			extract: 'journal.css',
@@ -31,6 +35,10 @@ export default {
 				nesting()
 			]
 
+		}),
+
+		gzipPlugin({
+			filter: /\.(css)$/
 		})
 	
 	]
