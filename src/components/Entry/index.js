@@ -6,11 +6,11 @@ import Title from '../Title';
 import style from './index.module.css';
 
 export default function Entry(entry, index) {
-	const { date, title, body, tags } = entry;
+	const { date, title, link, body, tags } = entry;
 	return (`
 		<section class="${style.entry}" data-type="entry">
 			<header class="${style.header}">
-				${Title(title)}
+				${Title(title, link)}
 				${Date(date)}
 			</header>
 			${Content(body, index)}
