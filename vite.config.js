@@ -8,6 +8,7 @@ export default defineConfig({
 		compress()
 	],
 	root: 'src',
+	publicDir: 'public',
 	css: {
 		// modules: {
 		// 	generateScopedName: (name) => name
