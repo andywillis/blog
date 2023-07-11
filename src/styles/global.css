@@ -1,58 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap');
-
-@import 'open-props/open-props.min';
-@import 'open-props/colors-hsl.min';
+@import './colors';
+@import './sizes';
+@import './typeography';
 
 :root {
-
 	color-scheme: dark light;
-
 	box-sizing: border-box;
-
-	font-synthesis: none;
-	font-family: 'Lexend', sans-serif;
-	font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-	/* font-weight: 1.2rem; */
-	line-height: 1.8;
-
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-
 }
 
 body {
 	display: grid;
-	/* grid-template-columns: 50vw; */
-	/* flex-direction: column; */
-	grid-template-areas:
-		"header"
-		"entries";
-	padding: 1rem;
-	border-left: 5px solid hsl(var(--red-9-hsl) / 70%);
+	grid-template-areas: "header" "entries";
+	padding: var(--size-rem-1);
+	border-left: var(--size-px-05) solid var(--color-red-light);
+	min-height: 100vh;
 	margin: 0;
 }
 
-/* Tablet and Smaller Desktop */
 @media (min-width: 721px) {
 	body {
-		/* grid-template-columns: 50% 40%; */
-		/* flex-direction: column; */
-		/* grid-template:
-			"header header header"
-			"entries entries tags"; */
-		padding: 1rem 3rem;
-		border-left: 10px solid hsl(var(--red-9-hsl) / 70%);
+		padding: var(--size-rem-1) var(--size-rem-3);
+		border-left: var(--size-px-10) solid var(--color-red-light);
 		margin: 0;
 	}
 }
 
 .light {
-	background-color: hsl(var(--sand-2-hsl) / 20%);
-	color: hsl(var(--sand-7-hsl));
+	background-color: var(--color-sand-light-faded);
+	color: var(--color-sand-regular);
 }
 
 .dark {

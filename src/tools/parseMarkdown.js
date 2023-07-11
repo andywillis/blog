@@ -143,7 +143,7 @@ function buildTagList(entries) {
 
 function processMarkdown(markdown) {
 	return new Promise((resolve, reject) => {
-		const delimiter = '\n\n----\n\n';
+		const delimiter = '\n\n---\n\n';
 		const markdownArr = splitMarkdown(markdown, delimiter);
 		const entries = markdownArr.map(buildEntry); // .reverse();
 		const links = entries.map(entry => entry.link);

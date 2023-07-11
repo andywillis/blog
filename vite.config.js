@@ -1,7 +1,6 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import postcssNesting from 'postcss-nesting';
 import compress from 'vite-plugin-compression';
-// import path from 'path';
 
 export default defineConfig({
 	plugins: [
@@ -29,11 +28,11 @@ export default defineConfig({
 		outDir: '../build',
 		sourcemap: true,
 		rollupOptions: {
-      output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
-      }
-    }
+			output: {
+				entryFileNames: 'assets/[name].js',
+				chunkFileNames: 'assets/[name].js',
+				assetFileNames: 'assets/[name].[ext]'
+			}
+		}
 	}
 });
