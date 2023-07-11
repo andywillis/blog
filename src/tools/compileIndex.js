@@ -1,4 +1,5 @@
 import { minify } from 'html-minifier';
+// import { PurgeCSS } from 'purgecss';
 import fs from 'fs/promises';
 
 import extractHtml from './temp/extractHtml.js';
@@ -12,14 +13,29 @@ const buildPath = `${toolsPath}/build`;
 const css = await fs.readFile(`${tempPath}/journal.css`, 'utf8');
 const placeholder = await fs.readFile(`${toolsPath}/index_placeholder.html`, 'utf8');
 
+// const html = extractHtml();
+
+// const purgeCSSResult = await new PurgeCSS().purge({
+// 	content: [
+// 		{
+// 			raw: html,
+// 			extension: 'html'
+// 		}
+// 	],
+// 	css: [{ raw: css }]
+// });
+
+// console.log(purgeCSSResult)
+
 const replaced = placeholder
 	.replace('{stylesheet}', `<style>${css}</style>`)
 	.replace('{html}', extractHtml());
 
 const minified = minify(replaced, {
-	removeAttributeQuotes: true,
 	minifyCSS: true,
+	removeAttributeQuotes: true,
 	collapseWhitespace: true,
+	conservativeCollapse: true,
 	removeComments: true,
 	removeOptionalTags: true,
 	removeTagWhitespace: true

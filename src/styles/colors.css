@@ -1,0 +1,11 @@
+@import 'open-props/red-hsl.min';
+@import 'open-props/sand-hsl.min';
+
+:root {
+	
+	--color-red-dark: hsl(var(--red-9-hsl));
+	--color-red-light: hsl(var(--red-9-hsl) / 70%);
+	
+	--color-sand-light-faded: hsl(var(--sand-2-hsl) / 20%);
+	--color-sand-regular: hsl(var(--sand-7-hsl));
+}

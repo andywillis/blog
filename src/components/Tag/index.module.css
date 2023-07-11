@@ -1,21 +1,12 @@
 .tag {
   font-size: 1.4rem;
-  /* color: black; */
-  /* background-color: var(--green-1);
-  border: 1px solid var(--green-3);
-  padding: 0.2em 0.6em; */
   display: inline-block;
   color: hsl(var(--red-9-hsl));
-  /* border-radius: 5px; */
 }
 
-/* .tag:not(:last-child)::after {
-  content: ','
-} */
-
-/* .tag:not(:last-child) {
-  margin-right: 0.25em;
-} */
+.tag:not(:last-child) {
+  margin-right: 0.25rem;
+}
 
 .tag:hover {
   cursor: pointer;

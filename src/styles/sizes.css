@@ -1,0 +1,22 @@
+:root {
+
+	--size-rem-01: 0.1rem;
+	--size-rem-025: 0.25rem;
+	--size-rem-05: 0.5rem;
+	--size-rem-1: 1rem;
+	--size-rem-15: 1.5rem;
+	--size-rem-2: 2rem;
+	--size-rem-25: 2.5rem;
+	--size-rem-3: 3rem;
+
+  /* px */
+
+	--size-px-01: 1px;
+	--size-px-02: 2px;
+	--size-px-05: 5px;
+	--size-px-10: 10px;
+	--size-px-16: 16px;
+	--size-px-32: 32px;
+	--size-px-36: 36px;
+
+}

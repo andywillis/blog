@@ -11,29 +11,28 @@ export default {
 
 	output: {
 		file: 'src/tools/temp/extractHtml.js',
-    format: 'esm'
+		format: 'esm'
 	},
 
 	plugins: [
-    resolve(),
-    json(),
-    postcss({
+		resolve(),
+		json(),
+		postcss({
 
-      extract: 'journal.css',
+			extract: 'journal.css',
 
-      modules: {
-  			generateScopedName: function (name) {
-  				return name;
-  			}
-  		},
+			modules: {
+				generateScopedName: '[local]_[hash:base64:5]'
+			},
 
-      plugins: [
-        cssimport(),
-        importUrl(),
-      	nesting()
-      ]
+			plugins: [
+				cssimport(),
+				importUrl(),
+				nesting()
+			]
 
-    })
-  ]
+		})
+	
+	]
 
 };
