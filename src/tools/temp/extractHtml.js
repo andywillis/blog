@@ -1,11 +1,28 @@
-var style$b = {"h1":"h1","h2":"h2","h3":"h3"};
+var style$b = {"heading":"heading","h1":"h1 heading","h2":"h2 heading","h3":"h3 heading","date":"date h3 heading"};
 
-function Heading({ level, text }) {
+/**
+ * Heading
+ *
+ * @param {object} props
+ * @return {string}
+ */
+function Heading(props) {
+
+	const {
+		link,
+		level,
+		type = props.level,
+		text
+	} = props;
+
 	return (`
-		<${level} class="${style$b[level]}">
-			${text}
+		<${level}
+			class="${style$b[type]}"
+			${link ? `id="${link}"` : ''}
+		>${text}
 		</${level}>
 	`);
+
 }
 
 var style$a = {"header":"header","nav":"nav"};
@@ -13,7 +30,7 @@ var style$a = {"header":"header","nav":"nav"};
 function Header() {
 	return (`
 		<header class="${style$a.header}">
-			${Heading({ level: 'h1', text: 'Journal' })}
+			${Heading({ level: 'h1', type: 'h1', text: 'Andy Willis' })}
 		</header>
 	`);
 }
@@ -21,8 +38,12 @@ function Header() {
 // import style from './index.module.css';
 
 
-function Date$1(data) {
-	return `${Heading({ level: 'h3', text: data })}`;
+function Date(data) {
+	return `${Heading({
+		level: 'h3',
+		type: 'date',
+		text: data
+	})}`;
 }
 
 var style$9 = {"blockquote":"blockquote"};
@@ -43,6 +64,7 @@ function Image({ src, alt }) {
 			<img
 				class="${style$8.image}"
 				src="${src}"
+				loading="lazy"
 				alt="${alt}"
 			>
 		</div>
@@ -71,8 +93,9 @@ function Table(data) {
 
 function format(section) {
 	switch (section.type) {
+		case 'h3': return Heading({ level: 'h3', type: 'h3', text: section.text });
 		case 'blockquote': return Blockquote(section.html);
-		case 'heading': return Heading({ level: section.level, text: section.text });
+		// case 'heading': return Heading({ level: section.level, text: section.text });
 		case 'image': return Image({ src: section.src, alt: section.alt });
 		case 'table': return Table(section.html);
 		default: return Paragraph(section.html);
@@ -83,11 +106,11 @@ function Section(section) {
 	return `${format(section)}`;
 }
 
-var style$5 = {"body":"body"};
+var style$5 = {"content":"content"};
 
-function Body(sections) {
+function Content(sections) {
 	return (`
-		<div class="${style$5.body}">
+		<div class="${style$5.content}">
 			${sections.map(Section).join('')}
 		</div>
 	`);
@@ -95,66 +118,60 @@ function Body(sections) {
 
 var style$4 = {"tag":"tag"};
 
-function Tag(tag) {
+function Tag(tag, index, arr) {
 	return (`
 		<li class="${style$4.tag}">
-			${tag.tag}
+			${tag.tag}${index < arr.length - 1 ? ',' : ''}
 		</li>
 	`);
 }
 
-var style$3 = {"tags":"tags"};
+var style$3 = {"tagContainer":"tagContainer","tags":"tags"};
 
 function Tags(data) {
 	return (`
-		<ul class=${style$3.tags}>
-			${data.map(Tag).join('')}
-		</ul> 
+		<section class=${style$3.tagContainer}>
+			${Heading({ level: 'h3', type: 'h3', text: 'Tags' })}
+			<ul class="${style$3.tags}">
+				${data.map(Tag).join('')}
+			</ul>
+		</section>
 	`);
 }
 
-function Title(text) {
-	return Heading({ level: 'h2', text });
+var style$2 = {"link":"link"};
+
+function Title(content, link) {
+	return `
+		<a href="#${link}" class="${style$2.link}">
+			${Heading({ link, level: 'h2', type: 'h2', text: content })}
+		</a>
+	`;
 }
 
-var style$2 = {"entry":"entry"};
+var style$1 = {"header":"header","entry":"entry"};
 
 function Entry(entry, index) {
-	const { date, title, body, tags } = entry;
+	const { date, title, link, body, tags } = entry;
 	return (`
-		<div class="${style$2.entry}">
-			${Title(title)}
-			${Date$1(date)}
-			${Body(body)}
+		<section class="${style$1.entry}" data-type="entry">
+			<header class="${style$1.header}">
+				${Title(title, link)}
+				${Date(date)}
+			</header>
+			${Content(body)}
 			${Tags(tags)}
-		</div>
+		</section>
 	`);
 }
 
-var style$1 = {"entries":"entries"};
+var style = {"entries":"entries","entry":"entry"};
 
 function Entries(entries) {
 	return (`
-		<main class="${style$1.entries}">
+		<main class="${style.entries}">
 			${entries.map(Entry).join('')}
 		</main>
-	`);
-}
-
-var style = {"footer":"footer"};
-
-/**
- * Footer
- *
- * @export
- * @param {string} data
- * @return {string} VSX
- */
-function Footer(data) {
-	return (`
-		<footer class="${style.footer}">
-			<h2 class="${style.heading}">${data}</h2>
-		</footer>
 	`);
 }
 
@@ -169,9 +186,10 @@ function Journal(journal) {
 	return (`
 		${Header()}
 		${Entries(journal.entries)}
-		${Footer(`© Andy Willis ${new Date().getFullYear()}`)}
 	`);
 }
+
+// 		${Footer(`© Andy Willis ${new Date().getFullYear()}`)}
 
 var entries = [
 	{
@@ -391,7 +409,7 @@ var entries = [
 		body: [
 			{
 				id: 0,
-				type: "para",
+				type: "blockquote",
 				html: "\"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href=\"http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii\">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>\" - Wayne Levin"
 			},
 			{
@@ -478,7 +496,7 @@ var entries = [
 			{
 				id: 2,
 				type: "h3",
-				txt: "Process breakdown"
+				text: "Process breakdown"
 			},
 			{
 				id: 3,

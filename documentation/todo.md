@@ -7,3 +7,4 @@
 - Social media icons
 - Footer
 - Decent layouts
+- Dark mode
