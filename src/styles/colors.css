@@ -1,3 +1,5 @@
+@import 'open-props/blue-hsl.min';
+@import 'open-props/gray-hsl.min';
 @import 'open-props/red-hsl.min';
 @import 'open-props/sand-hsl.min';
 
@@ -8,4 +10,12 @@
 	
 	--color-sand-light-faded: hsl(var(--sand-2-hsl) / 20%);
 	--color-sand-regular: hsl(var(--sand-7-hsl));
+
+	--color-blue-light: hsl(var(--blue-1-hsl));
+	--color-blue-dark: hsl(var(--blue-8-hsl));
+
+	--color-gray-dark: hsl(var(--gray-8-hsl));
+	--color-gray-regular: hsl(var(--gray-3-hsl));
+	--color-gray-light: hsl(var(--gray-1-hsl));
+
 }

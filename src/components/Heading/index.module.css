@@ -6,52 +6,51 @@
 .h1 {
   composes: heading;
   color: hsl(var(--stone-9-hsl));
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: var(--size-rem-3);
+  font-weight: var(--font-weight-8);
 }
 
 .h2 {
   composes: heading;
   color: hsl(var(--sand-8-hsl));
-  font-size: 2.1rem;
-  font-weight: 600;
+  font-size: var(--size-rem-22);
+  font-weight: var(--font-weight-6);
+  margin-bottom: var(--size-rem-05);
   line-height: 1.2;
-  /* margin-bottom: 0.2rem; */
 }
 
 .h3 {
   composes: heading;
-  font-size: 1.6rem;
+  font-size: var(--size-rem-16);
   color: hsl(var(--sand-7-hsl));
-  /* line-height: var(--font-lineheight-3); */
-  /* margin-bottom: 2rem; */
-  /* padding-bottom: 2rem; */
-  /* border-bottom: var(--size-px-1) solid var(--gray-6); */
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-weight: var(--font-weight-6);
+  margin-bottom: var(--size-rem-1);
 }
 
 .date {
   composes: h3;
-  font-size: 2.1rem;
-  margin-bottom: 0.75rem;
+  font-size: var(--size-rem-16);
+  margin-bottom: var(--size-rem-075);
 }
 
 @media (min-width: 721px) {
+
   .h1 {
-    font-size: 2.4rem;
+    font-size: var(--size-rem-25);
   }  
+
   .h2 {
-    font-size: 1.8rem;
-    /* line-height: var(--font-lineheight-1); */
-    margin-bottom: 1rem;
+    font-size: var(--size-rem-18);
   }  
+
   .h3 {
-    font-size: 1.4rem;
+    font-size: var(--size-rem-15);
     border-bottom: var(--size-px-1) solid var(--gray-6);
-    margin-bottom: 2rem;
+    margin-bottom: var(--size-rem-2);
   }
+
   .h3 {
     margin-bottom: 0;
   }
+
 }

@@ -1,20 +1,13 @@
 .tag {
-  font-size: 1.4rem;
   display: inline-block;
   color: hsl(var(--red-9-hsl));
 }
 
 .tag:not(:last-child) {
-  margin-right: 0.25rem;
+  margin-right: var(--size-rem-025);
 }
 
 .tag:hover {
   cursor: pointer;
-  background-color: var(--blue-1);
-}
-
-@media (min-width: 721px) {
-  .tag {
-    font-size: 1.1rem;
-  }
+  background-color: var(--color-blue-light);
 }
