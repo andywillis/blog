@@ -1,14 +1,6 @@
 .header {
   grid-area: header;
-  margin-bottom: 3rem;
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-items: center; */
-  /* background-color: var(--blue-0);
-  color: var(--blue-9); */
-  /* border-bottom: 1px inset var(--blue-4); */
-  /* padding-left: var(--size-rem-md); */
-  /* margin-bottom: 3rem; */
+  margin-bottom: var(--size-rem-3);
 }
 
 .nav {
@@ -16,10 +8,4 @@
   flex-direction: row;
   align-items: center;
   padding: 0;
-}
-
-@media (min-width: 721px) {
-  /* .header {
-    margin-bottom: 3rem;
-  } */
 }

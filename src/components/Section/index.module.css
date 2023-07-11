@@ -1,4 +1,0 @@
-.paragraph { font-size: 0.8em; }
-.paragraph:first-child { margin-top: 2em; }
-.paragraph:not(:last-child) { margin-bottom: 1em; }
-.paragraph:last-child { margin-bottom: 2em; }

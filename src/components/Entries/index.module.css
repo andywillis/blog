@@ -1,20 +1,15 @@
 .entries > * ~ * {
-	margin-top: 4rem;
+	margin-top: var(--size-rem-4);
 }
 
 .entries {
 	grid-area: entries;
 	display: flex;
 	flex-direction: column;
-	/* margin: 0px auto; */
-	/* width: 90%; */
 }
 
 @media (min-width: 721px) {
-	.entries > .entry ~ .entry {
-		margin-top: 6rem;
+	.entries > * ~ * {
+		margin-top: var(--size-rem-6);
 	}
-	/* .entries {
-    width: 75%;
-  } */
 }

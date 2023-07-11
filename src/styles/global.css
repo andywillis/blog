@@ -27,6 +27,24 @@ body {
 .light {
 	background-color: var(--color-sand-light-faded);
 	color: var(--color-sand-regular);
+
+	a,
+	a:link,
+	a:visited,
+	a:active {
+		text-decoration: none;
+		color: var(--color-red-dark);
+	}
+
+	a:hover {
+		cursor: pointer;
+		background-color: var(--color-blue-light);
+	}
+
+	code {
+		color: hsl(var(--color-blue-dark));
+	}
+
 }
 
 .dark {

@@ -1,3 +1,7 @@
+.entry {
+	font-size: var(--size-rem-14);
+}
+
 .header {
 	border-bottom: 1px dashed hsl(var(--sand-7-hsl));
 }
@@ -5,8 +9,9 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 721px) {
 	.entry {
+    font-size: var(--size-rem-11);
 		display: grid;
-		column-gap: 4rem;
+		column-gap: var(--size-rem-4);
 		grid-template:
 			"heading tags"
 			"content aside" / 3fr 1fr;

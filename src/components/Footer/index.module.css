@@ -1,14 +1,3 @@
 .footer {
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: flex-end; */
-  font-size: var(--size-rem-lg);
-  /* line-height: 1.2rem; */
-  /* top: var(--viewport-height-100); */
-  /* padding-right: var(--size-rem-md); */
-  /* position: sticky; */
-  /* margin-top: 3em; */
-  /* border-top: 1px inset var(--blue-4); */
-  background-color: hsl(var(--indigo-2-hsl));
-  /* color: var(--gray-9); */
+  font-size: var(--size-rem-15);
 }
