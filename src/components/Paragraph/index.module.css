@@ -1,6 +1,6 @@
-.paragraph { 
+/* .paragraph { 
   font-size: 1.4rem;
-}
+} */
 
 .paragraph:not(:last-child) { margin-bottom: 1em; }
 .paragraph:last-child { margin-bottom: 2em; }
@@ -9,7 +9,7 @@
 .paragraph a:link,
 .paragraph a:visited,
 .paragraph a:active {
-  font-size: 1em;
+  /* font-size: 1em; */
   text-decoration: none;
   color: hsl(var(--red-9-hsl));
 }
@@ -23,8 +23,8 @@
   color: hsl(var(--blue-8-hsl));
 }
 
-@media (min-width: 721px) {
+/* @media (min-width: 721px) {
   .paragraph {
     font-size: 1.1rem;
   }
-}
+} */
