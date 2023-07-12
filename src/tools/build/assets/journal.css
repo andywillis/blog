@@ -206,27 +206,11 @@
 	}
 }
 
-@font-face {
-  font-family: 'Lexend';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lexend/v18/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsW_LA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lexend';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lexend/v18/wlptgwvFAVdoq2_F94zlCfv0bz1WC-UR_LA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lexend';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lexend/v18/wlptgwvFAVdoq2_F94zlCfv0bz1WC7sR_LA.ttf) format('truetype');
-}:where(html){--blue-0-hsl:205 100% 95%;--blue-1-hsl:206 100% 91%;--blue-2-hsl:206 100% 82%;--blue-3-hsl:206 96% 72%;--blue-4-hsl:207 91% 64%;--blue-5-hsl:207 86% 57%;--blue-6-hsl:208 80% 52%;--blue-7-hsl:208 77% 47%;--blue-8-hsl:209 77% 43%;--blue-9-hsl:209 75% 38%;--blue-10-hsl:209 76% 32%;--blue-11-hsl:209 75% 27%;--blue-12-hsl:209 76% 21%}:where(html){--gray-0-hsl:210 17% 98%;--gray-1-hsl:210 17% 95%;--gray-2-hsl:210 16% 93%;--gray-3-hsl:210 14% 89%;--gray-4-hsl:210 14% 83%;--gray-5-hsl:210 11% 71%;--gray-6-hsl:210 7% 56%;--gray-7-hsl:210 9% 31%;--gray-8-hsl:210 10% 23%;--gray-9-hsl:210 11% 15%;--gray-10-hsl:214 14% 10%;--gray-11-hsl:216 16% 6%;--gray-12-hsl:210 40% 2%}:where(html){--red-0-hsl:0 100% 98%;--red-1-hsl:0 100% 95%;--red-2-hsl:0 100% 89%;--red-3-hsl:0 100% 83%;--red-4-hsl:0 100% 76%;--red-5-hsl:0 100% 71%;--red-6-hsl:0 94% 65%;--red-7-hsl:0 86% 59%;--red-8-hsl:0 74% 54%;--red-9-hsl:0 65% 48%;--red-10-hsl:0 65% 42%;--red-11-hsl:0 65% 36%;--red-12-hsl:0 66% 30%}:where(html){--sand-0-hsl:200 27% 98%;--sand-1-hsl:48 17% 88%;--sand-2-hsl:45 22% 79%;--sand-3-hsl:44 22% 69%;--sand-4-hsl:44 17% 62%;--sand-5-hsl:44 14% 54%;--sand-6-hsl:42 14% 46%;--sand-7-hsl:43 16% 39%;--sand-8-hsl:41 15% 32%;--sand-9-hsl:43 14% 26%;--sand-10-hsl:44 11% 20%;--sand-11-hsl:60 6% 14%;--sand-12-hsl:60 6% 7%}:root {
+:where(html){--blue-0-hsl:205 100% 95%;--blue-1-hsl:206 100% 91%;--blue-2-hsl:206 100% 82%;--blue-3-hsl:206 96% 72%;--blue-4-hsl:207 91% 64%;--blue-5-hsl:207 86% 57%;--blue-6-hsl:208 80% 52%;--blue-7-hsl:208 77% 47%;--blue-8-hsl:209 77% 43%;--blue-9-hsl:209 75% 38%;--blue-10-hsl:209 76% 32%;--blue-11-hsl:209 75% 27%;--blue-12-hsl:209 76% 21%}
+:where(html){--gray-0-hsl:210 17% 98%;--gray-1-hsl:210 17% 95%;--gray-2-hsl:210 16% 93%;--gray-3-hsl:210 14% 89%;--gray-4-hsl:210 14% 83%;--gray-5-hsl:210 11% 71%;--gray-6-hsl:210 7% 56%;--gray-7-hsl:210 9% 31%;--gray-8-hsl:210 10% 23%;--gray-9-hsl:210 11% 15%;--gray-10-hsl:214 14% 10%;--gray-11-hsl:216 16% 6%;--gray-12-hsl:210 40% 2%}
+:where(html){--red-0-hsl:0 100% 98%;--red-1-hsl:0 100% 95%;--red-2-hsl:0 100% 89%;--red-3-hsl:0 100% 83%;--red-4-hsl:0 100% 76%;--red-5-hsl:0 100% 71%;--red-6-hsl:0 94% 65%;--red-7-hsl:0 86% 59%;--red-8-hsl:0 74% 54%;--red-9-hsl:0 65% 48%;--red-10-hsl:0 65% 42%;--red-11-hsl:0 65% 36%;--red-12-hsl:0 66% 30%}
+:where(html){--sand-0-hsl:200 27% 98%;--sand-1-hsl:48 17% 88%;--sand-2-hsl:45 22% 79%;--sand-3-hsl:44 22% 69%;--sand-4-hsl:44 17% 62%;--sand-5-hsl:44 14% 54%;--sand-6-hsl:42 14% 46%;--sand-7-hsl:43 16% 39%;--sand-8-hsl:41 15% 32%;--sand-9-hsl:43 14% 26%;--sand-10-hsl:44 11% 20%;--sand-11-hsl:60 6% 14%;--sand-12-hsl:60 6% 7%}
+:root {
 	
 	--color-red-dark: hsl(var(--red-9-hsl));
 	--color-red-light: hsl(var(--red-9-hsl) / 70%);
@@ -241,7 +225,8 @@
 	--color-gray-regular: hsl(var(--gray-3-hsl));
 	--color-gray-light: hsl(var(--gray-1-hsl));
 
-}:root {
+}
+:root {
 
 	--size-rem--15: -1.5rem;
 
@@ -273,8 +258,27 @@
 	--size-px-32: 32px;
 	--size-px-36: 36px;
 
-}:root {
-	
+}
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Lexend-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/Lexend-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 800;
+  src: url('/assets/fonts/Lexend-ExtraBold.woff2') format('woff2');
+}
+:root {
+
 	font-family: 'Lexend', sans-serif;
 	font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 	line-height: 1.8;	
@@ -290,46 +294,62 @@
 	--font-weight-8: 800;
 	--font-weight-6: 600;
 
-}:root {
+}
+:root {
 	color-scheme: dark light;
 	box-sizing: border-box;
-}body {
+}
+body {
 	display: grid;
 	grid-template-areas: "header" "entries";
 	padding: var(--size-rem-1);
 	border-left: var(--size-px-05) solid var(--color-red-light);
 	min-height: 100vh;
 	margin: 0;
-}@media (min-width: 721px) {
+}
+@media (min-width: 721px) {
 	body {
 		padding: var(--size-rem-1) var(--size-rem-3);
 		border-left: var(--size-px-10) solid var(--color-red-light);
 		margin: 0;
 	}
-}.light {
+}
+.light {
 	background-color: var(--color-sand-light-faded);
 	color: var(--color-sand-regular);
 
-}.light a,
+}
+.light a,
 	.light a:link,
 	.light a:visited,
 	.light a:active {
 		text-decoration: none;
 		color: var(--color-red-dark);
-	}.light a:hover {
+	}
+.light a:hover {
 		cursor: pointer;
 		background-color: var(--color-blue-light);
-	}.light code {
+	}
+.light code {
 		color: hsl(var(--color-blue-dark));
-	}.dark {
+	}
+.dark {
 	background-color: hsl(var(--gray-8-hsl));
 	color: hsl(var(--gray-0-hsl));
-}@media (prefers-color-scheme: dark) {
+}
+@media (prefers-color-scheme: dark) {
 	:root {
 		composes: dark;
 	}
-}@media (prefers-color-scheme: dark) {
+}
+@media (prefers-color-scheme: dark) {
 	:root {
 		composes: light;
 	}
-}/* Enable hover only on non-touch devices */@media (hover: hover) and (pointer: fine) {}/* Reduced motion */@media (prefers-reduced-motion) {}/* Mobile */@media (max-width: 700px) {}
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+/* Reduced motion */
+@media (prefers-reduced-motion) {}
+/* Mobile */
+@media (max-width: 700px) {}
