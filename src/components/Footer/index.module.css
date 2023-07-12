@@ -11,7 +11,11 @@
 
 .socialsList {
   grid-area: socials;
-  /* grid-column-start: 3; */
+}
+
+.socialsList li {
+  display: flex;
+  align-items: center;
 }
 
 .icon {

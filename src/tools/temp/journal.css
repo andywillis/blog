@@ -199,7 +199,11 @@
 
 .socialsList_QLLZy {
   grid-area: socials;
-  /* grid-column-start: 3; */
+}
+
+.socialsList_QLLZy li {
+  display: flex;
+  align-items: center;
 }
 
 .icon_ycf5J {
