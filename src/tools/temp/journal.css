@@ -194,7 +194,7 @@
   gap: var(--size-rem-2);
   grid-template: "socials" / 1fr;
   margin-top: var(--size-rem-4);
-  padding: var(--size-rem-05) var(--size-rem-15);
+  padding: var(--size-rem-3) var(--size-rem-15);
 }
 
 .socialsList_5g2nK {
@@ -213,7 +213,7 @@
 @media (min-width: 721px) {
 	.footer_7SU6u {
     grid-template: "socials . ." / 1fr 1fr 1fr;
-    padding: var(--size-rem-1) var(--size-rem-3);
+    padding: var(--size-rem-2) var(--size-rem-3);
 	}
 }
 
