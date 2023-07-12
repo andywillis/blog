@@ -2,10 +2,21 @@ import fs from 'fs/promises';
 
 import rootname from '../../rootname.js';
 
-const host1 = 'https://glistening-sprinkles-e2c775.netlify.app';
-// const host2 = 'https://spectacular-custard-14e5f1.netlify.app';
+const args = process.argv;
+const host = args[2].split('=')[1];
+
 const inputPath = `${rootname}/src/data`;
-const outputPath = `${rootname}/src/public/assets`;
+
+const details = {
+	sprinkles: {
+		host: 'https://glistening-sprinkles-e2c775.netlify.app',
+		outputPath: `${rootname}/src/public/assets`
+	},
+	custard: {
+		host: 'https://spectacular-custard-14e5f1.netlify.app',
+		outputPath: `${rootname}/src/tools/build/assets`
+	}
+};
 
 const data = JSON.parse(await fs.readFile(`${inputPath}/journal.json`, 'utf8'));
 
@@ -35,7 +46,7 @@ function wrapItems(items, host) {
 	`);
 }
 
-async function writeRSS(xml) {
+async function writeRSS({ xml, outputPath }) {
 	try {
 		const filePath = `${outputPath}/journal.rss`;
 		await fs.writeFile(filePath, xml, 'utf8');
@@ -44,14 +55,14 @@ async function writeRSS(xml) {
 	}
 }
 
-function createRSS(data, host) {
+function createRSS({ data, host }) {
 	const { entries } = data;
 	const items = buildItems(entries, host);
-	const xml = wrapItems(items, host);
-	writeRSS(xml.trim());
-	console.log('RSS file written');
+	return wrapItems(items, host);
 }
 
-createRSS(data, host1);
+const xml = createRSS({ data, host: details[host].host });
+writeRSS({ xml: xml.trim(), outputPath: details[host].outputPath });
+console.log('RSS file written');
 
 export default createRSS;

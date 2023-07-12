@@ -8,13 +8,13 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm run parse-markdown && pnpm run build-rss-sprinkles && vite build",
     "preview": "vite preview",
     "lint": "eslint",
     "parse-markdown": "node src/tools/parse-markdown.js",
-    "build-rss": "node src/tools/build-rss.js",
-    "build-bespoke": "rollup --config rollup-bespoke.config.js && node src/tools/build-index.js",
-    "build-all": "pnpm run build-bespoke && pnpm run build-rss" 
+    "build-rss-sprinkles": "node src/tools/build-rss.js host=sprinkles",
+    "build-rss-custard": "node src/tools/build-rss.js host=custard",
+    "build-bespoke": "rollup --config rollup-bespoke.config.js && node src/tools/build-index.js && pnpm run build-rss-custard"
   },
   "dependencies": {
     "classnames": "^2.3.2",
