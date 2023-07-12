@@ -5,22 +5,30 @@
 :root {
 	color-scheme: dark light;
 	box-sizing: border-box;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
 }
 
 body {
 	display: grid;
 	grid-template-areas: "header" "entries";
-	padding: var(--size-rem-1);
 	border-left: var(--size-px-05) solid var(--color-red-light);
 	min-height: 100vh;
 	margin: 0;
+	font-size: var(--size-rem-16);
 }
 
 @media (min-width: 721px) {
 	body {
-		padding: var(--size-rem-1) var(--size-rem-3);
 		border-left: var(--size-px-10) solid var(--color-red-light);
 		margin: 0;
+    font-size: var(--size-rem-11);
+		overflow-x: hidden;
 	}
 }
 

@@ -1,5 +1,6 @@
-import Header from '../Header';
 import Entries from '../Entries';
+import Footer from '../Footer';
+import Header from '../Header';
 
 /**
  * Journal
@@ -12,7 +13,6 @@ export default function Journal(journal) {
 	return (`
 		${Header()}
 		${Entries(journal.entries)}
+		${Footer()}
 	`);
 }
-
-// 		${Footer(`© Andy Willis ${new Date().getFullYear()}`)}

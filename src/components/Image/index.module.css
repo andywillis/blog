@@ -9,7 +9,7 @@
 }
 
 .image {
-  border-radius: var(--siz-px-075);
+  border-radius: var(--size-px-075);
   width: 100%;
   height: auto;
   animation: fadeIn 2s linear;

@@ -20,6 +20,10 @@ Work undertaken:
 - Rollup
 - Open-Props
 
+## Icons
+
+Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
+
 ## Licence
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
