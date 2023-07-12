@@ -8,7 +8,7 @@ import gzipPlugin from 'rollup-plugin-gzip';
 
 export default {
 
-	input: 'src/compileJournal.js',
+	input: 'src/tools/compile-bespoke.js',
 
 	output: {
 		file: 'src/tools/temp/extractHtml.js',

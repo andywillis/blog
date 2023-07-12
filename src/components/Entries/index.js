@@ -1,6 +1,6 @@
 import Entry from '../Entry';
 
-import style from './index.module.css';
+import style from './style.module.css';
 
 export default function Entries(entries) {
 	return (`

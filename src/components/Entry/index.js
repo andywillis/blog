@@ -1,20 +1,24 @@
-import Date from '../Date';
 import Content from '../Content';
+import Heading from '../Heading';
 import Tags from '../Tags';
-import Title from '../Title';
 
-import style from './index.module.css';
+import style from './style.module.css';
 
 export default function Entry(entry, index) {
+
 	const { date, title, link, body, tags } = entry;
+
 	return (`
 		<section class="${style.entry}" data-type="entry">
 			<header class="${style.header}">
-				${Title(title, link)}
-				${Date(date)}
+				<a href="#${link}">
+					${Heading({ link, level: 'h2', type: 'h2', text: title })}
+				</a>
+				${Heading({ level: 'h3', type: 'date', text: date })}
 			</header>
 			${Content(body, index)}
 			${Tags(tags)}
 		</section>
 	`);
+
 }

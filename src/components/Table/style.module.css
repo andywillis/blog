@@ -1,20 +1,20 @@
 .table {
-  width: 100%;
+  border: var(--size-px-01) solid var(--color-gray-dark);
+  border-collapse: collapse;
   margin: var(--size-rem-15) 0 var(--size-rem-15) 0;
   margin-left: auto;
   margin-right: auto;
-  border-collapse: collapse;
-  border: var(--size-px-01) solid var(--color-gray-dark);
+  width: 100%;
 }
 
 .table thead {
-  text-align: left;
   border-bottom: var(--size-px-01) solid var(--color-gray-dark);
+  text-align: left;
 }
 
 .table thead th { 
-  text-transform: uppercase;
   padding: var(--size-rem-05) var(--size-rem-075);
+  text-transform: uppercase;
 }
 
 .table tbody td {

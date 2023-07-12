@@ -1,4 +1,14 @@
-var style$b = {"heading":"heading_nJ6uJ","h1":"h1_FMROn heading_nJ6uJ","h2":"h2_oQFsm heading_nJ6uJ","h3":"h3_KuDyr heading_nJ6uJ","date":"date_svN9j h3_KuDyr heading_nJ6uJ"};
+var style$b = {"blockquote":"blockquote_hHp2i"};
+
+function Blockquote(blockquote) {
+	return (`
+		<p class=${style$b.blockquote}>
+			${blockquote}
+		</p>
+	`);
+}
+
+var style$a = {"heading":"heading_eZIvn","h1":"h1_mnlYR heading_eZIvn","h2":"h2_-gsxg heading_eZIvn","h3":"h3_mxmBn heading_eZIvn","date":"date_D4y8s h3_mxmBn heading_eZIvn"};
 
 /**
  * Heading
@@ -17,7 +27,7 @@ function Heading(props) {
 
 	return (`
 		<${level}
-			class="${style$b[type]}"
+			class="${style$a[type]}"
 			${link ? `id="${link}"` : ''}
 		>${text}
 		</${level}>
@@ -25,28 +35,7 @@ function Heading(props) {
 
 }
 
-// import style from './index.module.css';
-
-
-function Date(data) {
-	return `${Heading({
-		level: 'h3',
-		type: 'date',
-		text: data
-	})}`;
-}
-
-var style$a = {"blockquote":"blockquote_id4g0"};
-
-function Blockquote(blockquote) {
-	return (`
-		<p class=${style$a.blockquote}>
-			${blockquote}
-		</p>
-	`);
-}
-
-var style$9 = {"imageContainer":"imageContainer_3GSCf","image":"image_ZfmAG","fadeIn":"fadeIn_oAMz4"};
+var style$9 = {"imageContainer":"imageContainer_0ew51","image":"image_Mhl-i","fadeIn":"fadeIn_MbchH"};
 
 function Image({ src, alt }) {
 	return (`
@@ -62,7 +51,7 @@ function Image({ src, alt }) {
 	`);
 }
 
-var style$8 = {"paragraph":"paragraph_J0EDo"};
+var style$8 = {"paragraph":"paragraph_72Vn7"};
 
 function Paragraph(html) {
 	return (`
@@ -72,7 +61,7 @@ function Paragraph(html) {
 	`);
 }
 
-var style$7 = {"table":"table_kW01W"};
+var style$7 = {"table":"table_tftVB"};
 
 function Table(data) {
 	return (`
@@ -96,7 +85,7 @@ function Section(section) {
 	return `${format(section)}`;
 }
 
-var style$6 = {"content":"content_zCzQb"};
+var style$6 = {"content":"content_Go-kx"};
 
 function Content(sections) {
 	return (`
@@ -106,7 +95,7 @@ function Content(sections) {
 	`);
 }
 
-var style$5 = {"tag":"tag_3fnis"};
+var style$5 = {"tag":"tag_j1yjb"};
 
 function Tag(tag, index, arr) {
 	return (`
@@ -116,7 +105,7 @@ function Tag(tag, index, arr) {
 	`);
 }
 
-var style$4 = {"tagContainer":"tagContainer_C7DhE","tags":"tags_Da2tx"};
+var style$4 = {"tagContainer":"tagContainer_zYV7K","tags":"tags_m73Yt"};
 
 function Tags(data) {
 	return (`
@@ -129,31 +118,28 @@ function Tags(data) {
 	`);
 }
 
-function Title(content, link) {
-	return `
-		<a href="#${link}">
-			${Heading({ link, level: 'h2', type: 'h2', text: content })}
-		</a>
-	`;
-}
-
-var style$3 = {"header":"header_WW578","entry":"entry_fyjIz"};
+var style$3 = {"header":"header_CAcrz","entry":"entry_PTQ1E"};
 
 function Entry(entry, index) {
+
 	const { date, title, link, body, tags } = entry;
+
 	return (`
 		<section class="${style$3.entry}" data-type="entry">
 			<header class="${style$3.header}">
-				${Title(title, link)}
-				${Date(date)}
+				<a href="#${link}">
+					${Heading({ link, level: 'h2', type: 'h2', text: title })}
+				</a>
+				${Heading({ level: 'h3', type: 'date', text: date })}
 			</header>
 			${Content(body)}
 			${Tags(tags)}
 		</section>
 	`);
+
 }
 
-var style$2 = {"entries":"entries_GtBql"};
+var style$2 = {"entries":"entries_kJdov"};
 
 function Entries(entries) {
 	return (`
@@ -163,7 +149,7 @@ function Entries(entries) {
 	`);
 }
 
-var style$1 = {"footer":"footer_01lc4","socialsList":"socialsList_QLLZy","icon":"icon_ycf5J"};
+var style$1 = {"footer":"footer_7SU6u","socialsList":"socialsList_5g2nK","icon":"icon_X-gt0"};
 
 /**
  * Footer
@@ -206,7 +192,7 @@ function Footer() {
 	`);
 }
 
-var style = {"header":"header_ovhSs","nav":"nav_NtaC9"};
+var style = {"header":"header_qCyM9","nav":"nav_pQ0fU"};
 
 function Header() {
 	return (`
@@ -217,13 +203,13 @@ function Header() {
 }
 
 /**
- * Journal
+ * Home
  *
  * @export
- * @param {object} journal
+ * @param {object} Journal data
  * @return {string} Template
  */
-function Journal(journal) {
+function Home(journal) {
 	return (`
 		${Header()}
 		${Entries(journal.entries)}
@@ -962,7 +948,7 @@ var data = {
 };
 
 function compileJournal() {
-	return Journal(data);
+	return Home(data);
 }
 
 export { compileJournal as default };
