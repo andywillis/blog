@@ -34,6 +34,13 @@ function getDate(parent) {
 	return text;
 }
 
+function getSummary(parent) {
+	const element = parent.querySelector('h4');
+	const text = element.textContent;
+	removeElement(element);
+	return text;
+}
+
 function getTags(parent) {
 	const element = parent.querySelector('ul');
 	const items = element.querySelectorAll('li');
@@ -85,11 +92,6 @@ function getBody(el) {
 				break;
 			}
 
-			// case 'H2': {
-			// 	p.push({ id: i, type: 'h2', text: c.textContent });
-			// 	break;
-			// }
-
 			case 'H3': {
 				p.push({ id: i, type: 'h3', text: c.textContent });
 				break;
@@ -105,7 +107,7 @@ function getBody(el) {
 	}, []);
 }
 
-function buildEntry(md, id) {
+function buildEntry(md, index, arr) {
 	
 	const html = markdownParser.render(md);
 	
@@ -113,15 +115,17 @@ function buildEntry(md, id) {
 
 	const title = getTitle(div);
 	const date = getDate(div);
+	const summary = getSummary(div);
 	const tags = getTags(div);
-	const link = getLink(id, title);
+	const link = getLink((arr.length - 1) - index, title);
 	const body = getBody(div);
 	const cdata = div.innerHTML.trim();
 
 	const entry = {
-		id: ++id,
+		id: (arr.length - 1) - index,
 		title,
 		date,
+		summary,
 		tags,
 		link,
 		body,
@@ -134,8 +138,9 @@ function buildEntry(md, id) {
 
 function buildTagList(entries) {
 	return entries.reduce((acc, { tags }) => {
-		tags.forEach(({ txt }) => {
-			acc[txt] = (acc[txt] || 0) + 1;
+		tags.forEach(({ tag }) => {
+			acc[tag] ??= 0;
+			acc[tag]++;
 		});
 		return acc;
 	}, {});

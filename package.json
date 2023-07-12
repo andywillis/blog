@@ -11,7 +11,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "toMD": "node src/tools/parseMarkdown.js",
+    "parseMarkdown": "node src/tools/parseMarkdown.js",
     "compileJournal": "rollup --config && node src/tools/compileIndex.js"
   },
   "dependencies": {

@@ -1,5 +1,6 @@
 ## Parkes Operation Center (Apollo 11)
 ### Tuesday, 26 July 2022
+#### Unearthing the true faces of the Parkes Apollo 11 NASA crew
 
 * thedish
 * parkes
@@ -19,6 +20,7 @@ But I managed to [unearth this brilliant photo of the actual operations team][pa
 
 ## Towards Sandwich Bay
 ### Tuesday, 18 December 2018
+#### Photo archive
 
 * sandwichbay
 * ramsgate
@@ -34,6 +36,7 @@ This is the view from the other side of Sandwich Bay where it hugs the Cliffsend
 
 ## Sandwich Bay, Kent
 ### Wednesday, 31 October 2018
+#### Photo archive
 
 * sandwichbay
 * beach
@@ -52,6 +55,7 @@ Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling ou
 
 ## Dungeness
 ### Saturday, 30 September 2017
+#### Photo archive
 
 * dungeness
 * beach
@@ -67,6 +71,7 @@ Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling ou
 
 ## Flickr images for responsive sites
 ### Monday, 21 August 2017
+#### Flickr responsive images investigation
 
 * images
 * responsive
@@ -97,6 +102,7 @@ For reference here's a list of the sizes along with their sizeIds based on an or
 
 ## Akule
 ### Tuesday, 15 August 2017
+#### Photo archive
 
 * ocean
 * photography
@@ -114,6 +120,7 @@ For reference here's a list of the sizes along with their sizeIds based on an or
 
 ## Wimbledon Common
 ### Monday, 31 July 2017
+#### Photo archive
 
 * wimbledoncommon
 * pond
@@ -129,6 +136,7 @@ This is the pond I was lazing by when I heard the sad news that Sam Shepard had 
 
 ## This site
 ### Saturday, 24 June 2017
+#### Details of the changes to the journal
 
 * express
 * react
@@ -156,6 +164,7 @@ This system means I can update the markdown file whenever I want from either my 
 
 ## A Tuesday Wander
 ### Tuesday, 16 May 2017
+#### Walk archive
 
 * kensingtonchurch
 * greenpark
@@ -172,6 +181,7 @@ A walk from Embankment, up The Mall to Buckingham Palace, along Green Park, up t
 
 ## Broadstairs
 ### Wednesday, 28 December 2016
+#### Photo archive
 
 * broadstairs
 * northsea
@@ -193,6 +203,7 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 
 ## Wimbledon Common
 ### Saturday, 31 December 2016
+#### Photo archive
 
 * wimbledon
 * wimbledoncommon
@@ -205,6 +216,7 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 
 ## Montevideo, Uruguay
 ### Thursday, July 16 2015
+#### Photo archive
 
 * uruguay
 * beach
@@ -218,6 +230,7 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 
 ## Disney's The Black Hole
 ### Tuesday, 3 April 2012
+#### Introduction to my Spotmaps project
 
 * theblackhole
 * spotmaps
@@ -251,6 +264,7 @@ There are also a couple of online articles about the spotmaps website on [FastCo
 
 ## Nan
 ### Sunday, 1 January 2006
+#### Photo archive
 
 * nan
 * war
@@ -266,6 +280,7 @@ Nan is on the right.
 
 ## My Great Grandad, George W. Smith.
 ### Sunday, 1 January 2006
+#### Photo archive
 
 * greatgranddad
 * miner
@@ -282,6 +297,7 @@ Organised the first Kent miner's strike.
 
 ## Dirty Cow
 ### Sunday, 1 January 2000
+#### Photo archive
 
 * cow
 * dirtycow
