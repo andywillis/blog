@@ -1,7 +1,4 @@
 import Heading from '../Heading';
-// import IconStrip from '../IconStrip';
-
-// import iconConfig from '../../config/icons';
 
 import style from './index.module.css';
 
