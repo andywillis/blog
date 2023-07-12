@@ -1,4 +1,4 @@
-import Journal from './components/Journal';
+import Journal from './layouts/Home';
 
 import data from './data/journal.json';
 

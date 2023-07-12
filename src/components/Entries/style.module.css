@@ -3,10 +3,10 @@
 }
 
 .entries {
-	padding: var(--size-rem-05) var(--size-rem-15);
-	grid-area: entries;
 	display: flex;
 	flex-direction: column;
+	grid-area: entries;
+	padding: var(--size-rem-05) var(--size-rem-15);
 }
 
 @media (min-width: 721px) {

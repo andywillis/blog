@@ -4,25 +4,25 @@
 }
 
 .h1 {
-  composes: heading;
-  color: hsl(var(--stone-9-hsl));
   font-size: var(--size-rem-3);
   font-weight: var(--font-weight-8);
+  color: hsl(var(--stone-9-hsl));
+  composes: heading;
 }
 
 .h2 {
-  composes: heading;
   color: hsl(var(--sand-8-hsl));
+  composes: heading;
   font-size: var(--size-rem-22);
   font-weight: var(--font-weight-6);
-  margin-bottom: var(--size-rem-05);
   line-height: 1.2;
+  margin-bottom: var(--size-rem-05);
 }
 
 .h3 {
+  color: hsl(var(--sand-7-hsl));
   composes: heading;
   font-size: var(--size-rem-16);
-  color: hsl(var(--sand-7-hsl));
   font-weight: var(--font-weight-6);
   margin-bottom: var(--size-rem-1);
 }
@@ -44,8 +44,8 @@
   }  
 
   .h3 {
-    font-size: var(--size-rem-15);
     border-bottom: var(--size-px-1) solid var(--gray-6);
+    font-size: var(--size-rem-15);
     margin-bottom: var(--size-rem-2);
   }
 

@@ -1,7 +1,7 @@
 import Heading from '../Heading';
 import Tag from '../Tag';
 
-import style from './index.module.css';
+import style from './style.module.css';
 
 export default function Tags(data) {
 	return (`

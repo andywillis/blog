@@ -1,6 +1,6 @@
 import Heading from '../Heading';
 
-import style from './index.module.css';
+import style from './style.module.css';
 
 export default function Header() {
 	return (`

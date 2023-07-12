@@ -1,6 +1,6 @@
 import Section from '../Section';
 
-import style from './index.module.css';
+import style from './style.module.css';
 
 export default function Content(sections) {
 	return (`

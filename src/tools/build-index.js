@@ -1,6 +1,6 @@
+import fs from 'fs/promises';
 import fse from 'fs-extra';
 import { minify } from 'html-minifier';
-import fs from 'fs/promises';
 
 import rootname from '../../rootname.js';
 
@@ -14,15 +14,11 @@ const buildPath = `${toolsPath}/build`;
 await fse.emptyDir(buildPath);
 await fse.copy(publicOrigin, buildPath);
 
-// const css = await fs.readFile(`${tempPath}/journal.css`, 'utf8');
 const placeholder = await fs.readFile(`${toolsPath}/index_placeholder.html`, 'utf8');
 
-const replaced = placeholder
-	// .replace('{stylesheet}', `<style>${css}</style>`)
-	.replace('{html}', extractHtml());
+const replaced = placeholder.replace('{html}', extractHtml());
 
 const minified = minify(replaced, {
-	// minifyCSS: true,
 	removeAttributeQuotes: true,
 	collapseWhitespace: true,
 	conservativeCollapse: true,

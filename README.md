@@ -2,16 +2,16 @@
 
 A simple blog with a focus on accessibility and performance.
 
-All posts are written in markdown. A conversion process renders the markdown to JSON that the component system can use to build the page.
+All posts are written in markdown. A conversion process renders the markdown to JSON that the component system can use to build the journal.
 
-A backend engine produces a simple compiled index HTML page from the rendered page and, eventually, separate pages for each post. The HTML can be progressively enhanced with JS where needed.
+A backend engine produces simple compiled minified HTML/CSS from the rendered page (and, eventually, separate pages for each post). The HTML can be progressively enhanced with JS where needed.
 
 Work undertaken:
 
-- Stage 1: React 180K
-- Stage 2: Preact 58K
-- Stage 3: Bespoke system 28K JS + 11K CSS
-- Stage 4: Single minified HTML 23K
+- Stage 1: React
+- Stage 2: Preact
+- Stage 3: Bespoke JS components system (49K)
+- Stage 4: Compiled and minified HTML/CSS from stage 4 (31K)
 
 ## Tools
 

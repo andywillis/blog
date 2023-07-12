@@ -1,6 +1,6 @@
 .tag {
-  display: inline-block;
   color: hsl(var(--red-9-hsl));
+  display: inline-block;
 }
 
 .tag:not(:last-child) {
@@ -8,6 +8,6 @@
 }
 
 .tag:hover {
-  cursor: pointer;
   background-color: var(--color-blue-light);
+  cursor: pointer;
 }

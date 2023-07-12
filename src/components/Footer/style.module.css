@@ -1,12 +1,12 @@
 .footer {
+  align-items: center;
+  background-color: var(--color-sand-light-40);
+  border-top: var(--size-px-05) solid var(--color-sand-light-60);
   display: grid;
   gap: var(--size-rem-2);
   grid-template: "socials" / 1fr;
-  align-items: center;
   margin-top: var(--size-rem-4);
   padding: var(--size-rem-05) var(--size-rem-15);
-  border-top: var(--size-px-05) solid var(--color-sand-light-60);
-  background-color: var(--color-sand-light-40);
 }
 
 .socialsList {
@@ -14,8 +14,8 @@
 }
 
 .socialsList li {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .icon {
@@ -24,7 +24,7 @@
 
 @media (min-width: 721px) {
 	.footer {
-    padding: var(--size-rem-1) var(--size-rem-3);
     grid-template: "socials . ." / 1fr 1fr 1fr;
+    padding: var(--size-rem-1) var(--size-rem-3);
 	}
 }
