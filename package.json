@@ -11,8 +11,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "parse-markdown": "node src/tools/parseMarkdown.js",
-    "compile-bespoke": "rollup --config rollup-bespoke.config.js && node src/tools/build-index.js"
+    "parse-markdown": "node src/tools/parse-markdown.js",
+    "build-rss": "node src/tools/build-rss.js",
+    "build-bespoke": "rollup --config rollup-bespoke.config.js && node src/tools/build-index.js",
+    "build-all": "pnpm run build-bespoke && pnpm run build-rss" 
   },
   "dependencies": {
     "classnames": "^2.3.2",
