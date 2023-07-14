@@ -9,3 +9,4 @@
 - Decent layouts
 - Break up into individual pages
 - Dark mode
+- Move rollup to backend node scripts
