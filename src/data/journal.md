@@ -29,6 +29,8 @@ To keep things minimal:
 * I created a JS script to convert the journal markdown to JSON.
 * I wrote a component library using template strings. The parsed JSON is imported and passed into the `Journal` component, and the layers of components built from each entry in the data.
 * I used CSS modules that I could extract out into a minified core CSS file.
+* No client-side JS.
+* Images are now hosted locally, and they are converted to `webp` format. 
 * A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.
 
 Total minified HTML/CSS size: 33K.
