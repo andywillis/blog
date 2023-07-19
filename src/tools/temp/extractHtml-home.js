@@ -219,6 +219,93 @@ function Home(journal) {
 
 var entries = [
 	{
+		id: 16,
+		title: "DX vs UX",
+		date: "Friday, 14 July 2023",
+		summary: "An experiment in finding a personal balance between DX and UX",
+		tags: [
+			{
+				id: 0,
+				tag: "DX"
+			},
+			{
+				id: 1,
+				tag: "UX"
+			},
+			{
+				id: 2,
+				tag: "React"
+			},
+			{
+				id: 3,
+				tag: "Preact"
+			},
+			{
+				id: 4,
+				tag: "RenderPipeline"
+			}
+		],
+		link: "dx-vs-ux-16",
+		body: [
+			{
+				id: 0,
+				type: "para",
+				html: "Over the last few weeks I decided to revisit the code and markup for this site to try to address an issue that <a href=\"https://addyosmani.com/blog/software-value/\">a lot of developers are having</a> this year - whether the last decade of prioritising front-end development tooling and developer experience (DX) has had an inverse effect on user experience (UX), and whether we now just pay lip-serice to accessibility and performance."
+			},
+			{
+				id: 1,
+				type: "para",
+				html: "In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a <em>lot</em> of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component."
+			},
+			{
+				id: 2,
+				type: "h4",
+				text: "Initial stage"
+			},
+			{
+				id: 3,
+				type: "para",
+				html: "React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device."
+			},
+			{
+				id: 4,
+				type: "h4",
+				text: "Second stage"
+			},
+			{
+				id: 5,
+				type: "para",
+				html: "Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size."
+			},
+			{
+				id: 6,
+				type: "h4",
+				text: "Current stage"
+			},
+			{
+				id: 7,
+				type: "para",
+				html: "Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance."
+			},
+			{
+				id: 8,
+				type: "para",
+				html: "To keep things minimal:"
+			},
+			{
+				id: 9,
+				type: "para",
+				html: "Total minified HTML/CSS size: 33K."
+			},
+			{
+				id: 10,
+				type: "para",
+				html: "The next stage will be to use the component library and some templates to create separate entry pages."
+			}
+		],
+		cdata: "<p>Over the last few weeks I decided to revisit the code and markup for this site to try to address an issue that <a href=\"https://addyosmani.com/blog/software-value/\">a lot of developers are having</a> this year - whether the last decade of prioritising front-end development tooling and developer experience (DX) has had an inverse effect on user experience (UX), and whether we now just pay lip-serice to accessibility and performance.</p>\n<p>In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a <em>lot</em> of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component.</p>\n<h4>Initial stage</h4>\n<p>React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device.</p>\n<h4>Second stage</h4>\n<p>Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size.</p>\n<h4>Current stage</h4>\n<p>Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance.</p>\n<p>To keep things minimal:</p>\n<ol>\n<li>I created a JS script to convert the journal markdown to JSON.</li>\n<li>I wrote a component library using template strings. The parsed JSON is imported and passed into the <code>Journal</code> component, and the layers of components built from each entry in the data.</li>\n<li>I used CSS modules that I could extract out into a minified core CSS file.</li>\n<li>A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.</li>\n</ol>\n<p>Total minified HTML/CSS size: 33K.</p>\n<p>The next stage will be to use the component library and some templates to create separate entry pages.</p>"
+	},
+	{
 		id: 15,
 		title: "Parkes Operation Center (Apollo 11)",
 		date: "Tuesday, 26 July 2022",
@@ -226,15 +313,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "thedish"
+				tag: "TheDish"
 			},
 			{
 				id: 1,
-				tag: "parkes"
+				tag: "Parkes"
 			},
 			{
 				id: 2,
-				tag: "apollo11"
+				tag: "Apollo11"
 			}
 		],
 		link: "parkes-operation-center-apollo-11-15",
@@ -247,16 +334,21 @@ var entries = [
 			{
 				id: 1,
 				type: "para",
-				html: "But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front)."
+				html: "But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>."
 			},
 			{
-				id: 3,
+				id: 2,
+				type: "para",
+				html: "Back row left to right: Alfred Stella, George Kropp, William Reytar (back). Seated: Robert Taylor."
+			},
+			{
+				id: 4,
 				type: "image",
 				src: "/assets/images/parkes.webp",
 				alt: "Parkes Operations Team 1969"
 			}
 		],
-		cdata: "<p>Just finished watching <a href=\"https://en.wikipedia.org/wiki/The_Dish\">The Dish</a> - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was \"based on\" the actual events the film-makers used fictional characters.</p>\n<p>But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).</p>\n<p><img src=\"/assets/images/parkes.webp\" alt=\"Parkes Operations Team 1969\"></p>"
+		cdata: "<p>Just finished watching <a href=\"https://en.wikipedia.org/wiki/The_Dish\">The Dish</a> - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was \"based on\" the actual events the film-makers used fictional characters.</p>\n<p>But I managed to <a href=\"https://www.parkes.atnf.csiro.au/news_events/apollo11/parkes_operations.html\">unearth this brilliant photo of the actual operations team</a>.</p>\n<p>Back row left to right: Alfred Stella, George Kropp, William Reytar (back). Seated: Robert Taylor.</p>\n<p><img src=\"/assets/images/parkes.webp\" alt=\"Parkes Operations Team 1969\"></p>"
 	},
 	{
 		id: 14,
@@ -266,15 +358,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "sandwichbay"
+				tag: "SandwichBay"
 			},
 			{
 				id: 1,
-				tag: "ramsgate"
+				tag: "Ramsgate"
 			},
 			{
 				id: 2,
-				tag: "sunset"
+				tag: "Sunset"
 			}
 		],
 		link: "towards-sandwich-bay-14",
@@ -301,19 +393,19 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "sandwichbay"
+				tag: "SandwichBay"
 			},
 			{
 				id: 1,
-				tag: "beach"
+				tag: "Beach"
 			},
 			{
 				id: 2,
-				tag: "autumn"
+				tag: "Autumn"
 			},
 			{
 				id: 3,
-				tag: "lowtide"
+				tag: "LowTide"
 			}
 		],
 		link: "sandwich-bay-kent-13",
@@ -346,15 +438,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "dungeness"
+				tag: "Dungeness"
 			},
 			{
 				id: 1,
-				tag: "beach"
+				tag: "Beach"
 			},
 			{
 				id: 2,
-				tag: "windswept"
+				tag: "Windswept"
 			}
 		],
 		link: "dungeness-12",
@@ -382,15 +474,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "images"
+				tag: "Images"
 			},
 			{
 				id: 1,
-				tag: "responsive"
+				tag: "Responsive"
 			},
 			{
 				id: 2,
-				tag: "flickr"
+				tag: "Flickr"
 			}
 		],
 		link: "flickr-images-for-responsive-sites-11",
@@ -426,19 +518,19 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "ocean"
+				tag: "Ocean"
 			},
 			{
 				id: 1,
-				tag: "photography"
+				tag: "Photography"
 			},
 			{
 				id: 2,
-				tag: "underwater"
+				tag: "Underwater"
 			},
 			{
 				id: 3,
-				tag: "hawaii"
+				tag: "Hawaii"
 			}
 		],
 		link: "akule-10",
@@ -465,15 +557,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "wimbledoncommon"
+				tag: "WimbledonCommon"
 			},
 			{
 				id: 1,
-				tag: "pond"
+				tag: "Pond"
 			},
 			{
 				id: 2,
-				tag: "samshepard"
+				tag: "SamShepard"
 			}
 		],
 		link: "wimbledon-common-9",
@@ -500,23 +592,23 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "express"
+				tag: "Express"
 			},
 			{
 				id: 1,
-				tag: "react"
+				tag: "React"
 			},
 			{
 				id: 2,
-				tag: "reactrouter"
+				tag: "ReactRouter"
 			},
 			{
 				id: 3,
-				tag: "markdown"
+				tag: "Markdown"
 			},
 			{
 				id: 4,
-				tag: "journal"
+				tag: "Journal"
 			}
 		],
 		link: "this-site-8",
@@ -567,19 +659,19 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "kensingtonchurch"
+				tag: "KensingtonChurch"
 			},
 			{
 				id: 1,
-				tag: "greenpark"
+				tag: "GreenPark"
 			},
 			{
 				id: 2,
-				tag: "london"
+				tag: "London"
 			},
 			{
 				id: 3,
-				tag: "hydepark"
+				tag: "HydePark"
 			}
 		],
 		link: "a-tuesday-wander-7",
@@ -606,19 +698,19 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "broadstairs"
+				tag: "Broadstairs"
 			},
 			{
 				id: 1,
-				tag: "northsea"
+				tag: "NorthSea"
 			},
 			{
 				id: 2,
-				tag: "beach"
+				tag: "Beach"
 			},
 			{
 				id: 3,
-				tag: "ocean"
+				tag: "Ocean"
 			}
 		],
 		link: "broadstairs-6",
@@ -656,11 +748,7 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "wimbledon"
-			},
-			{
-				id: 1,
-				tag: "wimbledoncommon"
+				tag: "WimbledonCommon"
 			}
 		],
 		link: "wimbledon-common-5",
@@ -682,15 +770,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "uruguay"
+				tag: "Uruguay"
 			},
 			{
 				id: 1,
-				tag: "beach"
+				tag: "Beach"
 			},
 			{
 				id: 2,
-				tag: "ocean"
+				tag: "Ocean"
 			}
 		],
 		link: "montevideo-uruguay-4",
@@ -712,11 +800,11 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "theblackhole"
+				tag: "TheBlackHole"
 			},
 			{
 				id: 1,
-				tag: "spotmaps"
+				tag: "Spotmaps"
 			}
 		],
 		link: "disneys-the-black-hole-3",
@@ -778,15 +866,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "nan"
+				tag: "Nan"
 			},
 			{
 				id: 1,
-				tag: "war"
+				tag: "War"
 			},
 			{
 				id: 2,
-				tag: "hospital"
+				tag: "Hospital"
 			}
 		],
 		link: "nan-2",
@@ -813,19 +901,19 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "greatgranddad"
+				tag: "GreatGranddad"
 			},
 			{
 				id: 1,
-				tag: "miner"
+				tag: "Miner"
 			},
 			{
 				id: 2,
-				tag: "kent"
+				tag: "Kent"
 			},
 			{
 				id: 3,
-				tag: "dover"
+				tag: "Dover"
 			}
 		],
 		link: "my-great-grandad-george-w-smith-1",
@@ -852,15 +940,15 @@ var entries = [
 		tags: [
 			{
 				id: 0,
-				tag: "cow"
+				tag: "Cow"
 			},
 			{
 				id: 1,
-				tag: "dirtycow"
+				tag: "Dirtycow"
 			},
 			{
 				id: 2,
-				tag: "newyear"
+				tag: "NewYear"
 			}
 		],
 		link: "dirty-cow-0",
@@ -876,6 +964,7 @@ var entries = [
 	}
 ];
 var links = [
+	"dx-vs-ux-16",
 	"parkes-operation-center-apollo-11-15",
 	"towards-sandwich-bay-14",
 	"sandwich-bay-kent-13",
@@ -894,52 +983,55 @@ var links = [
 	"dirty-cow-0"
 ];
 var tags = {
-	thedish: 1,
-	parkes: 1,
-	apollo11: 1,
-	sandwichbay: 2,
-	ramsgate: 1,
-	sunset: 1,
-	beach: 4,
-	autumn: 1,
-	lowtide: 1,
-	dungeness: 1,
-	windswept: 1,
-	images: 1,
-	responsive: 1,
-	flickr: 1,
-	ocean: 3,
-	photography: 1,
-	underwater: 1,
-	hawaii: 1,
-	wimbledoncommon: 2,
-	pond: 1,
-	samshepard: 1,
-	express: 1,
-	react: 1,
-	reactrouter: 1,
-	markdown: 1,
-	journal: 1,
-	kensingtonchurch: 1,
-	greenpark: 1,
-	london: 1,
-	hydepark: 1,
-	broadstairs: 1,
-	northsea: 1,
-	wimbledon: 1,
-	uruguay: 1,
-	theblackhole: 1,
-	spotmaps: 1,
-	nan: 1,
-	war: 1,
-	hospital: 1,
-	greatgranddad: 1,
-	miner: 1,
-	kent: 1,
-	dover: 1,
-	cow: 1,
-	dirtycow: 1,
-	newyear: 1
+	DX: 1,
+	UX: 1,
+	React: 2,
+	Preact: 1,
+	RenderPipeline: 1,
+	TheDish: 1,
+	Parkes: 1,
+	Apollo11: 1,
+	SandwichBay: 2,
+	Ramsgate: 1,
+	Sunset: 1,
+	Beach: 4,
+	Autumn: 1,
+	LowTide: 1,
+	Dungeness: 1,
+	Windswept: 1,
+	Images: 1,
+	Responsive: 1,
+	Flickr: 1,
+	Ocean: 3,
+	Photography: 1,
+	Underwater: 1,
+	Hawaii: 1,
+	WimbledonCommon: 2,
+	Pond: 1,
+	SamShepard: 1,
+	Express: 1,
+	ReactRouter: 1,
+	Markdown: 1,
+	Journal: 1,
+	KensingtonChurch: 1,
+	GreenPark: 1,
+	London: 1,
+	HydePark: 1,
+	Broadstairs: 1,
+	NorthSea: 1,
+	Uruguay: 1,
+	TheBlackHole: 1,
+	Spotmaps: 1,
+	Nan: 1,
+	War: 1,
+	Hospital: 1,
+	GreatGranddad: 1,
+	Miner: 1,
+	Kent: 1,
+	Dover: 1,
+	Cow: 1,
+	Dirtycow: 1,
+	NewYear: 1
 };
 var data = {
 	entries: entries,

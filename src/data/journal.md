@@ -1,14 +1,57 @@
+## DX vs UX
+### Friday, 14 July 2023
+#### An experiment in finding a personal balance between DX and UX
+
+* DX
+* UX
+* React
+* Preact
+* RenderPipeline
+
+Over the last few weeks I decided to revisit the code and markup for this site to try to address an issue that [a lot of developers are having][addy] this year - whether the last decade of prioritising front-end development tooling and developer experience (DX) has had an inverse effect on user experience (UX), and whether we now just pay lip-serice to accessibility and performance.
+
+In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a _lot_ of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component.
+
+#### Initial stage
+
+React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device.
+
+#### Second stage
+
+Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size.
+
+#### Current stage
+
+Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance.
+
+To keep things minimal:
+
+1) I created a JS script to convert the journal markdown to JSON.
+2) I wrote a component library using template strings. The parsed JSON is imported and passed into the `Journal` component, and the layers of components built from each entry in the data.
+3) I used CSS modules that I could extract out into a minified core CSS file.
+4) A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.
+
+Total minified HTML/CSS size: 33K.
+
+The next stage will be to use the component library and some templates to create separate entry pages.
+
+[addy]: https://addyosmani.com/blog/software-value/
+
+---
+
 ## Parkes Operation Center (Apollo 11)
 ### Tuesday, 26 July 2022
 #### Unearthing the true faces of the Parkes Apollo 11 NASA crew
 
-* thedish
-* parkes
-* apollo11
+* TheDish
+* Parkes
+* Apollo11
 
 Just finished watching [The Dish][wikipedia] - the fictional account of the Parkes Observatory and the team that worked there during the Apollo mission. But because it was "based on" the actual events the film-makers used fictional characters.
 
-But I managed to [unearth this brilliant photo of the actual operations team][parkes]. (L-R) Alfred Stella, George Kropp, William Reytar (back) and Robert Taylor (seated at front).
+But I managed to [unearth this brilliant photo of the actual operations team][parkes].
+
+Back row left to right: Alfred Stella, George Kropp, William Reytar (back). Seated: Robert Taylor.
 
 ![Parkes Operations Team 1969][original-team]
 
@@ -22,9 +65,9 @@ But I managed to [unearth this brilliant photo of the actual operations team][pa
 ### Tuesday, 18 December 2018
 #### Photo archive
 
-* sandwichbay
-* ramsgate
-* sunset
+* SandwichBay
+* Ramsgate
+* Sunset
 
 This is the view from the other side of Sandwich Bay where it hugs the Cliffsend coast to the south of Ramsgate Harbour. This looks back toward the Bay, and is the outer reach of the low tide. Here the North Sea drains away to leave vast stretches of sand for the thousands of sea birds that make their home here.
 
@@ -38,10 +81,10 @@ This is the view from the other side of Sandwich Bay where it hugs the Cliffsend
 ### Wednesday, 31 October 2018
 #### Photo archive
 
-* sandwichbay
-* beach
-* autumn
-* lowtide
+* SandwichBay
+* Beach
+* Autumn
+* LowTide
 
 Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling out as we arrived, and slowly merged with the horizon as we walked along towards Shellness Point where the seals basked in the low Autumn sun."
 
@@ -57,9 +100,9 @@ Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling ou
 ### Saturday, 30 September 2017
 #### Photo archive
 
-* dungeness
-* beach
-* windswept
+* Dungeness
+* Beach
+* Windswept
 
 ![Dungeness beach][beach]
 ![Ship high on the beach][ship]
@@ -73,9 +116,9 @@ Took a walk with my Dad along the coast at Sandwich Bay. The tide was rolling ou
 ### Monday, 21 August 2017
 #### Flickr responsive images investigation
 
-* images
-* responsive
-* flickr
+* Images
+* Responsive
+* Flickr
 
 Today I implemented basic responsive images for this site in order to improve the performance, and it took less than an hour thanks - mainly - to Flickr.
 
@@ -104,10 +147,10 @@ For reference here's a list of the sizes along with their sizeIds based on an or
 ### Tuesday, 15 August 2017
 #### Photo archive
 
-* ocean
-* photography
-* underwater
-* hawaii
+* Ocean
+* Photography
+* Underwater
+* Hawaii
 
 > "When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, [I want to make images, not to explain or clarify that world, but to deepen the mystery.][hawaii]" - Wayne Levin
 
@@ -122,9 +165,9 @@ For reference here's a list of the sizes along with their sizeIds based on an or
 ### Monday, 31 July 2017
 #### Photo archive
 
-* wimbledoncommon
-* pond
-* samshepard
+* WimbledonCommon
+* Pond
+* SamShepard
 
 This is the pond I was lazing by when I heard the sad news that Sam Shepard had died.
 
@@ -138,11 +181,11 @@ This is the pond I was lazing by when I heard the sad news that Sam Shepard had 
 ### Saturday, 24 June 2017
 #### Details of the changes to the journal
 
-* express
-* react
-* reactrouter
-* markdown
-* journal
+* Express
+* React
+* ReactRouter
+* Markdown
+* Journal
 
 This site is [an on-going React/Redux project][uws] to build and maintain an online static-site generated journal that looks good on both mobile and desktop. Initially this was going to be a one-shot experiment, but as I lean into different tech each month this has become a useful battle-tested area for me to test each tech out.
 
@@ -166,10 +209,10 @@ This system means I can update the markdown file whenever I want from either my 
 ### Tuesday, 16 May 2017
 #### Walk archive
 
-* kensingtonchurch
-* greenpark
-* london
-* hydepark
+* KensingtonChurch
+* GreenPark
+* London
+* HydePark
 
 A walk from Embankment, up The Mall to Buckingham Palace, along Green Park, up to Hyde Park, through the park along the lake with the talkative geese, across to Kensington Palace Gardens, and finally out on to the road and on to Earl's Court.
 
@@ -183,10 +226,10 @@ A walk from Embankment, up The Mall to Buckingham Palace, along Green Park, up t
 ### Wednesday, 28 December 2016
 #### Photo archive
 
-* broadstairs
-* northsea
-* beach
-* ocean
+* Broadstairs
+* NorthSea
+* Beach
+* Ocean
 
 It comes as a surprise to many people, even to those who have lived in the area, that the water that plays along the coast around Broadstairs, Ramsgate, Sandwich, and even Deal, is not the English Channel, but the North Sea.
 
@@ -205,8 +248,7 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 ### Saturday, 31 December 2016
 #### Photo archive
 
-* wimbledon
-* wimbledoncommon
+* WimbledonCommon
 
 ![The sun's rays shine through the foliage of a tree on the Common][tree]
 
@@ -218,9 +260,9 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 ### Thursday, July 16 2015
 #### Photo archive
 
-* uruguay
-* beach
-* ocean
+* Uruguay
+* Beach
+* Ocean
 
 ![The beach North of Montevideo, Uruguay][uruguay]
 
@@ -232,8 +274,8 @@ If you were to imagine a line that crossed the sea in an ENE direction from Leat
 ### Tuesday, 3 April 2012
 #### Introduction to my Spotmaps project
 
-* theblackhole
-* spotmaps
+* TheBlackHole
+* Spotmaps
 
 This is one of the many images rendered by my [spotmaps][spotmaps] application.
 
@@ -266,9 +308,9 @@ There are also a couple of online articles about the spotmaps website on [FastCo
 ### Sunday, 1 January 2006
 #### Photo archive
 
-* nan
-* war
-* hospital
+* Nan
+* War
+* Hospital
 
 Nan is on the right.
 
@@ -282,10 +324,10 @@ Nan is on the right.
 ### Sunday, 1 January 2006
 #### Photo archive
 
-* greatgranddad
-* miner
-* kent
-* dover
+* GreatGranddad
+* Miner
+* Kent
+* Dover
 
 Organised the first Kent miner's strike.
 
@@ -299,9 +341,9 @@ Organised the first Kent miner's strike.
 ### Sunday, 1 January 2000
 #### Photo archive
 
-* cow
-* dirtycow
-* newyear
+* Cow
+* Dirtycow
+* NewYear
 
 ![Massive papier-mache cow on the roof of Fortress Studios][cow]
 

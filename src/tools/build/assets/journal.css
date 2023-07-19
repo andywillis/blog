@@ -27,7 +27,7 @@
 
 .h2_-gsxg {
   color: hsl(var(--sand-8-hsl));
-  font-size: var(--size-rem-22);
+  font-size: var(--size-rem-2);
   font-weight: var(--font-weight-6);
   line-height: 1.2;
   margin-bottom: var(--size-rem-05);
@@ -35,34 +35,35 @@
 
 .h3_mxmBn {
   color: hsl(var(--sand-7-hsl));
-  font-size: var(--size-rem-16);
+  font-size: var(--size-rem-18);
   font-weight: var(--font-weight-6);
   margin-bottom: var(--size-rem-1);
 }
 
 .date_D4y8s {
-  font-size: var(--size-rem-16);
+  font-size: var(--size-rem-18);
   margin-bottom: var(--size-rem-075);
 }
 
 @media (min-width: 721px) {
 
   .h1_mnlYR {
-    font-size: var(--size-rem-25);
+    font-size: var(--size-rem-23);
   }  
 
   .h2_-gsxg {
-    font-size: var(--size-rem-18);
+    font-size: var(--size-rem-16);
   }  
 
   .h3_mxmBn {
     border-bottom: var(--size-px-1) solid var(--gray-6);
-    font-size: var(--size-rem-15);
+    font-size: var(--size-rem-12);
     margin-bottom: var(--size-rem-2);
   }
 
-  .h3_mxmBn {
-    margin-bottom: 0;
+  .date_D4y8s {
+    font-size: var(--size-rem-12);
+    margin-bottom: var(--size-rem-2);
   }
 
 }
@@ -128,6 +129,13 @@
 	grid-area: content;
 }
 
+/* Tablet and Smaller Desktop */
+
+@media (min-width: 721px) {
+	.content_Go-kx {
+		margin-top: var(--size-rem-15);
+	}
+}
 .tag_j1yjb {
   color: hsl(var(--red-9-hsl));
   display: inline-block;
@@ -271,13 +279,22 @@
 	--size-rem-075: 0.75rem;
 	--size-rem-1: 1rem;
 	--size-rem-11: 1.1rem;
+	--size-rem-12: 1.2rem;
+	--size-rem-13: 1.3rem;
 	--size-rem-14: 1.4rem;
 	--size-rem-15: 1.5rem;
 	--size-rem-16: 1.6rem;
 	--size-rem-18: 1.8rem;
 	--size-rem-2: 2rem;
+	--size-rem-21: 2.1rem;
 	--size-rem-22: 2.2rem;
+	--size-rem-23: 2.3rem;
+	--size-rem-23: 2.4rem;
 	--size-rem-25: 2.5rem;
+	--size-rem-26: 2.6rem;
+	--size-rem-27: 2.7rem;
+	--size-rem-28: 2.8rem;
+	--size-rem-29: 2.9rem;
 	--size-rem-3: 3rem;
 	--size-rem-4: 4rem;
 	--size-rem-6: 6rem;
@@ -333,12 +350,20 @@
 :root {
 	color-scheme: dark light;
 	box-sizing: border-box;
-	
+
 }
 :root ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+:root .noscript {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
 	}
 body {
 	display: grid;
@@ -346,13 +371,13 @@ body {
 	border-left: var(--size-px-05) solid var(--color-red-light);
 	min-height: 100vh;
 	margin: 0;
-	font-size: var(--size-rem-16);
+	font-size: var(--size-rem-15);
 }
 @media (min-width: 721px) {
 	body {
 		border-left: var(--size-px-10) solid var(--color-red-light);
 		margin: 0;
-    font-size: var(--size-rem-11);
+    font-size: var(--size-rem-1);
 		overflow-x: hidden;
 	}
 }
