@@ -1,14 +1,14 @@
-var style$b = {"blockquote":"blockquote_hHp2i"};
+var style$c = {"blockquote":"blockquote_hHp2i"};
 
 function Blockquote(blockquote) {
 	return (`
-		<p class=${style$b.blockquote}>
+		<p class=${style$c.blockquote}>
 			${blockquote}
 		</p>
 	`);
 }
 
-var style$a = {"heading":"heading_eZIvn","h1":"h1_mnlYR heading_eZIvn","h2":"h2_-gsxg heading_eZIvn","h3":"h3_mxmBn heading_eZIvn","date":"date_D4y8s h3_mxmBn heading_eZIvn"};
+var style$b = {"heading":"heading_eZIvn","h1":"h1_mnlYR heading_eZIvn","h2":"h2_-gsxg heading_eZIvn","h3":"h3_mxmBn heading_eZIvn","date":"date_D4y8s h3_mxmBn heading_eZIvn"};
 
 /**
  * Heading
@@ -27,7 +27,7 @@ function Heading(props) {
 
 	return (`
 		<${level}
-			class="${style$a[type]}"
+			class="${style$b[type]}"
 			${link ? `id="${link}"` : ''}
 		>${text}
 		</${level}>
@@ -35,19 +35,35 @@ function Heading(props) {
 
 }
 
-var style$9 = {"imageContainer":"imageContainer_0ew51","image":"image_Mhl-i","fadeIn":"fadeIn_MbchH"};
+var style$a = {"imageContainer":"imageContainer_0ew51","image":"image_Mhl-i","fadeIn":"fadeIn_MbchH"};
 
 function Image({ src, alt }) {
 	return (`
-		<div class="${style$9.imageContainer}">
+		<div class="${style$a.imageContainer}">
 			<img
-				class="${style$9.image}"
+				class="${style$a.image}"
 				width="800px"
 				height="500px"
 				src="${src}"
 				alt="${alt}"
 			>
 		</div>
+	`);
+}
+
+var style$9 = {"listitem":"listitem_UVf6a"};
+
+function ListItem(item) {
+	return `<li class="${style$9.listitem}">${item.html}</li>`;
+}
+
+// import style from './style.module.css';
+
+function List(items) {
+	return (`
+		<ul>
+			${items.map(item => ListItem(item)).join('')}
+		</ul>
 	`);
 }
 
@@ -77,6 +93,7 @@ function format(section) {
 		case 'blockquote': return Blockquote(section.html);
 		case 'image': return Image({ src: section.src, alt: section.alt });
 		case 'table': return Table(section.html);
+		case 'list': return List(section.items);
 		default: return Paragraph(section.html);
 	}
 }
@@ -259,7 +276,7 @@ var entries = [
 			},
 			{
 				id: 2,
-				type: "h4",
+				type: "h3",
 				text: "Initial stage"
 			},
 			{
@@ -269,7 +286,7 @@ var entries = [
 			},
 			{
 				id: 4,
-				type: "h4",
+				type: "h3",
 				text: "Second stage"
 			},
 			{
@@ -279,7 +296,7 @@ var entries = [
 			},
 			{
 				id: 6,
-				type: "h4",
+				type: "h3",
 				text: "Current stage"
 			},
 			{
@@ -294,16 +311,42 @@ var entries = [
 			},
 			{
 				id: 9,
-				type: "para",
-				html: "Total minified HTML/CSS size: 33K."
+				type: "list",
+				items: [
+					{
+						id: 0,
+						type: "listitem",
+						html: "I created a JS script to convert the journal markdown to JSON."
+					},
+					{
+						id: 1,
+						type: "listitem",
+						html: "I wrote a component library using template strings. The parsed JSON is imported and passed into the <code>Journal</code> component, and the layers of components built from each entry in the data."
+					},
+					{
+						id: 2,
+						type: "listitem",
+						html: "I used CSS modules that I could extract out into a minified core CSS file."
+					},
+					{
+						id: 3,
+						type: "listitem",
+						html: "A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment."
+					}
+				]
 			},
 			{
 				id: 10,
 				type: "para",
+				html: "Total minified HTML/CSS size: 33K."
+			},
+			{
+				id: 11,
+				type: "para",
 				html: "The next stage will be to use the component library and some templates to create separate entry pages."
 			}
 		],
-		cdata: "<p>Over the last few weeks I decided to revisit the code and markup for this site to try to address an issue that <a href=\"https://addyosmani.com/blog/software-value/\">a lot of developers are having</a> this year - whether the last decade of prioritising front-end development tooling and developer experience (DX) has had an inverse effect on user experience (UX), and whether we now just pay lip-serice to accessibility and performance.</p>\n<p>In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a <em>lot</em> of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component.</p>\n<h4>Initial stage</h4>\n<p>React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device.</p>\n<h4>Second stage</h4>\n<p>Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size.</p>\n<h4>Current stage</h4>\n<p>Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance.</p>\n<p>To keep things minimal:</p>\n<ol>\n<li>I created a JS script to convert the journal markdown to JSON.</li>\n<li>I wrote a component library using template strings. The parsed JSON is imported and passed into the <code>Journal</code> component, and the layers of components built from each entry in the data.</li>\n<li>I used CSS modules that I could extract out into a minified core CSS file.</li>\n<li>A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.</li>\n</ol>\n<p>Total minified HTML/CSS size: 33K.</p>\n<p>The next stage will be to use the component library and some templates to create separate entry pages.</p>"
+		cdata: "<p>Over the last few weeks I decided to revisit the code and markup for this site to try to address an issue that <a href=\"https://addyosmani.com/blog/software-value/\">a lot of developers are having</a> this year - whether the last decade of prioritising front-end development tooling and developer experience (DX) has had an inverse effect on user experience (UX), and whether we now just pay lip-serice to accessibility and performance.</p>\n<p>In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a <em>lot</em> of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component.</p>\n<h3>Initial stage</h3>\n<p>React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device.</p>\n<h3>Second stage</h3>\n<p>Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size.</p>\n<h3>Current stage</h3>\n<p>Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance.</p>\n<p>To keep things minimal:</p>\n<ul>\n<li>I created a JS script to convert the journal markdown to JSON.</li>\n<li>I wrote a component library using template strings. The parsed JSON is imported and passed into the <code>Journal</code> component, and the layers of components built from each entry in the data.</li>\n<li>I used CSS modules that I could extract out into a minified core CSS file.</li>\n<li>A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.</li>\n</ul>\n<p>Total minified HTML/CSS size: 33K.</p>\n<p>The next stage will be to use the component library and some templates to create separate entry pages.</p>"
 	},
 	{
 		id: 15,

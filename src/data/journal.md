@@ -12,24 +12,24 @@ Over the last few weeks I decided to revisit the code and markup for this site t
 
 In my personal projects I'm generally very frugal when it comes to introducing new libraries into a tech stack. In order to do this I do a _lot_ of experimentation. For example, this site in particular has undergone various iterations over the last few of years with markdown as the only consistent component.
 
-#### Initial stage
+### Initial stage
 
 React, Redux, and an Express server hooked up to Google Drive. The journal markdown was stored on GD which allowed me to access and update it easily from any device.
 
-#### Second stage
+### Second stage
 
 Preact, Signals, Express, Google Drive. This was really a test of Preact's capabilities, to work out how Signals worked, and to see whether they were a decent alternative to other popular state management libraries. Preact's added value was a significantly reduced bundle size.
 
-#### Current stage
+### Current stage
 
 Here I wanted to strip back all the technology to the bare minimum and achieve a good balance between DX and UX. I wanted to use the capabilities of component-based design but with a renewed focus on performance and accessibility. In short I wanted a way to design the front end with today's component-centric technology but then be able to export that into plain HTML/CSS to keep performance costs low, and retain good UX and performance.
 
 To keep things minimal:
 
-1) I created a JS script to convert the journal markdown to JSON.
-2) I wrote a component library using template strings. The parsed JSON is imported and passed into the `Journal` component, and the layers of components built from each entry in the data.
-3) I used CSS modules that I could extract out into a minified core CSS file.
-4) A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.
+* I created a JS script to convert the journal markdown to JSON.
+* I wrote a component library using template strings. The parsed JSON is imported and passed into the `Journal` component, and the layers of components built from each entry in the data.
+* I used CSS modules that I could extract out into a minified core CSS file.
+* A Rollup configuration builds and gzips the developed code and CSS, and a separate JS script minifies the HTML, and merges all the relevant files into one folder ready for deployment.
 
 Total minified HTML/CSS size: 33K.
 

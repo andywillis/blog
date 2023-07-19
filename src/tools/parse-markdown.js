@@ -60,6 +60,12 @@ function getLink(id, title) {
 	);
 }
 
+function getListItems(list) {
+	return Array.from(list.querySelectorAll('li')).map((item, id) => {
+		return { id, type: 'listitem', html: item.innerHTML };
+	});
+}
+
 function getBody(el) {
 
 	const selector = 'p, h2, h3, h4, blockquote, img, table, ul';
@@ -69,7 +75,7 @@ function getBody(el) {
 		switch (c.nodeName) {
 
 			case 'UL': {
-				p.push({ id: i, type: 'list', html: c.innerHTML });
+				p.push({ id: i, type: 'list', items: getListItems(c) });
 				break;
 			}
 

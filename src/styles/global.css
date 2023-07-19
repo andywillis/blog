@@ -6,12 +6,6 @@
 	color-scheme: dark light;
 	box-sizing: border-box;
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
 	.noscript {
 		display: flex;
 		flex-direction: column;
@@ -59,7 +53,7 @@ body {
 	}
 
 	code {
-		color: hsl(var(--color-blue-dark));
+		color: var(--color-blue-dark);
 	}
 
 }
