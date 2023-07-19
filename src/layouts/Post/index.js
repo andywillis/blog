@@ -1,18 +1,18 @@
-import Entries from '../../components/Entries';
+import Entry from '../../components/Entry';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 /**
- * Home
+ * Post
  *
  * @export
- * @param {object} Journal data
+ * @param {object} Entry data
  * @return {string}
  */
-export default function Home(journal) {
+export default function Post(entry) {
 	return (`
 		${Header()}
-		${Entries(journal.entries)}
+		${Entry(entry)}
 		${Footer()}
 	`);
 }

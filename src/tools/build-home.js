@@ -4,7 +4,7 @@ import { minify } from 'html-minifier';
 
 import rootname from '../../rootname.js';
 
-import extractHtml from './temp/extractHtml.js';
+import extractHtml from './temp/extractHtml-home.js';
 
 const publicOrigin = `${rootname}/src/public`;
 const toolsPath = `${rootname}/src/tools`;

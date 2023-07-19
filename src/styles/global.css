@@ -6,12 +6,15 @@
 	color-scheme: dark light;
 	box-sizing: border-box;
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+	.noscript {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
 	}
-	
+
 }
 
 body {
@@ -20,14 +23,14 @@ body {
 	border-left: var(--size-px-05) solid var(--color-red-light);
 	min-height: 100vh;
 	margin: 0;
-	font-size: var(--size-rem-16);
+	font-size: var(--size-rem-15);
 }
 
 @media (min-width: 721px) {
 	body {
 		border-left: var(--size-px-10) solid var(--color-red-light);
 		margin: 0;
-    font-size: var(--size-rem-11);
+    font-size: var(--size-rem-1);
 		overflow-x: hidden;
 	}
 }
@@ -50,7 +53,7 @@ body {
 	}
 
 	code {
-		color: hsl(var(--color-blue-dark));
+		color: var(--color-blue-dark);
 	}
 
 }

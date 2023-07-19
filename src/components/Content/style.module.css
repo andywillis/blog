@@ -1,3 +1,10 @@
 .content {
 	grid-area: content;
 }
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 721px) {
+	.content {
+		margin-top: var(--size-rem-15);
+	}
+}
