@@ -1,0 +1,30 @@
+.footer {
+  align-items: center;
+  background-color: var(--color-sand-light-40);
+  border-top: var(--size-px-05) solid var(--color-sand-light-60);
+  display: grid;
+  gap: var(--size-rem-2);
+  grid-template: "socials" / 1fr;
+  margin-top: var(--size-rem-4);
+  padding: var(--size-rem-3) var(--size-rem-15);
+}
+
+.socialsList {
+  grid-area: socials;
+}
+
+.socialsList li {
+  align-items: center;
+  display: flex;
+}
+
+.icon {
+  margin-right: var(--size-rem-05);
+}
+
+@media (min-width: 721px) {
+	.footer {
+    grid-template: "socials . ." / 1fr 1fr 1fr;
+    padding: var(--size-rem-2) var(--size-rem-3);
+	}
+}
