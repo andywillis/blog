@@ -34,11 +34,17 @@
     }],
     "vue/max-attributes-per-line": ["error", {
       "singleline": {
-        "max": 4
+        "max": 6
       },      
       "multiline": {
         "max": 10
       }
+    }],
+    "indent": 0,
+    "vue/script-indent": ["error", "tab", {
+      "baseIndent": 1,
+      "switchCase": 1,
+      "ignores": []
     }]
   }
 }

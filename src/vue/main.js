@@ -3,8 +3,8 @@ import { createApp } from 'vue';
 
 import Journal from './layouts/Home/index.vue';
 
-// import data from '../data/journal.json';
+import data from '../data/journal.json';
 
 import '../public/styles/global.css';
 
-createApp(Journal).mount('body');
+createApp(Journal, { data }).mount('body');
