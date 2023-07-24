@@ -1,9 +1,10 @@
-import { createApp } from 'vue'
+/* eslint-disable import/no-relative-packages */
+import { createApp } from 'vue';
 
-import Journal from './layouts/Home';
+import Journal from './layouts/Home/index.vue';
 
-import data from '../data/journal.json';
+// import data from '../data/journal.json';
 
 import '../public/styles/global.css';
 
-createApp(Journal, { data }).mount('#app');
+createApp(Journal).mount('body');

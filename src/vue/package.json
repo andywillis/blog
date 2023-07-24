@@ -1,5 +1,5 @@
 {
-  "name": "preact",
+  "name": "vue",
   "private": true,
   "version": "2.1.0",
   "scripts": {
@@ -8,17 +8,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@preact/preset-vite": "2.5.0",
     "@vitejs/plugin-vue": "4.2.3",
     "babel-preset-vue": "2.0.2",
-    "eslint-config-airbnb": "19.0.4",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-vue": "9.15.1",
     "open-props": "^1.5.10"
   },
   "dependencies": {
-    "@preact/signals": "1.1.5",
-    "classnames": "^2.3.2",
-    "preact": "10.16.0",
     "vue": "3.3.4"
   }
 }
