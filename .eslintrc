@@ -49,8 +49,8 @@
     "arrow-parens": 0,
     "arrow-body-style": 0,
     "no-shadow": 0,
-    "no-param-reassign": 0,
     "no-tabs": 0,
+    "no-param-reassign": 0,
     "indent": ["error", "tab", { "SwitchCase": 1 }]
   }
 }

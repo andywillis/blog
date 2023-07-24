@@ -8,7 +8,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run parse-markdown && pnpm run build-rss-sprinkles && vite build",
+    "vanilladev": "pnpm --filter vanilla run dev",
+    "preactdev": "pnpm --filter preact run dev",
+    "vanillabuild": "pnpm run parse-markdown && pnpm run build-rss-sprinkles && pnpm --filter vanilla run build",
+    "preactbuild": "pnpm run parse-markdown && pnpm run build-rss-sprinkles && pnpm --filter preact run build",
     "preview": "vite preview",
     "lint": "eslint",
     "parse-markdown": "node src/tools/parse-markdown.js",

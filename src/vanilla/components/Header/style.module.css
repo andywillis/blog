@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--color-sand-light-40);
+  border-bottom: var(--size-px-05) solid var(--color-sand-light-60);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--size-rem-4);
+  padding: var(--size-rem-05) var(--size-rem-15);
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+@media (min-width: 721px) {
+	.header {
+    padding: var(--size-rem-1) var(--size-rem-3);
+	}
+}

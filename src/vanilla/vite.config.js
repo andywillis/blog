@@ -7,8 +7,7 @@ export default defineConfig({
 		splitVendorChunkPlugin(),
 		compress()
 	],
-	root: 'src',
-	publicDir: 'public',
+	publicDir: '../public',
 	css: {
 		// modules: {
 		// 	generateScopedName: (name) => name
@@ -26,7 +25,7 @@ export default defineConfig({
 	build: {
 		target: 'esnext',
 		emptyOutDir: true,
-		outDir: '../build',
+		outDir: '../../build',
 		sourcemap: true,
 		rollupOptions: {
 			output: {
