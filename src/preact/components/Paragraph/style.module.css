@@ -1,0 +1,7 @@
+.paragraph:not(:last-child) {
+  margin-bottom: var(--size-rem-1);
+}
+
+.paragraph:last-child {
+  margin-bottom: var(--size-rem-2);
+}

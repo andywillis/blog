@@ -1,0 +1,27 @@
+.table {
+  border: var(--size-px-01) solid var(--color-gray-dark);
+  border-collapse: collapse;
+  margin: var(--size-rem-15) 0 var(--size-rem-15) 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.table thead {
+  border-bottom: var(--size-px-01) solid var(--color-gray-dark);
+  text-align: left;
+}
+
+.table thead th { 
+  padding: var(--size-rem-05) var(--size-rem-075);
+  text-transform: uppercase;
+}
+
+.table tbody td {
+  border: var(--size-px-01) solid var(--color-sand-regular);
+  padding: var(--size-rem-05) var(--size-rem-075);
+}
+
+.table th {
+  background-color: var(--color-gray-light);
+}

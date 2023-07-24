@@ -1,0 +1,14 @@
+.header {
+	border-bottom: 1px dashed hsl(var(--sand-7-hsl));
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 721px) {
+	.entry {
+		column-gap: var(--size-rem-4);
+		display: grid;
+		grid-template:
+			"heading tags"
+			"content aside" / 3fr 1fr;
+	}	
+}
