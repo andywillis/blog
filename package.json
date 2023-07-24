@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "vanilladev": "pnpm --filter vanilla run dev",
+    "preactdev": "pnpm --filter preact run dev",
     "build": "pnpm run parse-markdown && pnpm run build-rss-sprinkles && vite build",
     "preview": "vite preview",
     "lint": "eslint",

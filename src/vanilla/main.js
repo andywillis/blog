@@ -1,6 +1,8 @@
+/* eslint-disable import/no-relative-packages */
 import Journal from './layouts/Home';
 
-// eslint-disable-next-line import/no-relative-packages
+import '../public/styles/global.css';
+
 import data from '../data/journal.json';
 
 const html = Journal(data);

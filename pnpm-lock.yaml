@@ -112,8 +112,15 @@ importers:
       eslint-plugin-react-hooks:
         specifier: 4.6.0
         version: 4.6.0(eslint@8.43.0)
+      open-props:
+        specifier: ^1.5.10
+        version: 1.5.10
 
-  src/vanilla: {}
+  src/vanilla:
+    dependencies:
+      open-props:
+        specifier: ^1.5.10
+        version: 1.5.10
 
 packages:
 
@@ -2673,7 +2680,6 @@ packages:
 
   /open-props@1.5.10:
     resolution: {integrity: sha512-iE+B7Zo0ytgeUNI38uHiBrxF5Nnv3uX8AzogBXzf7wqeNyG6oqQEEBs1gnAZdRF+h7IRO0zOGM5d9/huiNFR+w==}
-    dev: false
 
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
