@@ -1,6 +1,6 @@
-@import './colors';
-@import './sizes';
-@import './typeography';
+@import './colors.css';
+@import './sizes.css';
+@import './typeography.css';
 
 :root {
 	color-scheme: dark light;

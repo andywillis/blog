@@ -1,7 +1,7 @@
-@import 'open-props/blue-hsl.min';
-@import 'open-props/gray-hsl.min';
-@import 'open-props/red-hsl.min';
-@import 'open-props/sand-hsl.min';
+@import 'node_modules/open-props/blue-hsl.min.css';
+@import 'open-props/gray-hsl.min.css';
+@import 'open-props/red-hsl.min.css';
+@import 'open-props/sand-hsl.min.css';
 
 :root {
 	
