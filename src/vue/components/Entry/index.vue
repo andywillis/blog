@@ -1,24 +1,29 @@
-import Content from '../Content';
-import Heading from '../Heading';
-import Tags from '../Tags';
+<script setup>
+	
+	import Content from '../Content/index.vue';
+	import Heading from '../Heading/index.vue';
+	import Tags from '../Tags/index.vue';
+	
+	import style from './style.module.css';
 
-import style from './style.module.css';
+	defineProps({
+		entry: {
+			type: Object,
+			required: true
+		}
+	});
 
-export default function Entry({ entry }) {
+</script>
 
-	const { date, title, link, body, tags } = entry;
-
-	return (
-		<section class={style.entry} data-type="entry">
-			<header class={style.header}>
-				<a href={`#${link}`}>
-					<Heading link={link} level="h2" type="h2" text={title} />
-				</a>
-				<Heading level="h3" type="date" text={date} />
-			</header>
-			<Content body={body} />
-			<Tags tags={tags} />
-		</section>
-	);
-
-}
+<template>
+	<section :class="style.entry">
+		<header :class="style.header">
+			<a :href="'#' + entry.link">
+				<Heading :id="entry.link" type="h2" :text="entry.title" />
+			</a>
+			<Heading type="date" :text="entry.date" />
+		</header>
+		<Content :body="entry.body" />
+		<Tags :tags="entry.tags" />
+	</section>
+</template>

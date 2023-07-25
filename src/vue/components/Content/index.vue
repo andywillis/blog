@@ -1,13 +1,22 @@
-import Section from '../Section';
+<script setup>
 
-import style from './style.module.css';
+	import Section from '../Section/index.vue';
 
-export default function Content({ body }) {
-	return (
-		<div class={style.content}>
-			{body.map(section => {
-				return <Section key={section.id} section={section} />;
-			})}
-		</div>
-	);
-}
+	import style from './style.module.css';
+
+	defineProps({
+		body: {
+			type: Object,
+			required: true
+		}
+	});
+
+</script>
+
+<template>
+	<div :class="style.content">
+		<template v-for="section in body" :key="section.id">
+			<Section :section="section" />
+		</template>
+	</div>
+</template>

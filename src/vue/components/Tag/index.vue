@@ -1,9 +1,22 @@
-import style from './style.module.css';
+<script setup>
 
-export default function Tag({ tag, number }) {
-	return (
-		<li class={style.tag}>
-			{tag.tag}{tag.id < number - 1 ? ',' : ''}
-		</li>
-	);
-}
+	import style from './style.module.css';
+
+	defineProps({
+		tag: {
+			type: Object,
+			required: true
+		},
+		numberOfTags: {
+			type: String,
+			required: true
+		}
+	});
+
+</script>
+
+<template>
+	<li :class="style.tag">
+		{{ tag.tag }}{{ tag.id < numberOfTags - 1 ? ',' : '' }}
+	</li>
+</template>
