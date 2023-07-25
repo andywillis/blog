@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "../../.eslintrc",
+    "plugin:vue/vue3-recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "plugins": [
+        "@babel/plugin-syntax-import-assertions"
+      ],
+      "presets": ["babel-preset-vue"]
+    }
+  },
+  "globals": {
+    "Vue": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts", ".vue"]
+      }
+    }
+  },
+  "rules":{
+    "vue/multi-word-component-names": 0,
+    "vue/html-indent": ["error", "tab", {
+      "attribute": 1,
+      "baseIndent": 1,
+      "closeBracket": 0,
+      "alignAttributesVertically": true,
+      "ignores": []
+    }],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 6
+      },      
+      "multiline": {
+        "max": 10
+      }
+    }],
+    "indent": 0,
+    "vue/script-indent": ["error", "tab", {
+      "baseIndent": 1,
+      "switchCase": 1,
+      "ignores": []
+    }],
+    "vue/no-undef-components": ["error", {
+      "ignorePatterns": []
+    }]
+  }
+}
