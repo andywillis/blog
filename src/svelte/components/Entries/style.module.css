@@ -1,0 +1,19 @@
+.entries > * ~ * {
+	margin-top: var(--size-rem-4);
+}
+
+.entries {
+	display: flex;
+	flex-direction: column;
+	grid-area: entries;
+	padding: var(--size-rem-05) var(--size-rem-15);
+}
+
+@media (min-width: 721px) {
+	.entries > * ~ * {
+		margin-top: var(--size-rem-6);
+	}
+	.entries {
+		padding: var(--size-rem-1) var(--size-rem-3);
+	}
+}

@@ -1,0 +1,15 @@
+.blockquote ~ .blockquote {
+  margin-top: var(--size-rem--15);
+}
+
+.blockquote {
+  margin: var(--size-rem-15) var(--size-rem-1);
+  padding: var(--size-rem-05);
+  border-left: var(--size-px-05) solid var(--color-gray-regular);
+}
+
+@media (min-width: 721px) {
+  .blockquote {
+    border-left: var(--size-px-10) solid var(--color-gray-regular);
+  }
+}
