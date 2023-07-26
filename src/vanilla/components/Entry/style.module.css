@@ -1,5 +1,5 @@
 .header {
-	border-bottom: 1px dashed hsl(var(--sand-7-hsl));
+	border-bottom: 1px dashed var(--color-sand-regular);
 }
 
 /* Tablet and Smaller Desktop */

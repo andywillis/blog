@@ -2,3 +2,4 @@ packages:
   - 'src/preact'
   - 'src/vanilla'
   - 'src/vue'
+  - 'src/svelte'

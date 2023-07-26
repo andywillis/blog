@@ -8,14 +8,17 @@ A backend engine produces simple compiled minified HTML/CSS from the rendered pa
 
 Work undertaken:
 
-- Stage 1: React
-- Stage 2: Preact
-- Stage 3: Bespoke JS components system (49K)
+- Stage 1: Created with React
+- Stage 2: Created with Preact
+- Stage 3: Created with bespoke JS components system (49K)
 - Stage 4: Compiled and minified HTML/CSS from stage 4 (31K)
+- Stage 5: Re-created with Vue
 
 ## Tools
 
 - Vite
+- Preact
+- Vue
 - Markdown
 - Rollup
 - Open-Props

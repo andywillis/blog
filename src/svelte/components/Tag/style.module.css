@@ -1,0 +1,13 @@
+.tag {
+  color: hsl(var(--red-9-hsl));
+  display: inline-block;
+}
+
+.tag:not(:last-child) {
+  margin-right: var(--size-rem-05);
+}
+
+.tag:hover {
+  background-color: var(--color-blue-light);
+  cursor: pointer;
+}
