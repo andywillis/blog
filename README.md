@@ -13,6 +13,7 @@ Work undertaken:
 - Stage 3: Created with bespoke JS components system (49K)
 - Stage 4: Compiled and minified HTML/CSS from stage 4 (31K)
 - Stage 5: Re-created with Vue
+- Stage 6: Re-created with Svelte
 
 ## Tools
 
