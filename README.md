@@ -19,6 +19,7 @@ Work undertaken:
 
 - Vite
 - Preact
+- Svelte
 - Vue
 - Markdown
 - Rollup
