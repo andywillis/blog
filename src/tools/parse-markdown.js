@@ -160,7 +160,7 @@ function processMarkdown(markdown) {
 		const links = entries.map(entry => entry.link);
 		const tags = buildTagList(entries);
 		try {
-			resolve({ entries, links, tags });
+			resolve({ id: 0, title: 'Journal', entries, links, tags });
 		} catch (e) {
 			reject(e);
 		}

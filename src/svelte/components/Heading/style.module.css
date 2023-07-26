@@ -1,17 +1,16 @@
 .heading {
   margin: 0;
   padding: 0;
+  color: var(--color-sand-regular);
 }
 
 .h1 {
   font-size: var(--size-rem-3);
   font-weight: var(--font-weight-8);
-  color: hsl(var(--stone-9-hsl));
   composes: heading;
 }
 
 .h2 {
-  color: hsl(var(--sand-8-hsl));
   composes: heading;
   font-size: var(--size-rem-2);
   font-weight: var(--font-weight-6);
@@ -20,7 +19,6 @@
 }
 
 .h3 {
-  color: hsl(var(--sand-7-hsl));
   composes: heading;
   font-size: var(--size-rem-18);
   font-weight: var(--font-weight-6);
