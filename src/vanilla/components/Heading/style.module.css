@@ -19,6 +19,10 @@
   margin-bottom: var(--size-rem-05);
 }
 
+h2:hover {
+  text-decoration: underline;
+}
+
 .h3 {
   composes: heading;
   font-size: var(--size-rem-18);

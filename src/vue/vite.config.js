@@ -21,18 +21,11 @@ export default defineConfig({
 	server: {
 		port: 3000,
 		open: true,
-		// proxy: {
-		//   '/endpoint': {
-		//     target: 'http://localhost:4000',
-		//     secure: false,
-		//     changeOrigin: true
-		//   },
-		// }
 	},
 	build: {
 		target: 'esnext',
 		emptyOutDir: true,
-		outDir: '../../build',
+		outDir: './build',
 		sourcemap: true
 	}
 });

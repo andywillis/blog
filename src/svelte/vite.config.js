@@ -12,9 +12,6 @@ export default defineConfig({
   ],
   publicDir: '../public',
   css: {
-    // modules: {
-    //  generateScopedName: (name) => name
-    // },
     postcss: {
       plugins: [
         postcssNesting
@@ -28,7 +25,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     emptyOutDir: true,
-    outDir: '../../build',
+    outDir: './build',
     sourcemap: true,
     rollupOptions: {
       output: {

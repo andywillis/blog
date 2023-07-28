@@ -8,7 +8,7 @@
 * Vue
 * Svelte
 
-So I decided to side-step the multi-page process on the journal for a moment and take a look at Vue and Svelte. Vue is slighter younger than React, and Svelte - the baby - arriving in 2016. I'd wanted to work with them for a while but never really had a good plan or project in which to use them. But as a way to introduce myself to their component systems, and understand their basic feature-set, the Journal was ideal.
+So I decided to side-step the multi-page process on the journal for a moment and take a look at Vue and Svelte. Vue is slighter younger than React with Svelte - the baby - arriving in 2016. I'd wanted to work with them for a while but never really had a good plan or project in which to use them. But as a way to introduce myself to their component systems, and understand their basic feature-set, incorporating them into the journal was ideal.
 
 The groundwork for introducing them was simple. Similarly to the vanilla JS and Preact component systems they would take advantage of the global CSS so it's really just a matter of changing the syntax of either the Preact or vanilla systems to their syntax.
 
@@ -35,7 +35,9 @@ A couple of interesting things that cropped up while I was testing the output:
 
 4. I do like Svelte but their method for props-sharing is a little counter-intuitive and there isn't a lot of documentation on _why_ they've chosen this route (I'm not sure "you'll get used to it" counts). In short the component that has props being _passed to it_ has to export those props _from it_ (`export let prop;`).
 
-I'm going to add to my knowledge of both libraries soon with rewrites of my [Walking Journal](https://quiet-douhua-784278.netlify.app/pines-to-fan-bay) as a baseline. And then maybe I'll take a look at some web component libraries like Stencil.
+5. `markdown-it`, which I use to parse the markdown into HTML so I can parse that and get some nice JSON, has different output for an ordered list (`ol`) and an unordered list (`ul`). I would have expected them to be the same but MDIT pads the list items with paragraph elements. And that meant a little fiddling with my `parse-markdown` tool so it didn't pick up those nested paragraphs and render them.
+
+I'm going to add to my knowledge of both libraries soon with rewrites of my [Walking Journal](https://quiet-douhua-784278.netlify.app/pines-to-fan-bay) as a baseline. And then maybe I'll take a look at some web component libraries like Stencil. It's turning into quite a fun project.
 
 ---
 
