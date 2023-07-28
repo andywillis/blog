@@ -23,7 +23,7 @@
 
 	font-family: 'Lexend', sans-serif;
 	font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-	line-height: 1.8;	
+	line-height: 1.8;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -35,5 +35,7 @@
 
 	--font-weight-8: 800;
 	--font-weight-6: 600;
+
+	--font-code: Courier, monospace;
 
 }
