@@ -11,7 +11,7 @@ function format(section) {
 		case 'blockquote': return <Blockquote html={section.html} />;
 		case 'image': return <Image src={section.src} alt={section.alt} />;
 		case 'table': return <Table html={section.html} />;
-		case 'list': return <List items={section.items} />;
+		case 'list': return <List variant={section.variant} items={section.items} />;
 		default: return <Paragraph html={section.html} />;
 	}
 }

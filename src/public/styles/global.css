@@ -53,7 +53,16 @@ body {
 	}
 
 	code {
+		display: inline-block;
+		margin: 0 0.2rem;
+		font-family: var(--font-code);
+		font-weight: var(--font-weight-6);
 		color: var(--color-blue-dark);
+	}
+
+	pre code {
+		margin: 0;
+		font-size: var(--size-rem-09);
 	}
 
 }

@@ -12,6 +12,10 @@ const { JSDOM } = jsdom;
 const { document } = (new JSDOM('<div>')).window;
 const div = document.querySelector('div');
 
+function trimAll(t) {
+	return t.trim();
+}
+
 function splitMarkdown(markdown, delimiter) {
 	return markdown.split(delimiter); // .reverse();
 }
@@ -62,25 +66,30 @@ function getLink(id, title) {
 
 function getListItems(list) {
 	return Array.from(list.querySelectorAll('li')).map((item, id) => {
-		return { id, type: 'listitem', html: item.innerHTML };
+		return { id, type: 'listitem', html: trimAll(item.innerHTML) };
 	});
 }
 
 function getBody(el) {
 
-	const selector = 'p, h2, h3, h4, blockquote, img, table, ul';
+	const selector = 'h2, h3, h4, blockquote, img, table, ul, ol, p';
 
 	return [...el.querySelectorAll(selector)].reduce((p, c, i) => {
 
 		switch (c.nodeName) {
 
 			case 'UL': {
-				p.push({ id: i, type: 'list', items: getListItems(c) });
+				p.push({ id: i, type: 'list', variant: 'unordered', items: getListItems(c) });
+				break;
+			}
+
+			case 'OL': {
+				p.push({ id: i, type: 'list', variant: 'ordered', items: getListItems(c) });					
 				break;
 			}
 
 			case 'TABLE': {
-				p.push({ id: i, type: 'table', html: c.innerHTML });
+				p.push({ id: i, type: 'table', html: trimAll(c.innerHTML) });
 				break;
 			}
 
@@ -90,21 +99,27 @@ function getBody(el) {
 			}
 
 			case 'P': {
-				if (c.firstChild.nodeName !== 'IMG') {
-					const name = c.parentNode.nodeName;
-					const type = name === 'BLOCKQUOTE' ? 'blockquote' : 'para';
-					p.push({ id: i, type, html: c.innerHTML });
+
+				// Make sure that only root paragraphs are rendered so
+				// that it doesn't get confused with ordered lists which
+				// also have paragraphs in them for some reason (markdown-it issue?)
+				if (c.parentElement.nodeName === 'DIV') {
+					if (c.firstChild.nodeName !== 'IMG') {
+						const name = c.parentNode.nodeName;
+						const type = name === 'BLOCKQUOTE' ? 'blockquote' : 'para';
+						p.push({ id: i, type, html: trimAll(c.innerHTML) });
+					}
 				}
 				break;
 			}
 
 			case 'H3': {
-				p.push({ id: i, type: 'h3', text: c.textContent });
+				p.push({ id: i, type: 'h3', text: trimAll(c.textContent) });
 				break;
 			}
 
 			case 'H4': {
-				p.push({ id: i, type: 'h4', text: c.textContent });
+				p.push({ id: i, type: 'h4', text: trimAlle(c.textContent) });
 				break;
 			}
 
@@ -117,7 +132,8 @@ function buildEntry(md, index, arr) {
 	
 	const html = markdownParser.render(md);
 	
-	div.innerHTML = html;
+	div.innerHTML = trimAll(html);
+	// console.log(html)
 
 	const title = getTitle(div);
 	const date = getDate(div);
@@ -125,7 +141,7 @@ function buildEntry(md, index, arr) {
 	const tags = getTags(div);
 	const link = getLink((arr.length - 1) - index, title);
 	const body = getBody(div);
-	const cdata = div.innerHTML.trim();
+	const cdata = trimAll(div.innerHTML);
 
 	const entry = {
 		id: (arr.length - 1) - index,

@@ -21,6 +21,6 @@
 	<Blockquote v-else-if="section.type === 'blockquote'" :html="section.html" />
 	<Image v-else-if="section.type === 'image'" :src="section.src" :alt="section.alt" />
 	<Table v-else-if="section.type === 'table'" :html="section.html" />
-	<List v-else-if="section.type === 'list'" :items="section.items" />
+	<List v-else-if="section.type === 'list'" :variant="section.variant" :items="section.items" />
 	<Paragraph v-else :html="section.html" />
 </template>

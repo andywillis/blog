@@ -13,6 +13,7 @@
 .h2 {
   composes: heading;
   font-size: var(--size-rem-2);
+  color: var(--color-red-dark);
   font-weight: var(--font-weight-6);
   line-height: 1.2;
   margin-bottom: var(--size-rem-05);

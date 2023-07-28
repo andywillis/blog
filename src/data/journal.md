@@ -1,9 +1,51 @@
+## DX vs UX: Part Deux
+### Friday, 28 July 2023
+#### Introducing Vue and Svelte
+
+* DX
+* UX
+* Journal
+* Vue
+* Svelte
+
+So I decided to side-step the multi-page process on the journal for a moment and take a look at Vue and Svelte. Vue is slighter younger than React, and Svelte - the baby - arriving in 2016. I'd wanted to work with them for a while but never really had a good plan or project in which to use them. But as a way to introduce myself to their component systems, and understand their basic feature-set, the Journal was ideal.
+
+The groundwork for introducing them was simple. Similarly to the vanilla JS and Preact component systems they would take advantage of the global CSS so it's really just a matter of changing the syntax of either the Preact or vanilla systems to their syntax.
+
+Vue was done in three hours; Svelte a little longer - simply because I spent more time reading its documentation.
+
+A couple of interesting things that cropped up while I was testing the output:
+
+1. In Vue you can have nested `<template>` elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:
+
+	```
+	<section v-for="item in items" :key="item.id">
+	```
+	Usually, you want that element _as part of the component_. And you don't really want to create _another_ containing component because that adds causes unnecessary markup. So by using a nested template which doesn't add any new markup:
+
+	```
+	<template v-for="item in items" :key="item.id">
+	```
+
+	you can move that `section` container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.
+
+2. One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional `0.25rem` on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.
+
+3. Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the `<script setup>` (Vue) or `<script>` (Svelte) tags.
+
+4. I do like Svelte but their method for props-sharing is a little counter-intuitive and there isn't a lot of documentation on _why_ they've chosen this route (I'm not sure "you'll get used to it" counts). In short the component that has props being _passed to it_ has to export those props _from it_ (`export let prop;`).
+
+I'm going to add to my knowledge of both libraries soon with rewrites of my [Walking Journal](https://quiet-douhua-784278.netlify.app/pines-to-fan-bay) as a baseline. And then maybe I'll take a look at some web component libraries like Stencil.
+
+---
+
 ## DX vs UX
 ### Friday, 14 July 2023
 #### An experiment in finding a personal balance between DX and UX
 
 * DX
 * UX
+* Journal
 * React
 * Preact
 * RenderPipeline

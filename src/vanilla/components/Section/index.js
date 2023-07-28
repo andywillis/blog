@@ -11,7 +11,7 @@ function format(section) {
 		case 'blockquote': return Blockquote(section.html);
 		case 'image': return Image({ src: section.src, alt: section.alt });
 		case 'table': return Table(section.html);
-		case 'list': return List(section.items);
+		case 'list': return List({ variant: section.variant, items: section.items });
 		default: return Paragraph(section.html);
 	}
 }

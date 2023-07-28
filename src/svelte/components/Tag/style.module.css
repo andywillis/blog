@@ -1,5 +1,5 @@
 .tag {
-  color: hsl(var(--red-9-hsl));
+  color: var(--color-red-dark);
   display: inline-block;
 }
 

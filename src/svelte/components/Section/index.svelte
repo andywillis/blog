@@ -21,7 +21,7 @@
 	<Table html={section.html} />
 
 {:else if section.type === 'list'}
-	<List items={section.items} />
+	<List variant={section.variant} items={section.items} />
 
 {:else}
 	<Paragraph html={section.html} />

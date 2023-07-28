@@ -15,6 +15,7 @@
   font-size: var(--size-rem-2);
   font-weight: var(--font-weight-6);
   line-height: 1.2;
+  color: var(--color-red-dark);
   margin-bottom: var(--size-rem-05);
 }
 
