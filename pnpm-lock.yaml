@@ -17,6 +17,9 @@ importers:
       markdown-it:
         specifier: 13.0.1
         version: 13.0.1
+      markdown-it-footnote:
+        specifier: 3.0.3
+        version: 3.0.3
       open-props:
         specifier: ^1.5.10
         version: 1.5.10
@@ -3027,6 +3030,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /markdown-it-footnote@3.0.3:
+    resolution: {integrity: sha512-YZMSuCGVZAjzKMn+xqIco9d1cLGxbELHZ9do/TSYVzraooV8ypsppKNmUJ0fVH5ljkCInQAtFpm8Rb3eXSrt5w==}
+    dev: false
 
   /markdown-it@13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}

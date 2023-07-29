@@ -5,5 +5,5 @@ export default function Tag(tag, index, arr) {
 		<li class="${style.tag}">
 			${tag.tag}${index < arr.length - 1 ? ',' : ''}
 		</li>
-	`);
+	`).trim();
 }

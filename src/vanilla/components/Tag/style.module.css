@@ -4,7 +4,7 @@
 }
 
 .tag:not(:last-child) {
-  margin-right: var(--size-rem-025);
+  margin-right: var(--size-rem-05);
 }
 
 .tag:hover {
