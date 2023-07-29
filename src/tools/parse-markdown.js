@@ -1,5 +1,6 @@
 import jsdom from 'jsdom';
 import MarkdownIt from 'markdown-it';
+import MarkdownItFootnote from 'markdown-it-footnote';
 import fs from 'fs/promises';
 
 import rootname from '../../rootname.js';
@@ -7,6 +8,7 @@ import rootname from '../../rootname.js';
 const markdownData = await fs.readFile(`${rootname}/src/data/journal.md`, 'utf8');
 
 const markdownParser = MarkdownIt();
+markdownParser.use(MarkdownItFootnote);
 
 const { JSDOM } = jsdom;
 const { document } = (new JSDOM('<div>')).window;
@@ -64,27 +66,55 @@ function getLink(id, title) {
 	);
 }
 
-function getListItems(list) {
+function getListItems(list, link) {
 	return Array.from(list.querySelectorAll('li')).map((item, id) => {
-		return { id, type: 'listitem', html: trimAll(item.innerHTML) };
+		return { id, type: 'listitem', html: trimAll(item.innerHTML.replaceAll(/(fn\d+|fnref\d+)/g, `${link}-$1`)) };
 	});
 }
 
-function getBody(el) {
+function getFootnotes(list, link) {
+	return Array.from(list.querySelectorAll('li')).map((item, id) => {
+		return {
+			id,
+			no: id + 1,
+			fnid: `${link}-${item.id}`,
+			type: 'listitem',
+			html: trimAll(item.innerHTML.replaceAll(/(fn\d+|fnref\d+)/g, `${link}-$1`))
+		};
+	});
+}
 
-	const selector = 'h2, h3, h4, blockquote, img, table, ul, ol, p';
+function getBody(el, link) {
+
+	const selector = 'h2, h3, h4, blockquote, img, table, ul, ol, p, hr, section';
 
 	return [...el.querySelectorAll(selector)].reduce((p, c, i) => {
 
 		switch (c.nodeName) {
 
+			case 'SECTION': {
+				if (c.className === 'footnotes') {
+					p.push({ id: i, type: 'footnotes', footnotes: getFootnotes(c, link) });
+				}
+				break;
+			}
+
+			case 'HR': {
+				if (c.className === 'footnotes-sep') {
+					p.push({ id: i, type: 'hr' });
+				}
+				break;
+			}
+
 			case 'UL': {
-				p.push({ id: i, type: 'list', variant: 'unordered', items: getListItems(c) });
+				p.push({ id: i, type: 'list', variant: 'unordered', items: getListItems(c, link) });
 				break;
 			}
 
 			case 'OL': {
-				p.push({ id: i, type: 'list', variant: 'ordered', items: getListItems(c) });					
+				if (c.parentElement.nodeName === 'DIV') {
+					p.push({ id: i, type: 'list', variant: 'ordered', items: getListItems(c, link) });
+				}
 				break;
 			}
 
@@ -107,7 +137,7 @@ function getBody(el) {
 					if (c.firstChild.nodeName !== 'IMG') {
 						const name = c.parentNode.nodeName;
 						const type = name === 'BLOCKQUOTE' ? 'blockquote' : 'para';
-						p.push({ id: i, type, html: trimAll(c.innerHTML) });
+						p.push({ id: i, type, html: trimAll(c.innerHTML.replaceAll(/#(fn\d+)/g, `#${link}-$1`)) });
 					}
 				}
 				break;
@@ -140,7 +170,7 @@ function buildEntry(md, index, arr) {
 	const summary = getSummary(div);
 	const tags = getTags(div);
 	const link = getLink((arr.length - 1) - index, title);
-	const body = getBody(div);
+	const body = getBody(div, link);
 	const cdata = trimAll(div.innerHTML);
 
 	const entry = {

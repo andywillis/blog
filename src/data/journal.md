@@ -29,7 +29,7 @@ A couple of interesting things that cropped up while I was testing the output:
 
 	you can move that `section` container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.
 
-2. One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional `0.25rem` on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.
+2. One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional `0.25rem` on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.[^1]
 
 3. Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the `<script setup>` (Vue) or `<script>` (Svelte) tags.
 
@@ -38,6 +38,8 @@ A couple of interesting things that cropped up while I was testing the output:
 5. `markdown-it`, which I use to parse the markdown into HTML so I can parse that and get some nice JSON, has different output for an ordered list (`ol`) and an unordered list (`ul`). I would have expected them to be the same but MDIT pads the list items with paragraph elements. And that meant a little fiddling with my `parse-markdown` tool so it didn't pick up those nested paragraphs and render them.
 
 I'm going to add to my knowledge of both libraries soon with rewrites of my [Walking Journal](https://quiet-douhua-784278.netlify.app/pines-to-fan-bay) as a baseline. And then maybe I'll take a look at some web component libraries like Stencil. It's turning into quite a fun project.
+
+[^1]: Turns out that the issue was extra whitespace in the vanilla tag template which could be resolved by adding `trim()`.
 
 ---
 

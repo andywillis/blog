@@ -4,7 +4,7 @@ import Tags from '../Tags';
 
 import style from './style.module.css';
 
-export default function Entry(entry, index) {
+export default function Entry(entry) {
 
 	const { date, title, link, body, tags } = entry;
 
@@ -16,7 +16,7 @@ export default function Entry(entry, index) {
 				</a>
 				${Heading({ level: 'h3', type: 'date', text: date })}
 			</header>
-			${Content(body, index)}
+			${Content(body)}
 			${Tags(tags)}
 		</section>
 	`);
