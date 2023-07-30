@@ -8,10 +8,10 @@ import gzipPlugin from 'rollup-plugin-gzip';
 
 export default {
 
-	input: 'src/tools/compile-posts.js',
+	input: './tools/compile-home.js',
 
 	output: {
-		file: 'src/tools/temp/extractHtml-posts.js',
+		file: './tools/temp/extractHtml-home.js',
 		format: 'esm'
 	},
 
