@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { h } from 'preact';
+
 import Blockquote from '../Blockquote';
 import Heading from '../Heading';
 import Image from '../Image';

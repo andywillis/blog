@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-home": "rollup --config tools/rollup-home.config.js && node tools/build-home.js && pnpm run build-rss-custard",
+    "build-rss-custard": "node tools/build-rss.js host=custard"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",

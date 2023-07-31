@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { Fragment, h } from 'preact';
+
 import Entries from '../../components/Entries';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -12,10 +15,10 @@ import Header from '../../components/Header';
 export default function Home({ data }) {
 	const { entries } = data;
 	return (
-		<>
+		<Fragment>
 			<Header />
 			<Entries entries={entries} />
 			<Footer />
-		</>
+		</Fragment>
 	);
 }

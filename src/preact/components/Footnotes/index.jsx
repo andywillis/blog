@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { h } from 'preact';
+
 import Footnote from '../Footnote';
 
 import style from './style.module.css';

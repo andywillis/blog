@@ -1,4 +1,7 @@
 /* eslint-disable react/no-invalid-html-attribute */
+/* eslint-disable no-unused-vars */
+import { h } from 'preact';
+
 import style from './style.module.css';
 
 /**

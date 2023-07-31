@@ -1,6 +1,7 @@
-import ListItem from '../ListItem';
+/* eslint-disable no-unused-vars */
+import { h } from 'preact';
 
-// import style from './style.module.css';
+import ListItem from '../ListItem';
 
 export default function List({ variant, items }) {
 	if (variant === 'unordered') {

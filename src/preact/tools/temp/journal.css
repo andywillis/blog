@@ -33,10 +33,6 @@
   margin-bottom: var(--size-rem-05);
 }
 
-h2:hover {
-  text-decoration: underline;
-}
-
 .h3_LrMGp {
   font-size: var(--size-rem-18);
   font-weight: var(--font-weight-6);
@@ -71,14 +67,6 @@ h2:hover {
 
 }
 
-.hr_J7xd- {
-	color: var(--color-red-dark);
-}
-.footnotes_S49wG {
-	margin: 1rem;
-	padding: 0;
-	font-size: var(--size-rem-08);
-}
 .imageContainer_PR--x {
   border: var(--size-px-02) solid var(--color-gray-dark);
   border-radius: var(--size-px-10);
@@ -99,6 +87,14 @@ h2:hover {
 @keyframes fadeIn_oPi-L {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+.hr_J7xd- {
+	color: var(--color-red-dark);
+}
+.footnotes_S49wG {
+	margin: 1rem;
+	padding: 0;
+	font-size: var(--size-rem-08);
 }
 .listitem_AgtJS {
   margin-bottom: var(--size-rem-1);
