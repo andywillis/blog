@@ -8,7 +8,7 @@ import rootname from '../../../rootname.js';
 import extractHtml from './temp/extract-html.js';
 
 // Set paths
-const appPath = `${rootname}/src/vanilla`;
+const appPath = `${rootname}/src/preact`;
 const publicPath = `${rootname}/src/public`;
 const toolsPath = `${appPath}/tools`;
 const tempPath = `${toolsPath}/temp`;

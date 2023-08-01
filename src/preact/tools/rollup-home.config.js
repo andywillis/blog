@@ -9,7 +9,7 @@ import { babel } from '@rollup/plugin-babel';
 
 export default {
 
-	input: './tools/compile-home.js',
+	input: './tools/compile-home.jsx',
 
 	output: {
 		file: './tools/temp/extract-html.js',
@@ -25,7 +25,17 @@ export default {
 		json(),
 
 		babel({
-			plugins: [[ 'babel-plugin-transform-react-jsx', { pragma: 'h' }]],
+			plugins: [
+				[ '@babel/plugin-transform-react-jsx', {
+					pragma: 'h',
+					pragmaFrag: 'Fragment'
+				}],
+				[ 'babel-plugin-jsx-pragmatic', {
+					module: 'preact',
+					import: 'h',
+					export: 'h'
+				}]
+			],
 			extensions: [ '.jsx', '.js' ]
 		}),
 

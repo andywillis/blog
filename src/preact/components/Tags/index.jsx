@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { h } from 'preact';
-
 import Heading from '../Heading';
 import Tag from '../Tag';
 

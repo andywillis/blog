@@ -1,21 +1,17 @@
-var n$2,l$2,u$2,s$2=[];function y$2(l,u,t){var i,o,r,f={};for(r in u)"key"==r?i=u[r]:"ref"==r?o=u[r]:f[r]=u[r];if(arguments.length>2&&(f.children=arguments.length>3?n$2.call(arguments,2):t),"function"==typeof l&&null!=l.defaultProps)for(r in l.defaultProps)void 0===f[r]&&(f[r]=l.defaultProps[r]);return d$2(l,f,i,o,null)}function d$2(n,t,i,o,r){var f={type:n,props:t,key:i,ref:o,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:null==r?++u$2:r};return null==r&&null!=l$2.vnode&&l$2.vnode(f),f}function k$2(n){return n.children}n$2=s$2.slice,l$2={__e:function(n,l,u,t){for(var i,o,r;l=l.__;)if((i=l.__c)&&!i.__)try{if((o=i.constructor)&&null!=o.getDerivedStateFromError&&(i.setState(o.getDerivedStateFromError(n)),r=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,t||{}),r=i.__d),r)return i.__E=i}catch(l){n=l;}throw n}},u$2=0,"function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout;
-
-var o=/[\s\n\\/='"\0<>]/,n$1=/^xlink:?./,a=/["&<]/;function i(e){if(0===e.length||!1===a.test(e))return e;for(var t=0,r=0,o="",n="";r<e.length;r++){switch(e.charCodeAt(r)){case 34:n="&quot;";break;case 38:n="&amp;";break;case 60:n="&lt;";break;default:continue}r!==t&&(o+=e.slice(t,r)),o+=n,t=r+1;}return r!==t&&(o+=e.slice(t,r)),o}var l$1={},c=new Set(["animation-iteration-count","border-image-outset","border-image-slice","border-image-width","box-flex","box-flex-group","box-ordinal-group","column-count","fill-opacity","flex","flex-grow","flex-negative","flex-order","flex-positive","flex-shrink","flood-opacity","font-weight","grid-column","grid-row","line-clamp","line-height","opacity","order","orphans","stop-opacity","stroke-dasharray","stroke-dashoffset","stroke-miterlimit","stroke-opacity","stroke-width","tab-size","widows","z-index","zoom"]),s$1=/[A-Z]/g;function _(e){var t="";for(var r in e){var o=e[r];if(null!=o&&""!==o){var n="-"==r[0]?r:l$1[r]||(l$1[r]=r.replace(s$1,"-$&").toLowerCase()),a=";";"number"!=typeof o||n.startsWith("--")||c.has(n)||(a="px;"),t=t+n+":"+o+a;}}return t||void 0}var u$1,p,d$1,f,v=[],h=Array.isArray,m=Object.assign;function y$1(o,n){var a=l$2.__s;l$2.__s=!0,u$1=l$2.__b,p=l$2.diffed,d$1=l$2.__r,f=l$2.unmount;var i=y$2(k$2,null);i.__k=[o];try{return x(o,n||k$1,!1,void 0,i)}finally{l$2.__c&&l$2.__c(o,v),l$2.__s=a,v.length=0;}}function g(){this.__d=!0;}var k$1={};function b(e,t){var r,o=e.type,n=!0;return e.__c?(n=!1,(r=e.__c).state=r.__s):r=new o(e.props,t),e.__c=r,r.__v=e,r.props=e.props,r.context=t,r.__d=!0,null==r.state&&(r.state=k$1),null==r.__s&&(r.__s=r.state),o.getDerivedStateFromProps?r.state=m({},r.state,o.getDerivedStateFromProps(r.props,r.state)):n&&r.componentWillMount?(r.componentWillMount(),r.state=r.__s!==r.state?r.__s:r.state):!n&&r.componentWillUpdate&&r.componentWillUpdate(),d$1&&d$1(e),r.render(r.props,r.state,t)}function x(t,a,l,c,s){if(null==t||!0===t||!1===t||""===t)return "";if("object"!=typeof t)return "function"==typeof t?"":i(t+"");if(h(t)){var v="";s.__k=t;for(var y=0;y<t.length;y++){var k=t[y];null!=k&&"boolean"!=typeof k&&(v+=x(k,a,l,c,s));}return v}if(void 0!==t.constructor)return "";t.__=s,u$1&&u$1(t);var S,D,A,E=t.type,F=t.props,L=a;if("function"==typeof E){if(E===k$2){if(F.UNSTABLE_comment)return "\x3c!--"+i(F.UNSTABLE_comment||"")+"--\x3e";D=F.children;}else {if(null!=(S=E.contextType)){var T=a[S.__c];L=T?T.props.value:S.__;}if(E.prototype&&"function"==typeof E.prototype.render)D=b(t,L),A=t.__c;else {t.__c=A={__v:t,props:F,context:L,setState:g,forceUpdate:g,__d:!0,__h:[]};for(var U=0;A.__d&&U++<25;)A.__d=!1,d$1&&d$1(t),D=E.call(A,F,L);A.__d=!0;}if(null!=A.getChildContext&&(a=m({},a,A.getChildContext())),(E.getDerivedStateFromError||A.componentDidCatch)&&l$2.errorBoundaries){var W="";D=null!=D&&D.type===k$2&&null==D.key?D.props.children:D;try{return W=x(D,a,l,c,t)}catch(e){return E.getDerivedStateFromError&&(A.__s=E.getDerivedStateFromError(e)),A.componentDidCatch&&A.componentDidCatch(e,{}),A.__d&&(D=b(t,a),null!=(A=t.__c).getChildContext&&(a=m({},a,A.getChildContext())),W=x(D=null!=D&&D.type===k$2&&null==D.key?D.props.children:D,a,l,c,t)),W}finally{p&&p(t),t.__=void 0,f&&f(t);}}}var j=x(D=null!=D&&D.type===k$2&&null==D.key?D.props.children:D,a,l,c,t);return p&&p(t),t.__=void 0,f&&f(t),j}var M,z="<"+E,B="";for(var N in F){var H=F[N];switch(N){case"children":M=H;continue;case"key":case"ref":case"__self":case"__source":continue;case"htmlFor":if("for"in F)continue;N="for";break;case"className":if("class"in F)continue;N="class";break;case"defaultChecked":N="checked";break;case"defaultSelected":N="selected";break;case"defaultValue":case"value":switch(N="value",E){case"textarea":M=H;continue;case"select":c=H;continue;case"option":c!=H||"selected"in F||(z+=" selected");}break;case"dangerouslySetInnerHTML":B=H&&H.__html;continue;case"style":"object"==typeof H&&(H=_(H));break;default:if(l&&n$1.test(N))N=N.toLowerCase().replace(w,"xlink:");else {if(o.test(N))continue;"-"!==N[4]&&"draggable"!==N||null==H||(H+="");}}null!=H&&!1!==H&&"function"!=typeof H&&(z=!0===H||""===H?z+" "+N:z+" "+N+'="'+i(H+"")+'"');}if(o.test(E))throw new Error(E+" is not a valid HTML tag name in "+z+">");return B||("string"==typeof M?B=i(M):null!=M&&!1!==M&&!0!==M&&(B=x(M,a,"svg"===E||"foreignObject"!==E&&l,c,t))),p&&p(t),t.__=void 0,f&&f(t),!B&&C.has(E)?z+"/>":z+">"+B+"</"+E+">"}var w=/^xlink:?/,C=new Set(["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"]);
-
-var n,
-  l,
-  u,
-  s = [];
-function y(l, u, t) {
+var n$2,
+  l$2,
+  u$2,
+  s$2 = [];
+function y$2(l, u, t) {
   var i,
     o,
     r,
     f = {};
   for (r in u) "key" == r ? i = u[r] : "ref" == r ? o = u[r] : f[r] = u[r];
-  if (arguments.length > 2 && (f.children = arguments.length > 3 ? n.call(arguments, 2) : t), "function" == typeof l && null != l.defaultProps) for (r in l.defaultProps) void 0 === f[r] && (f[r] = l.defaultProps[r]);
-  return d(l, f, i, o, null);
+  if (arguments.length > 2 && (f.children = arguments.length > 3 ? n$2.call(arguments, 2) : t), "function" == typeof l && null != l.defaultProps) for (r in l.defaultProps) void 0 === f[r] && (f[r] = l.defaultProps[r]);
+  return d$2(l, f, i, o, null);
 }
-function d(n, t, i, o, r) {
+function d$2(n, t, i, o, r) {
   var f = {
     type: n,
     props: t,
@@ -29,14 +25,14 @@ function d(n, t, i, o, r) {
     __c: null,
     __h: null,
     constructor: void 0,
-    __v: null == r ? ++u : r
+    __v: null == r ? ++u$2 : r
   };
-  return null == r && null != l.vnode && l.vnode(f), f;
+  return null == r && null != l$2.vnode && l$2.vnode(f), f;
 }
-function k(n) {
+function k$2(n) {
   return n.children;
 }
-n = s.slice, l = {
+n$2 = s$2.slice, l$2 = {
   __e: function (n, l, u, t) {
     for (var i, o, r; l = l.__;) if ((i = l.__c) && !i.__) try {
       if ((o = i.constructor) && null != o.getDerivedStateFromError && (i.setState(o.getDerivedStateFromError(n)), r = i.__d), null != i.componentDidCatch && (i.componentDidCatch(n, t || {}), r = i.__d), r) return i.__E = i;
@@ -45,15 +41,18 @@ n = s.slice, l = {
     }
     throw n;
   }
-}, u = 0, "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout;
+}, u$2 = 0, "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout;
+
+var n$1,l$1,u$1,s$1=[];function y$1(l,u,t){var i,o,r,f={};for(r in u)"key"==r?i=u[r]:"ref"==r?o=u[r]:f[r]=u[r];if(arguments.length>2&&(f.children=arguments.length>3?n$1.call(arguments,2):t),"function"==typeof l&&null!=l.defaultProps)for(r in l.defaultProps)void 0===f[r]&&(f[r]=l.defaultProps[r]);return d$1(l,f,i,o,null)}function d$1(n,t,i,o,r){var f={type:n,props:t,key:i,ref:o,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:null==r?++u$1:r};return null==r&&null!=l$1.vnode&&l$1.vnode(f),f}function k$1(n){return n.children}n$1=s$1.slice,l$1={__e:function(n,l,u,t){for(var i,o,r;l=l.__;)if((i=l.__c)&&!i.__)try{if((o=i.constructor)&&null!=o.getDerivedStateFromError&&(i.setState(o.getDerivedStateFromError(n)),r=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,t||{}),r=i.__d),r)return i.__E=i}catch(l){n=l;}throw n}},u$1=0,"function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout;
+
+var o=/[\s\n\\/='"\0<>]/,n=/^xlink:?./,a=/["&<]/;function i(e){if(0===e.length||!1===a.test(e))return e;for(var t=0,r=0,o="",n="";r<e.length;r++){switch(e.charCodeAt(r)){case 34:n="&quot;";break;case 38:n="&amp;";break;case 60:n="&lt;";break;default:continue}r!==t&&(o+=e.slice(t,r)),o+=n,t=r+1;}return r!==t&&(o+=e.slice(t,r)),o}var l={},c=new Set(["animation-iteration-count","border-image-outset","border-image-slice","border-image-width","box-flex","box-flex-group","box-ordinal-group","column-count","fill-opacity","flex","flex-grow","flex-negative","flex-order","flex-positive","flex-shrink","flood-opacity","font-weight","grid-column","grid-row","line-clamp","line-height","opacity","order","orphans","stop-opacity","stroke-dasharray","stroke-dashoffset","stroke-miterlimit","stroke-opacity","stroke-width","tab-size","widows","z-index","zoom"]),s=/[A-Z]/g;function _(e){var t="";for(var r in e){var o=e[r];if(null!=o&&""!==o){var n="-"==r[0]?r:l[r]||(l[r]=r.replace(s,"-$&").toLowerCase()),a=";";"number"!=typeof o||n.startsWith("--")||c.has(n)||(a="px;"),t=t+n+":"+o+a;}}return t||void 0}var u,p,d,f,v=[],h=Array.isArray,m=Object.assign;function y(o,n){var a=l$1.__s;l$1.__s=!0,u=l$1.__b,p=l$1.diffed,d=l$1.__r,f=l$1.unmount;var i=y$1(k$1,null);i.__k=[o];try{return x(o,n||k,!1,void 0,i)}finally{l$1.__c&&l$1.__c(o,v),l$1.__s=a,v.length=0;}}function g(){this.__d=!0;}var k={};function b(e,t){var r,o=e.type,n=!0;return e.__c?(n=!1,(r=e.__c).state=r.__s):r=new o(e.props,t),e.__c=r,r.__v=e,r.props=e.props,r.context=t,r.__d=!0,null==r.state&&(r.state=k),null==r.__s&&(r.__s=r.state),o.getDerivedStateFromProps?r.state=m({},r.state,o.getDerivedStateFromProps(r.props,r.state)):n&&r.componentWillMount?(r.componentWillMount(),r.state=r.__s!==r.state?r.__s:r.state):!n&&r.componentWillUpdate&&r.componentWillUpdate(),d&&d(e),r.render(r.props,r.state,t)}function x(t,a,l,c,s){if(null==t||!0===t||!1===t||""===t)return "";if("object"!=typeof t)return "function"==typeof t?"":i(t+"");if(h(t)){var v="";s.__k=t;for(var y=0;y<t.length;y++){var k=t[y];null!=k&&"boolean"!=typeof k&&(v+=x(k,a,l,c,s));}return v}if(void 0!==t.constructor)return "";t.__=s,u&&u(t);var S,D,A,E=t.type,F=t.props,L=a;if("function"==typeof E){if(E===k$1){if(F.UNSTABLE_comment)return "\x3c!--"+i(F.UNSTABLE_comment||"")+"--\x3e";D=F.children;}else {if(null!=(S=E.contextType)){var T=a[S.__c];L=T?T.props.value:S.__;}if(E.prototype&&"function"==typeof E.prototype.render)D=b(t,L),A=t.__c;else {t.__c=A={__v:t,props:F,context:L,setState:g,forceUpdate:g,__d:!0,__h:[]};for(var U=0;A.__d&&U++<25;)A.__d=!1,d&&d(t),D=E.call(A,F,L);A.__d=!0;}if(null!=A.getChildContext&&(a=m({},a,A.getChildContext())),(E.getDerivedStateFromError||A.componentDidCatch)&&l$1.errorBoundaries){var W="";D=null!=D&&D.type===k$1&&null==D.key?D.props.children:D;try{return W=x(D,a,l,c,t)}catch(e){return E.getDerivedStateFromError&&(A.__s=E.getDerivedStateFromError(e)),A.componentDidCatch&&A.componentDidCatch(e,{}),A.__d&&(D=b(t,a),null!=(A=t.__c).getChildContext&&(a=m({},a,A.getChildContext())),W=x(D=null!=D&&D.type===k$1&&null==D.key?D.props.children:D,a,l,c,t)),W}finally{p&&p(t),t.__=void 0,f&&f(t);}}}var j=x(D=null!=D&&D.type===k$1&&null==D.key?D.props.children:D,a,l,c,t);return p&&p(t),t.__=void 0,f&&f(t),j}var M,z="<"+E,B="";for(var N in F){var H=F[N];switch(N){case"children":M=H;continue;case"key":case"ref":case"__self":case"__source":continue;case"htmlFor":if("for"in F)continue;N="for";break;case"className":if("class"in F)continue;N="class";break;case"defaultChecked":N="checked";break;case"defaultSelected":N="selected";break;case"defaultValue":case"value":switch(N="value",E){case"textarea":M=H;continue;case"select":c=H;continue;case"option":c!=H||"selected"in F||(z+=" selected");}break;case"dangerouslySetInnerHTML":B=H&&H.__html;continue;case"style":"object"==typeof H&&(H=_(H));break;default:if(l&&n.test(N))N=N.toLowerCase().replace(w,"xlink:");else {if(o.test(N))continue;"-"!==N[4]&&"draggable"!==N||null==H||(H+="");}}null!=H&&!1!==H&&"function"!=typeof H&&(z=!0===H||""===H?z+" "+N:z+" "+N+'="'+i(H+"")+'"');}if(o.test(E))throw new Error(E+" is not a valid HTML tag name in "+z+">");return B||("string"==typeof M?B=i(M):null!=M&&!1!==M&&!0!==M&&(B=x(M,a,"svg"===E||"foreignObject"!==E&&l,c,t))),p&&p(t),t.__=void 0,f&&f(t),!B&&C.has(E)?z+"/>":z+">"+B+"</"+E+">"}var w=/^xlink:?/,C=new Set(["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"]);
 
 var style$e = {"blockquote":"blockquote_yY4lR"};
 
-/* eslint-disable no-unused-vars */
 function Blockquote({
   html
 }) {
-  return y("p", {
+  return y$2("p", {
     class: style$e.blockquote,
     dangerouslySetInnerHTML: {
       __html: html
@@ -62,8 +61,6 @@ function Blockquote({
 }
 
 var style$d = {"heading":"heading_cMGRh","h1":"h1_fGUMj heading_cMGRh","h2":"h2_jj-Vm heading_cMGRh","h3":"h3_LrMGp heading_cMGRh","date":"date_X1hqw h3_LrMGp heading_cMGRh"};
-
-/* eslint-disable no-unused-vars */
 
 /**
  * Heading
@@ -79,25 +76,25 @@ function Heading(props) {
     text
   } = props;
   if (level === 'h1') {
-    return y("h1", {
+    return y$2("h1", {
       class: style$d[type],
       id: link && link
     }, text);
   }
   if (level === 'h2') {
-    return y("h2", {
+    return y$2("h2", {
       class: style$d[type],
       id: link && link
     }, text);
   }
   if (level === 'h3') {
-    return y("h3", {
+    return y$2("h3", {
       class: style$d[type],
       id: link && link
     }, text);
   }
   if (level === 'h4') {
-    return y("h4", {
+    return y$2("h4", {
       class: style$d[type],
       id: link && link
     }, text);
@@ -107,14 +104,13 @@ function Heading(props) {
 
 var style$c = {"imageContainer":"imageContainer_PR--x","image":"image_oRCDK","fadeIn":"fadeIn_oPi-L"};
 
-/* eslint-disable no-unused-vars */
 function Image({
   src,
   alt
 }) {
-  return y("div", {
+  return y$2("div", {
     class: style$c.imageContainer
-  }, y("img", {
+  }, y$2("img", {
     class: style$c.image,
     width: "800px",
     height: "500px",
@@ -125,18 +121,16 @@ function Image({
 
 var style$b = {"hr":"hr_J7xd-"};
 
-/* eslint-disable no-unused-vars */
 function HR() {
-  return y("hr", {
+  return y$2("hr", {
     class: style$b.hr
   });
 }
 
-/* eslint-disable no-unused-vars */
 function Footnote({
   footnote
 }) {
-  return y("li", {
+  return y$2("li", {
     id: footnote.fnid,
     dangerouslySetInnerHTML: {
       __html: footnote.html
@@ -146,14 +140,13 @@ function Footnote({
 
 var style$a = {"footnotes":"footnotes_S49wG"};
 
-/* eslint-disable no-unused-vars */
 function Footnotes({
   footnotes
 }) {
-  return y("ol", {
+  return y$2("ol", {
     class: style$a.footnotes
   }, footnotes.map(footnote => {
-    return y(Footnote, {
+    return y$2(Footnote, {
       key: footnote.id,
       footnote: footnote
     });
@@ -162,11 +155,10 @@ function Footnotes({
 
 var style$9 = {"listitem":"listitem_AgtJS"};
 
-/* eslint-disable no-unused-vars */
 function ListItem({
   html
 }) {
-  return y("li", {
+  return y$2("li", {
     class: style$9.listitem,
     dangerouslySetInnerHTML: {
       __html: html
@@ -174,18 +166,17 @@ function ListItem({
   });
 }
 
-/* eslint-disable no-unused-vars */
 function List({
   variant,
   items
 }) {
   if (variant === 'unordered') {
-    return y("ul", null, items.map(item => y(ListItem, {
+    return y$2("ul", null, items.map(item => y$2(ListItem, {
       key: item.id,
       html: item.html
     })));
   }
-  return y("ol", null, items.map(item => y(ListItem, {
+  return y$2("ol", null, items.map(item => y$2(ListItem, {
     key: item.id,
     html: item.html
   })));
@@ -193,11 +184,10 @@ function List({
 
 var style$8 = {"paragraph":"paragraph_O-cGo"};
 
-/* eslint-disable no-unused-vars */
 function Paragraph({
   html
 }) {
-  return y("p", {
+  return y$2("p", {
     class: style$8.paragraph,
     dangerouslySetInnerHTML: {
       __html: html
@@ -207,11 +197,10 @@ function Paragraph({
 
 var style$7 = {"table":"table_O-f4G"};
 
-/* eslint-disable no-unused-vars */
 function Table({
   html
 }) {
-  return y("table", {
+  return y$2("table", {
     class: style$7.table,
     dangerouslySetInnerHTML: {
       __html: html
@@ -219,41 +208,40 @@ function Table({
   });
 }
 
-/* eslint-disable no-unused-vars */
 function format(section) {
   switch (section.type) {
     case 'h3':
-      return y(Heading, {
+      return y$2(Heading, {
         level: "h3",
         type: "h3",
         text: section.text
       });
     case 'blockquote':
-      return y(Blockquote, {
+      return y$2(Blockquote, {
         html: section.html
       });
     case 'image':
-      return y(Image, {
+      return y$2(Image, {
         src: section.src,
         alt: section.alt
       });
     case 'table':
-      return y(Table, {
+      return y$2(Table, {
         html: section.html
       });
     case 'hr':
-      return y(HR, null);
+      return y$2(HR, null);
     case 'footnotes':
-      return y(Footnotes, {
+      return y$2(Footnotes, {
         footnotes: section.footnotes
       });
     case 'list':
-      return y(List, {
+      return y$2(List, {
         variant: section.variant,
         items: section.items
       });
     default:
-      return y(Paragraph, {
+      return y$2(Paragraph, {
         html: section.html
       });
   }
@@ -266,14 +254,13 @@ function Section({
 
 var style$6 = {"content":"content_C6SBZ"};
 
-/* eslint-disable no-unused-vars */
 function Content({
   body
 }) {
-  return y("div", {
+  return y$2("div", {
     class: style$6.content
   }, body.map(section => {
-    return y(Section, {
+    return y$2(Section, {
       key: section.id,
       section: section
     });
@@ -282,32 +269,30 @@ function Content({
 
 var style$5 = {"tag":"tag_VNvQZ"};
 
-/* eslint-disable no-unused-vars */
 function Tag({
   tag,
   number
 }) {
-  return y("li", {
+  return y$2("li", {
     class: style$5.tag
   }, tag.tag, tag.id < number - 1 ? ',' : '');
 }
 
 var style$4 = {"tagContainer":"tagContainer_odrG5","tags":"tags_73-wP"};
 
-/* eslint-disable no-unused-vars */
 function Tags({
   tags
 }) {
-  return y("section", {
+  return y$2("section", {
     class: style$4.tagContainer
-  }, y(Heading, {
+  }, y$2(Heading, {
     level: "h3",
     type: "h3",
     text: "Tags"
-  }), y("ul", {
+  }), y$2("ul", {
     class: style$4.tags
   }, tags.map(tag => {
-    return y(Tag, {
+    return y$2(Tag, {
       key: tag.id,
       tag: tag,
       number: tags.length
@@ -317,7 +302,6 @@ function Tags({
 
 var style$3 = {"header":"header_TAYZH","entry":"entry_m7mFJ"};
 
-/* eslint-disable no-unused-vars */
 function Entry({
   entry
 }) {
@@ -328,39 +312,38 @@ function Entry({
     body,
     tags
   } = entry;
-  return y("section", {
+  return y$2("section", {
     class: style$3.entry,
     "data-type": "entry"
-  }, y("header", {
+  }, y$2("header", {
     class: style$3.header
-  }, y("a", {
+  }, y$2("a", {
     href: `#${link}`
-  }, y(Heading, {
+  }, y$2(Heading, {
     link: link,
     level: "h2",
     type: "h2",
     text: title
-  })), y(Heading, {
+  })), y$2(Heading, {
     level: "h3",
     type: "date",
     text: date
-  })), y(Content, {
+  })), y$2(Content, {
     body: body
-  }), y(Tags, {
+  }), y$2(Tags, {
     tags: tags
   }));
 }
 
 var style$2 = {"entries":"entries_-TK-b"};
 
-/* eslint-disable no-unused-vars */
 function Entries({
   entries
 }) {
-  return y("main", {
+  return y$2("main", {
     class: style$2.entries
   }, entries.map(entry => {
-    return y(Entry, {
+    return y$2(Entry, {
       key: entry.id,
       entry: entry
     });
@@ -369,8 +352,6 @@ function Entries({
 
 var style$1 = {"footer":"footer_Rjxmy","socialsList":"socialsList_ULXe1","icon":"icon_pPG3P"};
 
-/* eslint-disable react/no-invalid-html-attribute */
-
 /**
  * Footer
  *
@@ -378,68 +359,65 @@ var style$1 = {"footer":"footer_Rjxmy","socialsList":"socialsList_ULXe1","icon":
  * @return {string}
  */
 function Footer() {
-  return y("footer", {
+  return y$2("footer", {
     class: style$1.footer
-  }, y("section", {
+  }, y$2("section", {
     class: style$1.socialsList
-  }, y("ul", null, y("li", null, y("a", {
+  }, y$2("ul", null, y$2("li", null, y$2("a", {
     href: "https://github.com/andywillis"
-  }, y("svg", {
+  }, y$2("svg", {
     class: style$1.icon,
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 496 512",
     width: "22",
     height: "22"
-  }, y("path", {
+  }, y$2("path", {
     d: "M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-  })), "Github")), y("li", null, y("a", {
+  })), "Github")), y$2("li", null, y$2("a", {
     href: "https://stackoverflow.com/users/1377002/andy"
-  }, y("svg", {
+  }, y$2("svg", {
     class: style$1.icon,
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 384 512",
     width: "22",
     height: "22"
-  }, y("path", {
+  }, y$2("path", {
     d: "M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"
-  })), "Stack overflow")), y("li", null, y("a", {
+  })), "Stack overflow")), y$2("li", null, y$2("a", {
     rel: "me",
     href: "https://fosstodon.org/@woodsbythesea"
-  }, y("svg", {
+  }, y$2("svg", {
     class: style$1.icon,
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 448 512",
     width: "22",
     height: "22"
-  }, y("path", {
+  }, y$2("path", {
     d: "M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"
-  })), "Mastodon")), y("li", null, y("a", {
+  })), "Mastodon")), y$2("li", null, y$2("a", {
     href: "/assets/journal.rss"
-  }, y("svg", {
+  }, y$2("svg", {
     class: style$1.icon,
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 448 512",
     width: "22",
     height: "22"
-  }, y("path", {
+  }, y$2("path", {
     d: "M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
   })), "RSS feed")))));
 }
 
 var style = {"header":"header_U5ZMi","nav":"nav_DWUCK"};
 
-/* eslint-disable no-unused-vars */
 function Header() {
-  return y("header", {
+  return y$2("header", {
     class: style.header
-  }, y(Heading, {
+  }, y$2(Heading, {
     level: "h1",
     type: "h1",
     text: "Andy Willis Journal (Preact)"
   }));
 }
-
-/* eslint-disable no-unused-vars */
 
 /**
  * Home
@@ -454,9 +432,9 @@ function Home({
   const {
     entries
   } = data;
-  return y(k, null, y(Header, null), y(Entries, {
+  return y$2(k$2, null, y$2(Header, null), y$2(Entries, {
     entries: entries
-  }), y(Footer, null));
+  }), y$2(Footer, null));
 }
 
 var id = 0;
@@ -1415,10 +1393,10 @@ var data = {
 	tags: tags
 };
 
-/* eslint-disable import/no-relative-packages */
-console.log(y$1(y(Home, {
-  data: data
-})));
+function compileHome () {
+  return y(y$2(Home, {
+    data: data
+  }));
+}
 
-// await fs.writeFile('tools/temp/index.html', render(<Journal data={data} />), 'utf8');
-// console.log('File written');
+export { compileHome as default };

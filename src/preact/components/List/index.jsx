@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { h } from 'preact';
-
 import ListItem from '../ListItem';
 
 export default function List({ variant, items }) {

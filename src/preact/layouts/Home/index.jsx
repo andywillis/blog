@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Fragment, h } from 'preact';
+import { Fragment } from 'preact';
 
 import Entries from '../../components/Entries';
 import Footer from '../../components/Footer';
