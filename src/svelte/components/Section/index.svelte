@@ -2,6 +2,8 @@
 	import Blockquote from '../Blockquote/index.svelte';
 	import Heading from '../Heading/index.svelte';
 	import Image from '../Image/index.svelte';
+	import Footnotes from '../Footnotes/index.svelte';
+	import HR from '../HR/index.svelte';
 	import List from '../List/index.svelte';
 	import Paragraph from '../Paragraph/index.svelte';
 	import Table from '../Table/index.svelte';
@@ -19,6 +21,12 @@
 
 {:else if section.type === 'table'}
 	<Table html={section.html} />
+
+{:else if section.type === 'hr'}
+	<HR />
+
+{:else if section.type === 'footnotes'}
+	<Footnotes footnotes={section.footnotes} />
 
 {:else if section.type === 'list'}
 	<List variant={section.variant} items={section.items} />

@@ -1,24 +1,37 @@
 {
   "name": "preact",
   "private": true,
+  "type": "module",
   "version": "2.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-bob": "rollup --config tools/rollup-bob.config.js",
+    "build-temp": "..\\..\\node_modules\\.bin\\babel tools/temp.js --out-file=tools/bob.js",
+    "build-home": "rollup --config tools/rollup-home.config.js && node tools/build-home.js && pnpm run build-rss-custard",
+    "build-home2": "rollup --config tools/rollup-home.config.js",
+    "build-rss-custard": "node tools/build-rss.js host=custard"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "7.22.5",
+    "@babel/preset-react": "7.22.5",
     "@preact/preset-vite": "2.5.0",
+    "@rollup/plugin-alias": "5.0.0",
+    "@rollup/plugin-babel": "6.0.3",
+    "babel-plugin-jsx-pragmatic": "1.0.2",
+    "babel-plugin-transform-react-jsx": "6.24.1",
     "babel-preset-preact": "2.0.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "open-props": "^1.5.10"
+    "open-props": "^1.5.10",
+    "preact": "10.16.0",
+    "preact-render-to-string": "6.2.0"
   },
   "dependencies": {
     "@preact/signals": "1.1.5",
-    "classnames": "^2.3.2",
-    "preact": "10.16.0"
+    "classnames": "^2.3.2"
   }
 }
