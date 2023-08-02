@@ -10,9 +10,9 @@
 }
 
 @media (min-width: 721px) {
-	.entries > * ~ * {
-		margin-top: var(--size-rem-6);
-	}
+	/* .entries > * ~ * {
+		margin-top: var(--size-rem-4);
+	} */
 	.entries {
 		padding: var(--size-rem-1) var(--size-rem-3);
 	}

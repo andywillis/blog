@@ -1,3 +1,17 @@
+## CSS Nesting
+### Wednesday, 02 August 2023
+#### Nesting has landed in Firefox 117
+
+* CSS
+* Nesting
+* Firefox
+
+From Stephanie Eckles' CSS newsletter:
+
+> CSS Nesting will be in all evergreen browsers as of Firefox 117, landing August 29... the nesting syntax has been relaxed and will eventually not require nested selectors to begin with a symbol, meaning "&" is not necessary before an element selector.
+
+---
+
 ## DX vs UX
 ### Friday, 14 July 2023
 #### An experiment in finding a personal balance between DX and UX
