@@ -5,6 +5,6 @@
 
 <template>
 	<header :class="style.header">
-		<Heading type="h1" text="Andy Willis Journal (Vue)" />
+		<Heading type="h1" text="Andy Willis - Journal (Vue)" />
 	</header>
 </template>

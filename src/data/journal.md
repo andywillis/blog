@@ -16,7 +16,7 @@ Vue was done in three hours; Svelte a little longer - simply because I spent mor
 
 A couple of interesting things that cropped up while I was testing the output:
 
-1. In Vue you can have nested `<template>` elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:
+1. In Vue you can have nested `template` elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:
 
 	```
 	<section v-for="item in items" :key="item.id">
@@ -31,7 +31,7 @@ A couple of interesting things that cropped up while I was testing the output:
 
 2. One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional `0.25rem` on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.[^1]
 
-3. Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the `<script setup>` (Vue) or `<script>` (Svelte) tags.
+3. Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the `script` tags.
 
 4. I do like Svelte but their method for props-sharing is a little counter-intuitive and there isn't a lot of documentation on _why_ they've chosen this route (I'm not sure "you'll get used to it" counts). In short the component that has props being _passed to it_ has to export those props _from it_ (`export let prop;`).
 

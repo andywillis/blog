@@ -43,7 +43,7 @@ body {
 	a:link,
 	a:visited,
 	a:active {
-		text-decoration: none;
+		text-decoration: underline;
 		color: var(--color-red-dark);
 	}
 
@@ -55,13 +55,14 @@ body {
 	code {
 		display: inline-block;
 		margin: 0 0.2rem;
-		font-family: var(--font-code);
+		/* font-family: var(--font-code-inline); */
 		font-weight: var(--font-weight-6);
 		color: var(--color-blue-dark);
 	}
 
 	pre code {
 		margin: 0;
+		font-family: var(--font-code-pre);
 		font-size: var(--size-rem-09);
 	}
 
