@@ -11,7 +11,7 @@
 	--color-sand-light-20: hsl(var(--sand-2-hsl) / 20%);
 	--color-sand-light-40: hsl(var(--sand-2-hsl) / 40%);
 	--color-sand-light-60: hsl(var(--sand-2-hsl) / 60%);
-	--color-sand-regular: hsl(var(--sand-7-hsl));
+	--color-sand-regular: hsl(var(--sand-9-hsl));
 
 	--color-blue-light: hsl(var(--blue-1-hsl));
 	--color-blue-dark: hsl(var(--blue-8-hsl));

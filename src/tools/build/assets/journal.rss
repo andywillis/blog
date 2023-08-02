@@ -6,6 +6,12 @@
 				<description>Andy Willis Journal entries</description>
 				
 			<item>
+				<title>CSS Nesting</title>
+				<link>https://spectacular-custard-14e5f1.netlify.app/#css-nesting-18</link>
+				<description>Nesting has landed in Firefox 117</description>
+			</item>
+		
+			<item>
 				<title>DX vs UX: Part Deux</title>
 				<link>https://spectacular-custard-14e5f1.netlify.app/#dx-vs-ux-part-deux-17</link>
 				<description>Introducing Vue and Svelte</description>

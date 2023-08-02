@@ -245,7 +245,7 @@ var style = {"header":"header_U5ZMi","nav":"nav_DWUCK"};
 function Header() {
 	return (`
 		<header class="${style.header}">
-			${Heading({ level: 'h1', type: 'h1', text: 'Andy Willis Journal' })}
+			${Heading({ level: 'h1', type: 'h1', text: 'Andy Willis - Journal' })}
 		</header>
 	`);
 }
@@ -268,6 +268,40 @@ function Home(journal) {
 var id = 0;
 var title = "Journal";
 var entries = [
+	{
+		id: 18,
+		title: "CSS Nesting",
+		date: "Wednesday, 02 August 2023",
+		summary: "Nesting has landed in Firefox 117",
+		tags: [
+			{
+				id: 0,
+				tag: "CSS"
+			},
+			{
+				id: 1,
+				tag: "Nesting"
+			},
+			{
+				id: 2,
+				tag: "Firefox"
+			}
+		],
+		link: "css-nesting-18",
+		body: [
+			{
+				id: 0,
+				type: "para",
+				html: "From <a href=\"https://front-end.social/@5t3ph\">Stephanie Eckles'</a> CSS newsletter:"
+			},
+			{
+				id: 1,
+				type: "blockquote",
+				html: "<a href=\"https://drafts.csswg.org/css-nesting/#nesting\">CSS Nesting</a> will be in all evergreen browsers as of Firefox 117, landing August 29... the nesting syntax has been relaxed and will eventually not require nested selectors to begin with a symbol, meaning \"&amp;\" is not necessary before an element selector."
+			}
+		],
+		cdata: "<p>From <a href=\"https://front-end.social/@5t3ph\">Stephanie Eckles'</a> CSS newsletter:</p>"
+	},
 	{
 		id: 17,
 		title: "DX vs UX: Part Deux",
@@ -325,7 +359,7 @@ var entries = [
 					{
 						id: 0,
 						type: "listitem",
-						html: "<p>In Vue you can have nested <code>&lt;template&gt;</code> elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:</p>\n<pre><code>&lt;section v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>Usually, you want that element <em>as part of the component</em>. And you don't really want to create <em>another</em> containing component because that adds causes unnecessary markup. So by using a nested template which doesn't add any new markup:</p>\n<pre><code>&lt;template v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>you can move that <code>section</code> container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.</p>"
+						html: "<p>In Vue you can have nested <code>template</code> elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:</p>\n<pre><code>&lt;section v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>Usually, you want that element <em>as part of the component</em>. And you don't really want to create <em>another</em> containing component because that adds causes unnecessary markup. So by using a nested template which doesn't add any new markup:</p>\n<pre><code>&lt;template v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>you can move that <code>section</code> container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.</p>"
 					},
 					{
 						id: 1,
@@ -335,7 +369,7 @@ var entries = [
 					{
 						id: 2,
 						type: "listitem",
-						html: "<p>Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the <code>&lt;script setup&gt;</code> (Vue) or <code>&lt;script&gt;</code> (Svelte) tags.</p>"
+						html: "<p>Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the <code>script</code> tags.</p>"
 					},
 					{
 						id: 3,
@@ -346,20 +380,25 @@ var entries = [
 						id: 4,
 						type: "listitem",
 						html: "<p><code>markdown-it</code>, which I use to parse the markdown into HTML so I can parse that and get some nice JSON, has different output for an ordered list (<code>ol</code>) and an unordered list (<code>ul</code>). I would have expected them to be the same but MDIT pads the list items with paragraph elements. And that meant a little fiddling with my <code>parse-markdown</code> tool so it didn't pick up those nested paragraphs and render them.</p>"
+					},
+					{
+						id: 5,
+						type: "listitem",
+						html: "<p>Added a <code>markdown-it</code> plugin for footnotes which, after a little work on my <code>parse-markdown</code> tool seems to be working well.</p>"
 					}
 				]
 			},
 			{
-				id: 12,
+				id: 13,
 				type: "para",
 				html: "I'm going to add to my knowledge of both libraries soon with rewrites of my <a href=\"https://quiet-douhua-784278.netlify.app/pines-to-fan-bay\">Walking Journal</a> as a baseline. And then maybe I'll take a look at some web component libraries like Stencil. It's turning into quite a fun project."
 			},
 			{
-				id: 13,
+				id: 14,
 				type: "hr"
 			},
 			{
-				id: 14,
+				id: 15,
 				type: "footnotes",
 				footnotes: [
 					{
@@ -367,12 +406,12 @@ var entries = [
 						no: 1,
 						fnid: "dx-vs-ux-part-deux-17-fn1",
 						type: "listitem",
-						html: "<p>Turns out that the issue was extra whitespace in the vanilla tag template which could be resolved by adding <code>trim()</code>. <a href=\"#dx-vs-ux-part-deux-17-fnref1\" class=\"footnote-backref\">↩︎</a></p>"
+						html: "<p>Turns out that the issue was extra whitespace in the vanilla tag template which could be resolved by adding <code>.trim()</code> to the rendered string. <a href=\"#dx-vs-ux-part-deux-17-fnref1\" class=\"footnote-backref\">↩︎</a></p>"
 					}
 				]
 			}
 		],
-		cdata: "<p>So I decided to side-step the multi-page process on the journal for a moment and take a look at Vue and Svelte. Vue is slighter younger than React with Svelte - the baby - arriving in 2016. I'd wanted to work with them for a while but never really had a good plan or project in which to use them. But as a way to introduce myself to their component systems, and understand their basic feature-set, incorporating them into the journal was ideal.</p>\n<p>The groundwork for introducing them was simple. Similarly to the vanilla JS and Preact component systems they would take advantage of the global CSS so it's really just a matter of changing the syntax of either the Preact or vanilla systems to their syntax.</p>\n<p>Vue was done in three hours; Svelte a little longer - simply because I spent more time reading its documentation.</p>\n<p>A couple of interesting things that cropped up while I was testing the output:</p>\n<ol>\n<li>\n<p>In Vue you can have nested <code>&lt;template&gt;</code> elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:</p>\n<pre><code>&lt;section v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>Usually, you want that element <em>as part of the component</em>. And you don't really want to create <em>another</em> containing component because that adds causes unnecessary markup. So by using a nested template which doesn't add any new markup:</p>\n<pre><code>&lt;template v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>you can move that <code>section</code> container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.</p>\n</li>\n<li>\n<p>One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional <code>0.25rem</code> on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.<sup class=\"footnote-ref\"><a href=\"#fn1\" id=\"fnref1\">[1]</a></sup></p>\n</li>\n<li>\n<p>Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the <code>&lt;script setup&gt;</code> (Vue) or <code>&lt;script&gt;</code> (Svelte) tags.</p>\n</li>\n<li>\n<p>I do like Svelte but their method for props-sharing is a little counter-intuitive and there isn't a lot of documentation on <em>why</em> they've chosen this route (I'm not sure \"you'll get used to it\" counts). In short the component that has props being <em>passed to it</em> has to export those props <em>from it</em> (<code>export let prop;</code>).</p>\n</li>\n<li>\n<p><code>markdown-it</code>, which I use to parse the markdown into HTML so I can parse that and get some nice JSON, has different output for an ordered list (<code>ol</code>) and an unordered list (<code>ul</code>). I would have expected them to be the same but MDIT pads the list items with paragraph elements. And that meant a little fiddling with my <code>parse-markdown</code> tool so it didn't pick up those nested paragraphs and render them.</p>\n</li>\n</ol>\n<p>I'm going to add to my knowledge of both libraries soon with rewrites of my <a href=\"https://quiet-douhua-784278.netlify.app/pines-to-fan-bay\">Walking Journal</a> as a baseline. And then maybe I'll take a look at some web component libraries like Stencil. It's turning into quite a fun project.</p>\n<hr class=\"footnotes-sep\">\n<section class=\"footnotes\">\n<ol class=\"footnotes-list\">\n<li id=\"fn1\" class=\"footnote-item\"><p>Turns out that the issue was extra whitespace in the vanilla tag template which could be resolved by adding <code>trim()</code>. <a href=\"#fnref1\" class=\"footnote-backref\">↩︎</a></p>\n</li>\n</ol>\n</section>"
+		cdata: "<p>So I decided to side-step the multi-page process on the journal for a moment and take a look at Vue and Svelte. Vue is slighter younger than React with Svelte - the baby - arriving in 2016. I'd wanted to work with them for a while but never really had a good plan or project in which to use them. But as a way to introduce myself to their component systems, and understand their basic feature-set, incorporating them into the journal was ideal.</p>\n<p>The groundwork for introducing them was simple. Similarly to the vanilla JS and Preact component systems they would take advantage of the global CSS so it's really just a matter of changing the syntax of either the Preact or vanilla systems to their syntax.</p>\n<p>Vue was done in three hours; Svelte a little longer - simply because I spent more time reading its documentation.</p>\n<p>A couple of interesting things that cropped up while I was testing the output:</p>\n<ol>\n<li>\n<p>In Vue you can have nested <code>template</code> elements which are very useful when using iteration to create a series of components with the proper semantic markup. Vue attaches directives to a containing element:</p>\n<pre><code>&lt;section v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>Usually, you want that element <em>as part of the component</em>. And you don't really want to create <em>another</em> containing component because that adds causes unnecessary markup. So by using a nested template which doesn't add any new markup:</p>\n<pre><code>&lt;template v-for=\"item in items\" :key=\"item.id\"&gt;\n</code></pre>\n<p>you can move that <code>section</code> container within the component markup and have the components render properly. If you're a React developer it's the equivalent of a fragment.</p>\n</li>\n<li>\n<p>One CSS issue that cropped up was some suspicious missing spacing on rendered tags which had to be corrected with an additional <code>0.25rem</code> on each tag's right margin. I've not narrowed down why but I think it has something to do with point 1). The problem happens with the Svelte system too so I figure if I can fix it for one I can easily fix it for the other.<sup class=\"footnote-ref\"><a href=\"#fn1\" id=\"fnref1\">[1]</a></sup></p>\n</li>\n<li>\n<p>Fortunately I didn't have to do any CSS module wrangling or make any changes to Vue/Svelte configuration to make them work. You just import them directly within the <code>script</code> tags.</p>\n</li>\n<li>\n<p>I do like Svelte but their method for props-sharing is a little counter-intuitive and there isn't a lot of documentation on <em>why</em> they've chosen this route (I'm not sure \"you'll get used to it\" counts). In short the component that has props being <em>passed to it</em> has to export those props <em>from it</em> (<code>export let prop;</code>).</p>\n</li>\n<li>\n<p><code>markdown-it</code>, which I use to parse the markdown into HTML so I can parse that and get some nice JSON, has different output for an ordered list (<code>ol</code>) and an unordered list (<code>ul</code>). I would have expected them to be the same but MDIT pads the list items with paragraph elements. And that meant a little fiddling with my <code>parse-markdown</code> tool so it didn't pick up those nested paragraphs and render them.</p>\n</li>\n<li>\n<p>Added a <code>markdown-it</code> plugin for footnotes which, after a little work on my <code>parse-markdown</code> tool seems to be working well.</p>\n</li>\n</ol>\n<p>I'm going to add to my knowledge of both libraries soon with rewrites of my <a href=\"https://quiet-douhua-784278.netlify.app/pines-to-fan-bay\">Walking Journal</a> as a baseline. And then maybe I'll take a look at some web component libraries like Stencil. It's turning into quite a fun project.</p>\n<hr class=\"footnotes-sep\">\n<section class=\"footnotes\">\n<ol class=\"footnotes-list\">\n<li id=\"fn1\" class=\"footnote-item\"><p>Turns out that the issue was extra whitespace in the vanilla tag template which could be resolved by adding <code>.trim()</code> to the rendered string. <a href=\"#fnref1\" class=\"footnote-backref\">↩︎</a></p>\n</li>\n</ol>\n</section>"
 	},
 	{
 		id: 16,
@@ -733,13 +772,18 @@ var entries = [
 		link: "akule-10",
 		body: [
 			{
+				id: 0,
+				type: "blockquote",
+				html: "\"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href=\"http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii\">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>\" - Wayne Levin"
+			},
+			{
 				id: 3,
 				type: "image",
 				src: "/assets/images/akule.webp",
 				alt: "Pretty school of fish"
 			}
 		],
-		cdata: "<blockquote>\n<p>\"When I descend beneath the surface I am in a world with different rules, different truths. Things look different, light acts differently, gravity pulls differently. One can fly, or at least float over the landscape, or seascape. When I descend into this wonderland, <a href=\"http://lenscratch.com/2017/08/wayne-levin-the-states-project-hawaii\">I want to make images, not to explain or clarify that world, but to deepen the mystery.</a>\" - Wayne Levin</p>\n</blockquote>\n<p><img src=\"/assets/images/akule.webp\" alt=\"Pretty school of fish\"></p>"
+		cdata: "<p><img src=\"/assets/images/akule.webp\" alt=\"Pretty school of fish\"></p>"
 	},
 	{
 		id: 9,
@@ -1012,6 +1056,26 @@ var entries = [
 				html: "From the original site:"
 			},
 			{
+				id: 2,
+				type: "blockquote",
+				html: "Spotmaps, based on Brendan Dawes' <a href=\"http://brendandawes.com/projects/cinemaredux\">Cinema Redux</a>, is an on-going project to map the colour narratives of different films."
+			},
+			{
+				id: 4,
+				type: "blockquote",
+				html: "Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames."
+			},
+			{
+				id: 6,
+				type: "blockquote",
+				html: "Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film."
+			},
+			{
+				id: 8,
+				type: "blockquote",
+				html: "A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap."
+			},
+			{
 				id: 11,
 				type: "image",
 				src: "/assets/images/blackhole.webp",
@@ -1028,7 +1092,7 @@ var entries = [
 				html: "There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>."
 			}
 		],
-		cdata: "<p>This is one of the many images rendered by my <a href=\"https://github.com/andywillis/spotmaps\">spotmaps</a> application.</p>\n<p>From the original site:</p>\n<blockquote>\n<p>Spotmaps, based on Brendan Dawes' <a href=\"http://brendandawes.com/projects/cinemaredux\">Cinema Redux</a>, is an on-going project to map the colour narratives of different films.</p>\n</blockquote>\n<blockquote>\n<p>Films are processed through a Python/OpenCV pipeline: each frame's colour is sampled, and  a spot of average colour is produced from the combination of one second's frames.</p>\n</blockquote>\n<blockquote>\n<p>Spots are laid out 60 per line to represent one minute of film time. The length of the image represents the number of minutes in the film.</p>\n</blockquote>\n<blockquote>\n<p>A 24-colour Adobe swatch file in ASE format and a hex RGB colour file are available to download for each spotmap.</p>\n</blockquote>\n<p><img src=\"/assets/images/blackhole.webp\" alt=\"Black Hole spotmap\"></p>\n<p>More images can be found <a href=\"https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787\">here on Flickr</a>.</p>\n<p>There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>.</p>"
+		cdata: "<p>This is one of the many images rendered by my <a href=\"https://github.com/andywillis/spotmaps\">spotmaps</a> application.</p>\n<p>From the original site:</p>\n\n\n\n\n<p><img src=\"/assets/images/blackhole.webp\" alt=\"Black Hole spotmap\"></p>\n<p>More images can be found <a href=\"https://www.flickr.com/photos/urbanwhaleshark/albums/72157649963155584/with/17126036787\">here on Flickr</a>.</p>\n<p>There are also a couple of online articles about the spotmaps website on <a href=\"http://www.fastcodesign.com/1671572/infographic-the-colors-from-your-favorite-movies-mapped-to-7200-pixels\">FastCoDesign</a>, and <a href=\"http://gizmodo.com/5972740/the-color-of-movies-visualized\">Gizmodo</a>.</p>"
 	},
 	{
 		id: 2,
@@ -1136,6 +1200,7 @@ var entries = [
 	}
 ];
 var links = [
+	"css-nesting-18",
 	"dx-vs-ux-part-deux-17",
 	"dx-vs-ux-16",
 	"parkes-operation-center-apollo-11-15",
@@ -1156,6 +1221,9 @@ var links = [
 	"dirty-cow-0"
 ];
 var tags = {
+	CSS: 1,
+	Nesting: 1,
+	Firefox: 1,
 	DX: 2,
 	UX: 2,
 	Journal: 3,
