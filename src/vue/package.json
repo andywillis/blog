@@ -15,7 +15,8 @@
     "babel-preset-vue": "2.0.2",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-vue": "9.15.1",
-    "open-props": "^1.5.10"
+    "open-props": "^1.5.10",
+    "rollup-plugin-vue": "6.0.0"
   },
   "dependencies": {
     "vue": "3.3.4"

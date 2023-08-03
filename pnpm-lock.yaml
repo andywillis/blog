@@ -188,6 +188,9 @@ importers:
       open-props:
         specifier: ^1.5.10
         version: 1.5.10
+      rollup-plugin-vue:
+        specifier: 6.0.0
+        version: 6.0.0(@vue/compiler-sfc@3.3.4)
 
 packages:
 
@@ -2786,6 +2789,10 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /hash-sum@2.0.0:
+    resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
+    dev: true
+
   /he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
@@ -4187,6 +4194,19 @@ packages:
       style-inject: 0.3.0
     transitivePeerDependencies:
       - ts-node
+    dev: true
+
+  /rollup-plugin-vue@6.0.0(@vue/compiler-sfc@3.3.4):
+    resolution: {integrity: sha512-oVvUd84d5u73M2HYM3XsMDLtZRIA/tw2U0dmHlXU2UWP5JARYHzh/U9vcxaN/x/9MrepY7VH3pHFeOhrWpxs/Q==}
+    peerDependencies:
+      '@vue/compiler-sfc': '*'
+    dependencies:
+      '@vue/compiler-sfc': 3.3.4
+      debug: 4.3.4
+      hash-sum: 2.0.0
+      rollup-pluginutils: 2.8.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /rollup-pluginutils@2.8.2:

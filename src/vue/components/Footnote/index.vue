@@ -2,7 +2,7 @@
 	
 	defineProps({
 		footnote: {
-			type: String,
+			type: Object,
 			required: true
 		}
 	});

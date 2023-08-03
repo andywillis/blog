@@ -5,21 +5,23 @@ import { minify } from 'html-minifier';
 
 import rootname from '../../../rootname.js';
 
-import extractHtml from './temp/extractHtml-home.js';
+import extractHtml from './temp/extracthtml-home.js';
+
+console.log(extractHtml)
 
 // Set paths
-const appPath = `${rootname}/src/vanilla`;
+const appPath = `${rootname}/src/vue`;
 const publicPath = `${rootname}/src/public`;
 const toolsPath = `${appPath}/tools`;
 const tempPath = `${toolsPath}/temp`;
-const buildPath = `${toolsPath}/build-min`;
+const buildPath = `${appPath}/build-min`;
 
 await fse.emptyDir(buildPath);
 await fse.copy(publicPath, buildPath);
 
 const placeholder = await fs.readFile(`${toolsPath}/index_placeholder.html`, 'utf8');
 
-const replaced = placeholder.replace('{html}', extractHtml());
+const replaced = placeholder.replace('{html}', await extractHtml());
 
 const minified = minify(replaced, {
 	removeAttributeQuotes: true,

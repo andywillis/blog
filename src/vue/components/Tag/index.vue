@@ -8,7 +8,7 @@
 			required: true
 		},
 		numberOfTags: {
-			type: String,
+			type: Number,
 			required: true
 		}
 	});
