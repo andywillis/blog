@@ -4,5 +4,5 @@
 </script>
 
 <header class={style.header}>
-	<Heading type="h1" text="Andy Willis Journal (Svelte)" />
+	<Heading type="h1" text="Andy Willis - Journal (Svelte)" />
 </header>

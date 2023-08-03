@@ -12,7 +12,7 @@ const appPath = `${rootname}/src/vanilla`;
 const publicPath = `${rootname}/src/public`;
 const toolsPath = `${appPath}/tools`;
 const tempPath = `${toolsPath}/temp`;
-const buildPath = `${toolsPath}/build-min`;
+const buildPath = `${appPath}/build-min`;
 
 await fse.emptyDir(buildPath);
 await fse.copy(publicPath, buildPath);

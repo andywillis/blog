@@ -72,6 +72,12 @@ function getListItems(list, link) {
 	});
 }
 
+function getBlockQuote(element) {
+	const para = element.querySelector('p');
+	removeElement(element);
+	return para.innerHTML;
+}
+
 function getFootnotes(list, link) {
 	return Array.from(list.querySelectorAll('li')).map((item, id) => {
 		return {
@@ -128,6 +134,11 @@ function getBody(el, link) {
 				break;
 			}
 
+			case 'BLOCKQUOTE': {
+				p.push({ id: i, type: 'blockquote', html: getBlockQuote(c) });
+				break;
+			}
+
 			case 'P': {
 
 				// Make sure that only root paragraphs are rendered so
@@ -135,9 +146,7 @@ function getBody(el, link) {
 				// also have paragraphs in them for some reason (markdown-it issue?)
 				if (c.parentElement.nodeName === 'DIV') {
 					if (c.firstChild.nodeName !== 'IMG') {
-						const name = c.parentNode.nodeName;
-						const type = name === 'BLOCKQUOTE' ? 'blockquote' : 'para';
-						p.push({ id: i, type, html: trimAll(c.innerHTML.replaceAll(/#(fn\d+)/g, `#${link}-$1`)) });
+						p.push({ id: i, type: 'para', html: trimAll(c.innerHTML.replaceAll(/#(fn\d+)/g, `#${link}-$1`)) });
 					}
 				}
 				break;
@@ -149,7 +158,7 @@ function getBody(el, link) {
 			}
 
 			case 'H4': {
-				p.push({ id: i, type: 'h4', text: trimAlle(c.textContent) });
+				p.push({ id: i, type: 'h4', text: trimAll(c.textContent) });
 				break;
 			}
 
