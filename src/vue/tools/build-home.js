@@ -14,7 +14,7 @@ const appPath = `${rootname}/src/vue`;
 const publicPath = `${rootname}/src/public`;
 const toolsPath = `${appPath}/tools`;
 const tempPath = `${toolsPath}/temp`;
-const buildPath = `${appPath}/build-min`;
+const buildPath = `${toolsPath}/build-min`;
 
 await fse.emptyDir(buildPath);
 await fse.copy(publicPath, buildPath);
