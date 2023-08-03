@@ -5,14 +5,15 @@ import importUrl from 'postcss-import-url';
 import nesting from 'postcss-nesting';
 import cssimport from 'postcss-import';
 import gzipPlugin from 'rollup-plugin-gzip';
+import vue from 'rollup-plugin-vue';
 
 export default {
 
 	input: './tools/compile-home.js',
 
 	output: {
-		file: './tools/temp/extractHtml-home.js',
-		format: 'es'
+		file: './tools/temp/extracthtml-home.js',
+		format: 'esm'
 	},
 
 	plugins: [
@@ -20,6 +21,8 @@ export default {
 		resolve(),
 
 		json(),
+
+		vue(),
 
 		postcss({
 
