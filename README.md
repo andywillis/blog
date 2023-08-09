@@ -1,6 +1,6 @@
-# Journal
+# Journal Playground
 
-A simple blog with a focus on accessibility and performance.
+A playground for experimenting with building a simple blog with different FE libraries - with a focus on accessibility and performance.
 
 All posts are written in markdown. A conversion process renders the markdown to JSON that the component system can use to build the journal.
 
